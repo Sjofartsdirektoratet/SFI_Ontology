@@ -8,9 +8,13 @@ Created on Mon Jun 21 12:23:13 2021
 # importing required modules
 import PyPDF2
 import re
+import csv
+import os
+from rdflib import Graph, plugin
+from rdflib.serializer import Serializer
  
 # creating a pdf file object
-pdfFileObj = open('SFIDetailCode.pdf', 'rb')
+pdfFileObj = open('../SFIDetailCode.pdf', 'rb')
  
 # creating a pdf reader object
 pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
@@ -45,7 +49,7 @@ def fjerne_lineskift(liste):
 def koble_inn_tekst_uten_tall(liste):
     # Koble inn ord der den forran (i-1) finnes!
     temp = []
-    forrige = None
+    
     for i,tekst in enumerate(liste):
         if i>=1:
             if len(re.findall(r'\d+', tekst))==0 and len(tekst)>0:
@@ -160,7 +164,17 @@ for pre, fill, node in RenderTree(root):
         classes.append((node.name, node.parent.name))
     
 #ex:Boat(ex:8_SHIP_COMMON_SYSTEMS, ex:root, "8_SHIP_COMMON_SYSTEMS") .
+prefixes = ['@prefix ex: <http://example.com/ns#> .',
+'@prefix ottr: <http://ns.ottr.xyz/0.4/> .',
+'@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .',
+'@prefix ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .',
+'@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .',
+'@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .',
+'@prefix owl: <http://www.w3.org/2002/07/owl#> .',
+'@prefix rstr: <http://tpl.ottr.xyz/owl/restriction/0.1/> .',
+'@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .\n']
 all_text = []
+all_text_csv_format = []
 special_symbols1 = [" ", "\\", "/", "&"] # blir _
 special_symbols2 = [",",".","'", '"',"(", ")"] # blir ingenting
 
@@ -173,8 +187,21 @@ for node, parent in classes:
     parent = parent.replace(" ", "_").replace(",", "")\
         .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
             .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
+    all_text_csv_format.append([node,parent])
     all_text.append("ex:Boat(ex:"+node+", ex:"+parent+', "'+node+'") .')
     
 
-with open("second_SFI.stottr", "w") as f:
+with open("SFI_instances.stottr", "w") as f:
+    f.write("\n".join(prefixes))
     f.write("\n".join(all_text))
+
+
+run_lutra = 'java -jar lutra.jar --library SFI_library.stottr --libraryFormat stottr --inputFormat stottr --fetchMissing SFI_instances.stottr --output output'
+os.system(run_lutra)
+
+
+with open("SFI_csv.csv", "w", newline='') as f:
+    write = csv.writer(f)
+      
+    write.writerow(["Node","Parent"])
+    write.writerows(all_text_csv_format)

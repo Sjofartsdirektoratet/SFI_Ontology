@@ -4,7 +4,7 @@ import {Tree, treeUtil} from 'react-d3-tree';
 import * as d3 from 'd3';
  
 
-function Viz() {
+const Viz = () => {
     const [data, setData] = useState([]);
     
     useEffect(() => {
@@ -14,14 +14,12 @@ function Viz() {
     }, []);
 
     
-    
     return(
         
-        <div id="treeWrapper" style={{width: '1000px', height: '1000px'}}>
-            
-          <h2></h2>
+        <div>
+           
+           <h1>{data[3].Parent}</h1>
           
-   
         </div>
       );
 }
