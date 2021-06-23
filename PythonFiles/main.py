@@ -9,6 +9,7 @@ from SFI_pdf_transform import SFI_pdf_transform
 from make_tree_to_rdf import Make_tree, Convert_to_rdf
 import datetime
 
+print(f"{datetime.datetime.now()} - starting")
 
 # =============================================================================
 # Use SFI_pdf_transform to scrape data from pdf

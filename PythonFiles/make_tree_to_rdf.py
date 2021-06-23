@@ -32,7 +32,6 @@ class Make_tree:
         nodegrupper = {}
         for i in data:
             tallet = float(i.split(" ")[0])
-        
             
             if tallet < 10:
                 nodegrupper[tallet] = Node(i, parent=self.root)
@@ -84,7 +83,7 @@ class Convert_to_rdf:
     def transform(self, classes):
         self.all_text = []
         for node, parent in classes:
-            node_orig = node
+            node_orig = node.replace("'", "").replace('"', '')
             node = node.replace(" ", "_").replace(",", "")\
                 .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
                     .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
@@ -94,7 +93,7 @@ class Convert_to_rdf:
         
         
             self.all_text.append(
-                "{0} Boat( {0}{1} , {0}{2}, '{3}' .".format(self.namespace_init,
+                "{0}Boat({0}{1} , {0}{2}, '{3}') .".format(self.namespace_init,
                                                             node, parent, node_orig)
                 )
             
