@@ -116,12 +116,11 @@ data2[i] = "323.01 Travelling cranes, complete"
 from anytree import Node, RenderTree
 import math
 
-root = Node("root")
+root = Node("SFIConsept")
 nodegrupper = {}
 for i in data2:
     tallet = float(i.split(" ")[0])
 
-                
     
     if tallet < 10:
         nodegrupper[tallet] = Node(i, parent=root)
