@@ -36,7 +36,7 @@ print(f"{datetime.datetime.now()} - Tree made")
 # =============================================================================
 fname_stottr = "SFI_instances.stottr"
 
-ctr = Convert_to_rdf(namespace='ex: <http://example.com/ns#>')
+ctr = Convert_to_rdf()
 ctr.transform(classes)
 ctr.make_stottr(fname=fname_stottr)
 print(f"{datetime.datetime.now()} - stottr made on {fname_stottr}")

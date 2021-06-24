@@ -65,11 +65,10 @@ class Make_tree:
 
     
 class Convert_to_rdf:
-    def __init__(self, namespace='ex: <http://example.com/ns#>'):
+    def __init__(self):
         
-        self.namespace = namespace
-        self.namespace_init = self.namespace.split(":")[0] + ":"
-        self.prefixes = ['@prefix '+self.namespace+' .',
+        self.namespace_init = "sdir:"
+        self.prefixes = [
             '@prefix ottr: <http://ns.ottr.xyz/0.4/> .',
             '@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .',
             '@prefix ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .',
@@ -77,7 +76,9 @@ class Convert_to_rdf:
             '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .',
             '@prefix owl: <http://www.w3.org/2002/07/owl#> .',
             '@prefix rstr: <http://tpl.ottr.xyz/owl/restriction/0.1/> .',
-            '@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .\n']
+            '@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .\n',
+            '@prefix o-sdir: <https://www.sdir.no/SFI-model/ottr#> .',
+            '@prefix sdir: <https://www.sdir.no/SFI-model#> .\n']
         
     
     def transform(self, classes):
@@ -108,7 +109,7 @@ class Convert_to_rdf:
         
         
             self.all_text.append(
-                '{0}Boat({0}{1} , {0}{2}, "{3}"@en, "{4}") .'.format(self.namespace_init,
+                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}") .'.format(self.namespace_init,
                                                             node, parent, node_label, code)
                 )
             
