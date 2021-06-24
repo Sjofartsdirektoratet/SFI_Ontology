@@ -25,7 +25,7 @@ class Make_tree:
         Returns
         -------
         classes : list of tuples
-            (node name, parent name).
+            (node name, parent name, overview group).
 
         '''
         self.root = Node("SFIConsept")
@@ -34,28 +34,29 @@ class Make_tree:
             tallet = float(i.split(" ")[0])
             
             if tallet < 10:
-                nodegrupper[tallet] = Node(i, parent=self.root)
+                nodegrupper[tallet] = (Node(i, parent=self.root), "Main_Group")
                 
             if tallet < 100 and tallet >= 10:
                 gruppe = math.floor(tallet/10)
-                parent = nodegrupper[gruppe]
-                nodegrupper[tallet] = Node(i, parent=parent)
+                parent = nodegrupper[gruppe][0]
+                nodegrupper[tallet] = (Node(i, parent=parent), "Group")
                 
             if tallet < 1000 and tallet >= 100 and tallet.is_integer():
                 gruppe = math.floor(tallet/10)
-                parent = nodegrupper[gruppe]
-                nodegrupper[tallet] = Node(i, parent=parent)
+                parent = nodegrupper[gruppe][0]
+                nodegrupper[tallet] = (Node(i, parent=parent), "Sub_Group")
         
             if tallet >= 100 and not tallet.is_integer():
                 gruppe = math.floor(tallet)
-                parent = nodegrupper[gruppe]
-                nodegrupper[tallet] = Node(i, parent=parent)
+                parent = nodegrupper[gruppe][0]
+                nodegrupper[tallet] = (Node(i, parent=parent), "Detail_Code")
                 
         # Get class with parent        
         classes = []
         for pre, fill, node in RenderTree(self.root):
             if node.parent:
-                classes.append((node.name, node.parent.name))
+                tallet = float(node.name.split(" ")[0])
+                classes.append((node.name, node.parent.name, nodegrupper[tallet][1]))
                 
         return classes
 
@@ -86,6 +87,7 @@ class Convert_to_rdf:
         Parameters
         ----------
         classes : list of all nodes with parent as tuple
+            (node, parent, overview_group)
 
         Returns
         -------
@@ -94,7 +96,7 @@ class Convert_to_rdf:
 
         '''
         self.all_text = []
-        for node, parent in classes:
+        for node, parent, overview_group in classes:
             node_orig = node.replace("'", "").replace('"', '')
             code = node_orig.split(" ")[0]
             node_label = " ".join(node_orig.split(" ")[1:])
@@ -108,9 +110,16 @@ class Convert_to_rdf:
             code = node_orig.split(" ")[0]
         
         
+            # Add for ottr o-sdir:CreateRelation template
             self.all_text.append(
                 'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}") .'.format(self.namespace_init,
                                                             node, parent, node_label, code)
+                )
+            
+            # Add for ottr o-sdir:GroupBelonging template
+            self.all_text.append(
+                'o-sdir:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init,
+                                                         node, overview_group)
                 )
             
     

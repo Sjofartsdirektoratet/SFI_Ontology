@@ -20,3 +20,10 @@ o-sdir:CreateRelation[owl:Class ?group, owl:Class ?parent, ? ?label, ? xsd:strin
 	ottr:Triple(?group, rdfs:label, ?label)
 	
 }.
+
+
+o-sdir:GroupBelonging[owl:Class ?group, owl:Class ?overview_group] :: {
+	# Defines in one of the four main groups
+	
+	ax:SubClassOf(?group, ?overview_group)
+}.
