@@ -81,9 +81,22 @@ class Convert_to_rdf:
         
     
     def transform(self, classes):
+        '''
+        Parameters
+        ----------
+        classes : list of all nodes with parent as tuple
+
+        Returns
+        -------
+        None.
+        Saves all_text as stottr for use with lutra
+
+        '''
         self.all_text = []
         for node, parent in classes:
             node_orig = node.replace("'", "").replace('"', '')
+            code = node_orig.split(" ")[0]
+            node_label = " ".join(node_orig.split(" ")[1:])
             node = node.replace(" ", "_").replace(",", "")\
                 .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
                     .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
@@ -96,7 +109,7 @@ class Convert_to_rdf:
         
             self.all_text.append(
                 "{0}Boat({0}{1} , {0}{2}, '{3}', '{4}') .".format(self.namespace_init,
-                                                            node, parent, node_orig, code)
+                                                            node, parent, node_label, code)
                 )
             
     
