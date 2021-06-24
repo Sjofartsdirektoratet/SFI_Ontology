@@ -28,13 +28,13 @@ class Make_tree:
             (node name, parent name, overview group).
 
         '''
-        self.root = Node("SFIConsept")
+        self.root = Node("SFIConcept")
         nodegrupper = {}
         for i in data:
             tallet = float(i.split(" ")[0])
             
             if tallet < 10:
-                nodegrupper[tallet] = (Node(i, parent=self.root), "Main_Group")
+                nodegrupper[tallet] = (Node(i, parent=self.root), "MainGroup")
                 
             if tallet < 100 and tallet >= 10:
                 gruppe = math.floor(tallet/10)
@@ -44,12 +44,12 @@ class Make_tree:
             if tallet < 1000 and tallet >= 100 and tallet.is_integer():
                 gruppe = math.floor(tallet/10)
                 parent = nodegrupper[gruppe][0]
-                nodegrupper[tallet] = (Node(i, parent=parent), "Sub_Group")
+                nodegrupper[tallet] = (Node(i, parent=parent), "SubGroup")
         
             if tallet >= 100 and not tallet.is_integer():
                 gruppe = math.floor(tallet)
                 parent = nodegrupper[gruppe][0]
-                nodegrupper[tallet] = (Node(i, parent=parent), "Detail_Code")
+                nodegrupper[tallet] = (Node(i, parent=parent), "DetailCode")
                 
         # Get class with parent        
         classes = []
@@ -95,6 +95,11 @@ class Convert_to_rdf:
         Saves all_text as stottr for use with lutra
 
         '''
+        
+        root_group = Node("SFIConcept")
+        node1 = Node("MainGroup", parent=root_group); node2 = Node("Group", parent=node1)
+        node3 = Node("SubGroup", parent=node2); node4 = Node("DetailCode", parent=node3)
+        
         self.all_text = []
         for node, parent, overview_group in classes:
             node_orig = node.replace("'", "").replace('"', '')
@@ -121,6 +126,16 @@ class Convert_to_rdf:
                 'o-sdir:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init,
                                                          node, overview_group)
                 )
+            
+            
+        # Add the four groups to each other..
+        for pre, fill, node in RenderTree(root_group):
+            if node.parent:
+                self.all_text.append(
+                    'o-sdir:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init, node.name,
+                                                            node.parent.name)
+                )
+
             
     
         
