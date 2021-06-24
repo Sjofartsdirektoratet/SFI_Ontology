@@ -14,6 +14,6 @@ ex:Boat[owl:Class ?group, owl:Class ?parent, ? ?label, ? xsd:string ?code] :: {
 	
     ax:SubClassOf(?group, ?parent), 
 	ottr:Triple(?group, ex:code, ?code),
-	ottr:Triple(?group, rdfs:Label, ?label)
+	ottr:Triple(?group, rdfs:label, ?label)
 	
 }.
