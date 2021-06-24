@@ -90,11 +90,13 @@ class Convert_to_rdf:
             parent = parent.replace(" ", "_").replace(",", "")\
                 .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
                     .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
+                    
+            code = node_orig.split(" ")[0]
         
         
             self.all_text.append(
-                "{0}Boat({0}{1} , {0}{2}, '{3}') .".format(self.namespace_init,
-                                                            node, parent, node_orig)
+                "{0}Boat({0}{1} , {0}{2}, '{3}', '{4}') .".format(self.namespace_init,
+                                                            node, parent, node_orig, code)
                 )
             
     
