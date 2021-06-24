@@ -108,7 +108,7 @@ class Convert_to_rdf:
         
         
             self.all_text.append(
-                "{0}Boat({0}{1} , {0}{2}, '{3}', '{4}') .".format(self.namespace_init,
+                '{0}Boat({0}{1} , {0}{2}, "{3}"@en, "{4}") .'.format(self.namespace_init,
                                                             node, parent, node_label, code)
                 )
             

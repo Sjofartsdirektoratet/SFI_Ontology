@@ -8,12 +8,12 @@
 @prefix rstr: <http://tpl.ottr.xyz/owl/restriction/0.1/> .
 @prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .
 
-ex:Boat[owl:Class ?group, owl:Class ?parent, ? xsd:string ?label, ? xsd:string ?code] :: {
+ex:Boat[owl:Class ?group, owl:Class ?parent, ? ?label, ? xsd:string ?code] :: {
     # Define group and connect to parent
 	# define code and label for class
 	
-    ax:SubClassOf(?group, ?parent),
-    o-rdfs:Label(?group, ?label), # langauge tag this one
-	ottr:Triple(?group, ex:Code, ?code)
+    ax:SubClassOf(?group, ?parent), 
+	ottr:Triple(?group, ex:Code, ?code),
+	ottr:Triple(?group, rdfs:Label, ?label)
 	
 }.
