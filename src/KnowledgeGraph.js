@@ -7,13 +7,55 @@ const KnowledgeGraph = () => {
 
     
     useEffect(() => {
-        d3.csv('SFI_csv.csv').then(data => {
-
+        d3.json('smalljsonld.json').then(data => {
+            var data2 = [] // New array to store triples with code property to avoid multiple root problem
+            for (const elem of data) {
+                    if(elem["https://www.sdir.no/SFI-model#code"]){
+                        data2.push(elem)
+                    }
+                }
             
+            const applyColor = (group) => {
+                console.log(group)
+                var hexVal = ["#555","#c1e8b0","#74d9ed","#74ed76","#ed7a74","#edb374","#ed74e7","#7e74ed","#96ed74"]
+                var group_nr = parseInt(group["https://www.sdir.no/SFI-model#code"][0])
+                console.log(hexVal[group_nr])
+                return hexVal[group_nr]
+            
+            }
+
+            const findIndex = (liste) => {
+                var sfi_index = null
+                for (var i=0; i < liste.length; i++){
+                    var id = liste[i]["@id"]
+                    if (id == "https://www.sdir.no/SFI-model#SFIConcept"){
+                        sfi_index = i;
+                    } 
+                    if(id == "") return 0;
+                    if (/\d/.test(id)){
+                        return i
+                    }
+                    
+                }
+                if(sfi_index) return sfi_index;
+                return i;
+            }
+
             const hierarchy = d3.stratify()
-            .id(function(d) { return d.Node; })
-            .parentId(function(d) { return d.Parent; })
-            (data);
+            .id(function(d) { 
+                if (d["https://www.sdir.no/SFI-model#code"]){   
+                    return d["@id"];
+                }
+                 })
+            .parentId(function(d) { 
+                if (d["https://www.sdir.no/SFI-model#code"]){
+                    var i = findIndex(d["http://www.w3.org/2000/01/rdf-schema#subClassOf"])
+                    //console.log(i)
+                    //console.log(d["http://www.w3.org/2000/01/rdf-schema#subClassOf"])
+                    return d["http://www.w3.org/2000/01/rdf-schema#subClassOf"][i]["@id"];
+                }
+               })
+            (data2);
 
             let height = 1500
             let width = 1500
@@ -26,6 +68,7 @@ const KnowledgeGraph = () => {
             
             console.log(hierarchy)
             const root = tree(hierarchy);
+           
             const svg = d3.select(d3KGraph.current)
                 .append('svg')
                 .attr("height",height)
@@ -35,7 +78,7 @@ const KnowledgeGraph = () => {
             svg.append("g")
                 .attr('transform', "translate("+(width/2)+","+(height/2)+")")
                 .attr("fill", "none")
-                .attr("stroke", "#555")
+                .attr("stroke","#555")
                 .attr("stroke-opacity", 0.5)
                 .attr("stroke-width", 1)
                 .selectAll("path")
@@ -53,9 +96,10 @@ const KnowledgeGraph = () => {
                 .attr("transform", d => `
                     rotate(${d.x * 180 / Math.PI - 90})
                     translate(${d.y},0)
-                    scale(${(Math.abs(4-d.depth)+1)*1.1})
+                    scale(${(Math.abs(4-d.depth)+1)*1.5})
                 `)
                 .attr("fill", d => d.children ? "#555" : "#999")
+                .attr("stroke", "#c1e8b0")
                 .attr("r", 0.5);
 
             svg.append("g")
@@ -71,12 +115,12 @@ const KnowledgeGraph = () => {
                     rotate(${d.x * 180 / Math.PI - 90}) 
                     translate(${d.y},0) 
                     rotate(${d.x >= Math.PI ? 180 : 0})
-                    scale(${(Math.abs(4-d.depth)+1)*1.1})
+                    scale(${(Math.abs(4-d.depth)+1)*1.5})
                 `)
                 .attr("dy", "0.31em")
                 .attr("x", d => d.x < Math.PI === !d.children ? 6 : -6)
                 .attr("text-anchor", d => d.x < Math.PI === !d.children ? "start" : "end")
-                .text(d => d.id)
+                .text(d => d.data["https://www.sdir.no/SFI-model#code"][0]["@value"])
                 .clone(true).lower()
                 .attr("stroke", "white");
 
