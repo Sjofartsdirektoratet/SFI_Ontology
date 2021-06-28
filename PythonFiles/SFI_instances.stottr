@@ -8167,3 +8167,4 @@ o-sdir:GroupBelonging(sdir:MainGroup, sdir:SFIConcept) .
 o-sdir:GroupBelonging(sdir:Group, sdir:MainGroup) .
 o-sdir:GroupBelonging(sdir:SubGroup, sdir:Group) .
 o-sdir:GroupBelonging(sdir:DetailCode, sdir:SubGroup) .
+o-sdir:ExplainProperty(sdir:code, "Code for exact position in SFI model"@en, "hasCode"@en, sdir:SFIConcept, xsd:string) .

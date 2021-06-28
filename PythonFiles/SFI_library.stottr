@@ -27,3 +27,14 @@ o-sdir:GroupBelonging[owl:Class ?group, owl:Class ?overview_group] :: {
 	
 	ax:SubClassOf(?group, ?overview_group)
 }.
+
+o-sdir:ExplainProperty[?p, ? ?comment, ? ?label, ? ?domain, ?range] :: {
+	# Define a property
+	
+	ottr:Triple(?p, rdf:type, rdf:Property),
+	ottr:Triple(?p, rdfs:label, ?label),
+	ottr:Triple(?p, rdfs:comment, ?comment),
+	ottr:Triple(?p, rdfs:range, ?range),
+	ottr:Triple(?p, rdfs:domain, ?domain)
+	
+}.

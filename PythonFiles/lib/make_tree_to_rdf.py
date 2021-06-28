@@ -135,6 +135,22 @@ class Convert_to_rdf:
                     'o-sdir:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init, node.name,
                                                             node.parent.name)
                 )
+                
+        # Add all property codes
+        properties = {"code":{"comment": "Code for exact position in SFI model",
+                              "label": "hasCode",
+                              "domain": "sdir:SFIConcept",
+                              "range": "xsd:string"}
+                      }
+        
+        for prop in properties:
+            self.all_text.append(
+                'o-sdir:ExplainProperty({0}, "{1}"@en, "{2}"@en, {3}, {4}) .'.format('sdir:'+prop, 
+                                                             properties[prop]['comment'],
+                                                             properties[prop]['label'],
+                                                             properties[prop]['domain'],
+                                                             properties[prop]['range'])
+                )
 
             
     

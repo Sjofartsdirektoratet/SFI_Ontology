@@ -1,3 +1,5 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdir:  <https://www.sdir.no/SFI-model#> .
 
@@ -19173,6 +19175,12 @@ sdir:351043_LO_coolers
         rdfs:label       "LO coolers"@en ;
         rdfs:subClassOf  sdir:DetailCode , sdir:351_LOADING_DISCHARGING_PUMPS ;
         sdir:code        "351.043" .
+
+sdir:code  a          rdf:Property ;
+        rdfs:comment  "Code for exact position in SFI model"@en ;
+        rdfs:domain   sdir:SFIConcept ;
+        rdfs:label    "hasCode"@en ;
+        rdfs:range    xsd:string .
 
 sdir:331030_Manoeuvre_consoles
         rdfs:label       "Manoeuvre consoles"@en ;
