@@ -7,7 +7,7 @@ const KnowledgeGraph = () => {
 
     
     useEffect(() => {
-        d3.json('smalljsonld.json').then(data => {
+        d3.json('jsontest.json').then(data => {
             var data2 = [] // New array to store triples with code property to avoid multiple root problem
             for (const elem of data) {
                     if(elem["https://www.sdir.no/SFI-model#code"]){
@@ -31,13 +31,13 @@ const KnowledgeGraph = () => {
                     if (id == "https://www.sdir.no/SFI-model#SFIConcept"){
                         sfi_index = i;
                     } 
-                    if(id == "") return 0;
-                    if (/\d/.test(id)){
+                    else if(id == "") return 0;
+                    else if (/\d/.test(id)){ // remove else if if every group is a part of SFIConcept
                         return i
                     }
                     
                 }
-                if(sfi_index) return sfi_index;
+                if(sfi_index != null) return sfi_index;
                 return i;
             }
 
@@ -50,8 +50,8 @@ const KnowledgeGraph = () => {
             .parentId(function(d) { 
                 if (d["https://www.sdir.no/SFI-model#code"]){
                     var i = findIndex(d["http://www.w3.org/2000/01/rdf-schema#subClassOf"])
-                    //console.log(i)
-                    //console.log(d["http://www.w3.org/2000/01/rdf-schema#subClassOf"])
+                    
+
                     return d["http://www.w3.org/2000/01/rdf-schema#subClassOf"][i]["@id"];
                 }
                })
