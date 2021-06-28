@@ -16,10 +16,9 @@ const KnowledgeGraph = () => {
                 }
             
             const applyColor = (group) => {
-                console.log(group)
+                
                 var hexVal = ["#555","#c1e8b0","#74d9ed","#74ed76","#ed7a74","#edb374","#ed74e7","#7e74ed","#96ed74"]
-                var group_nr = parseInt(group["https://www.sdir.no/SFI-model#code"][0])
-                console.log(hexVal[group_nr])
+                var group_nr = parseInt(group.data["https://www.sdir.no/SFI-model#code"][0]["@value"][0])
                 return hexVal[group_nr]
             
             }
@@ -66,7 +65,6 @@ const KnowledgeGraph = () => {
             .separation((a, b) => (a.parent == b.parent ? 1 : 2) / a.depth)
 
             
-            console.log(hierarchy)
             const root = tree(hierarchy);
            
             const svg = d3.select(d3KGraph.current)
@@ -75,20 +73,23 @@ const KnowledgeGraph = () => {
                 .attr("width",width)
                 // .attr('transform', "translate("+(width/2)+","+(height/2)+")");
                 
-            svg.append("g")
+            svg.append("g") // Applying attributes to Links in graph
                 .attr('transform', "translate("+(width/2)+","+(height/2)+")")
                 .attr("fill", "none")
-                .attr("stroke","#555")
+                //.attr("stroke", "#74d9ed")
                 .attr("stroke-opacity", 0.5)
                 .attr("stroke-width", 1)
                 .selectAll("path")
                 .data(root.links())
+                //.attr("stroke", d => applyColor(d))
                 .join("path")
                 .attr("d", d3.linkRadial()
                     .angle(d => d.x)
-                    .radius(d => d.y));
+                    .radius(d => d.y))
+                
+                .attr('stroke', function(d) { return applyColor(d.source); });
             
-            svg.append("g")
+            svg.append("g")// Applying attributes to Nodes in graph
                 .attr('transform', "translate("+(width/2)+","+(height/2)+")")
                 .selectAll("circle")
                 .data(root.descendants())
@@ -99,10 +100,18 @@ const KnowledgeGraph = () => {
                     scale(${(Math.abs(4-d.depth)+1)*1.5})
                 `)
                 .attr("fill", d => d.children ? "#555" : "#999")
-                .attr("stroke", "#c1e8b0")
-                .attr("r", 0.5);
+                .attr('stroke', function(d) { return applyColor(d); })
+                .attr("r", 0.5)
+                // .on('mouseover', function(d,node){
+                //     // var nodeSelection = d3.select(this);
+                //     console.log()
+                //     console.log(node.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"])
+                    
+                // })
+                .append("svg:title")
+                    .text(function(d) { return d.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]; });
 
-            svg.append("g")
+            svg.append("g") //Apply attributes to text in graph
                 .attr('transform', "translate("+(width/2)+","+(height/2)+")")
                 .attr("font-family", "sans-serif")
                 .attr("font-size", 1.5)
@@ -121,8 +130,10 @@ const KnowledgeGraph = () => {
                 .attr("x", d => d.x < Math.PI === !d.children ? 6 : -6)
                 .attr("text-anchor", d => d.x < Math.PI === !d.children ? "start" : "end")
                 .text(d => d.data["https://www.sdir.no/SFI-model#code"][0]["@value"])
+                //.text(d => d.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"])
+
                 .clone(true).lower()
-                .attr("stroke", "white");
+                //.attr('stroke', function(d) { return applyColor(d); });
 
 
             
