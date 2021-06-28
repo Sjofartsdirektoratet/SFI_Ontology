@@ -52,7 +52,7 @@ print(f"{datetime.datetime.now()} - lutra ran. Output: {fname_lutra}.ttl")
 # =============================================================================
 
 fname_in = "SFI_model.ttl"
-fname_out = "Ontologi.json"
+fname_out = "../public/Ontologi.json"
 rdf_to_json = Rdf_to_Jsonld(fname_in=fname_in, fname_out=fname_out)
 rdf_to_json.transform()
 print(f"{datetime.datetime.now()} - RDF to JSON-LD made. filename: {fname_out}")
