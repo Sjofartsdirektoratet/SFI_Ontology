@@ -7,6 +7,7 @@ Created on Wed Jun 23 14:06:40 2021
 
 from SFI_pdf_transform import SFI_pdf_transform
 from make_tree_to_rdf import Make_tree, Convert_to_rdf
+from rdf_to_jsonld import Rdf_to_Jsonld
 import datetime
 
 print(f"{datetime.datetime.now()} - starting")
@@ -41,6 +42,15 @@ ctr.transform(classes)
 ctr.make_stottr(fname=fname_stottr)
 print(f"{datetime.datetime.now()} - stottr made on {fname_stottr}")
 
-fname_lutra = 'output'
+fname_lutra = 'SFI_model'
 ctr.activate_lutra(fname=fname_lutra)
 print(f"{datetime.datetime.now()} - lutra ran. Output: {fname_lutra}.ttl")
+
+
+
+
+fname_in = "SFI_model.ttl"
+fname_out = "Ontologi.json"
+rdf_to_json = Rdf_to_Jsonld(fname_in=fname_in, fname_out=fname_out)
+rdf_to_json.transform()
+print(f"{datetime.datetime.now()} - RDF to JSON-LD made. filename: {fname_out}")
