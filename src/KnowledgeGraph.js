@@ -102,14 +102,20 @@ const KnowledgeGraph = () => {
                 .attr("fill", d => d.children ? "#555" : "#999")
                 .attr('stroke', function(d) { return applyColor(d); })
                 .attr("r", 0.5)
+                .attr("dy", ".35em")
+                //.text(function(d) { return d.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]; });
                 // .on('mouseover', function(d,node){
-                //     // var nodeSelection = d3.select(this);
+                //     d3.select(this).append("svg:text")
+                //         .attr('transform', "translate("+(width/2)+","+(height/2)+")")
+                //         .attr("text-anchor", "middle")  
+                //         .text(node.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"])
+
                 //     console.log()
                 //     console.log(node.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"])
                     
-                // })
-                .append("svg:title")
-                    .text(function(d) { return d.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]; });
+                // });
+                // .append("svg:title")
+                //     .text(function(d) { return d.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]; });
 
             svg.append("g") //Apply attributes to text in graph
                 .attr('transform', "translate("+(width/2)+","+(height/2)+")")
