@@ -7,7 +7,7 @@ const KnowledgeGraph = () => {
 
     
     useEffect(() => {
-        d3.json('jsontest.json').then(data => {
+        d3.json('jsontest_2.json').then(data => {
             var data2 = [] // New array to store triples with code property to avoid multiple root problem
             for (const elem of data) {
                     if(elem["https://www.sdir.no/SFI-model#code"]){
@@ -17,7 +17,7 @@ const KnowledgeGraph = () => {
             
             const applyColor = (group) => {
                 
-                var hexVal = ["#555","#c1e8b0","#74d9ed","#74ed76","#ed7a74","#edb374","#ed74e7","#7e74ed","#96ed74"]
+                var hexVal = ["#555","#a3ff47","#ff4747","#47ffe6","#ff47ea","#47ff94","#9747ff","#4766ff","#ffa347"]
                 var group_nr = parseInt(group.data["https://www.sdir.no/SFI-model#code"][0]["@value"][0])
                 return hexVal[group_nr]
             
@@ -31,7 +31,7 @@ const KnowledgeGraph = () => {
                         sfi_index = i;
                     } 
                     else if(id == "") return 0;
-                    else if (/\d/.test(id)){ // remove else if if every group is a part of SFIConcept
+                    else if (/\d/.test(id)){ // remove else if, if every group is a part of SFIConcept
                         return i
                     }
                     
@@ -40,7 +40,7 @@ const KnowledgeGraph = () => {
                 return i;
             }
 
-            const hierarchy = d3.stratify()
+            const hierarchy = d3.stratify() // Builds d3.hierarchy object from json
             .id(function(d) { 
                 if (d["https://www.sdir.no/SFI-model#code"]){   
                     return d["@id"];
@@ -56,16 +56,16 @@ const KnowledgeGraph = () => {
                })
             (data2);
 
-            let height = 1500
-            let width = 1500
+            let height = 1800
+            let width = 1800
             let radius = width/2 - 50
 
             let tree = d3.tree()
-            .size([2 * Math.PI, radius])
-            .separation((a, b) => (a.parent == b.parent ? 1 : 2) / a.depth)
+            .size([2 * Math.PI, radius]) 
+            .separation((a, b) => (a.parent == b.parent ? 1 : 4) / a.depth)
 
             
-            
+            console.log(hierarchy)
             const root = tree(hierarchy);
            
             var svg = d3.select(d3KGraph.current)
@@ -109,29 +109,38 @@ const KnowledgeGraph = () => {
                 .attr("transform", d => `
                     rotate(${d.x * 180 / Math.PI - 90})
                     translate(${d.y},0)
-                    scale(${(Math.abs(4-d.depth)+1)*1.5})
+                    scale(${(Math.abs(4-d.depth)+1)*2})
                 `)
                 .attr("fill", d => d.children ? "#555" : "#999")
                 .attr('stroke', function(d) { return applyColor(d); })
                 .attr("r", 0.5)
                 .on('mouseover', function(d,node){
+                    var code_info = node.data["https://www.sdir.no/SFI-model#code"][0]["@value"]
+                    var label_info = node.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]
+
+                    var labels = code_info + " " + label_info
                     var info = node.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]
                 
                     var xy = d3.pointer(d, node);
                         console.log(typeof(xy))
 
                     div.transition()		
-                        .duration(50)		
-                        .style("opacity", .9);		
-                    div.html(info)	
+                        .duration(600)		
+                        .style("visibility", "visible");		
+
+                    div.html(labels)    
                         .style("left", xy[0] + "px")		
                         .style("top", (xy[1] - 28) + "px")	
-                        .style("position", "absolute");
+                        .style("position", "absolute")
+                        .style("border-radius", "25px")
+                        .style("padding", "5px")
+                        .style("display", "block")
+                        .style("background-color", "#e7e7e7"); 
                     })					
                 .on("mouseout", function(d) {		
                     div.transition()		
-                        .duration(500)		
-                        .style("opacity", .9);	
+                        .duration(1600)		
+                        .style("visibility", "hidden");	
                 });
                                    
             
@@ -150,16 +159,16 @@ const KnowledgeGraph = () => {
                     rotate(${d.x * 180 / Math.PI - 90}) 
                     translate(${d.y},0) 
                     rotate(${d.x >= Math.PI ? 180 : 0})
-                    scale(${(Math.abs(4-d.depth)+1)*1.5})
+                    scale(${(Math.abs(4-d.depth)+1)*2})
                 `)
                 .attr("dy", "0.31em")
                 .attr("x", d => d.x < Math.PI === !d.children ? 6 : -6)
                 .attr("text-anchor", d => d.x < Math.PI === !d.children ? "start" : "end")
                 .text(d => d.data["https://www.sdir.no/SFI-model#code"][0]["@value"])
                 //.text(d => d.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"])
-
-                .clone(true).lower()
-                //.attr('stroke', function(d) { return applyColor(d); });
+                .style("padding","1px")
+                .clone(true).lower();
+                
             
 
 
