@@ -9,8 +9,11 @@ import rdflib
 from rdflib.serializer import Serializer
 import json
 
+fname_in = "output.ttl"
+fname_out = 'jsontest_2.json'
+
 g = rdflib.Graph()
-g.load('smalloutput.ttl', format="ttl")
+g.load(fname_in, format="ttl")
 
 root = '''
   [{"@id":"https://www.sdir.no/SFI-model#SFIConcept",
@@ -37,6 +40,9 @@ json_klartekst = str(jj)
 
 json_klartext = root + json_klartekst[3:-1].replace("\\n", "")
 
-with open('jsontest.json', 'w') as f:
+
+with open(fname_out, 'w') as f:
      f.write(json_klartext)
 f.close()
+
+print(f"RDF to JSON-LD made. filename: {fname_out}")
