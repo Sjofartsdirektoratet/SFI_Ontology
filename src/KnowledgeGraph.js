@@ -65,6 +65,7 @@ const KnowledgeGraph = () => {
             .separation((a, b) => (a.parent == b.parent ? 1 : 2) / a.depth)
 
             
+            
             const root = tree(hierarchy);
            
             const svg = d3.select(d3KGraph.current)
@@ -72,11 +73,17 @@ const KnowledgeGraph = () => {
                 .attr("height",height)
                 .attr("width",width)
                 // .attr('transform', "translate("+(width/2)+","+(height/2)+")");
-                
-            svg.append("g") // Applying attributes to Links in graph
+            
+            // Define the div for the tooltip
+            var div = d3.select('svg').append("div")	
+                .attr("class", "tooltip")				
+                .style("opacity", 0);
+
+            
+            // Applying attributes to Links in graph
+            svg.append("g") 
                 .attr('transform', "translate("+(width/2)+","+(height/2)+")")
                 .attr("fill", "none")
-                //.attr("stroke", "#74d9ed")
                 .attr("stroke-opacity", 0.5)
                 .attr("stroke-width", 1)
                 .selectAll("path")
@@ -89,7 +96,8 @@ const KnowledgeGraph = () => {
                 
                 .attr('stroke', function(d) { return applyColor(d.source); });
             
-            svg.append("g")// Applying attributes to Nodes in graph
+            // Applying attributes to Nodes in graph
+            svg.append("g")
                 .attr('transform', "translate("+(width/2)+","+(height/2)+")")
                 .selectAll("circle")
                 .data(root.descendants())
@@ -102,14 +110,38 @@ const KnowledgeGraph = () => {
                 .attr("fill", d => d.children ? "#555" : "#999")
                 .attr('stroke', function(d) { return applyColor(d); })
                 .attr("r", 0.5)
-                // .on('mouseover', function(d,node){
-                //     // var nodeSelection = d3.select(this);
-                //     console.log()
-                //     console.log(node.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"])
+                .on('mouseover', function(d,node){
+                    var info = node.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]
                     
-                // })
-                .append("svg:title")
-                    .text(function(d) { return d.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]; });
+                
+                    var xy = d3.pointer(d, node);
+                        console.log(typeof(xy[0]))
+
+                    div.transition()		
+                        .duration(50)		
+                        .style("opacity", .9);		
+                    div.html(info)	
+                        .style("left", xy[0].toString() + "px")		
+                        .style("top", (xy[1] - 28).toString() + "px");	
+                    })					
+                .on("mouseout", function(d) {		
+                    div.transition()		
+                        .duration(500)		
+                        .style("opacity", 0);	
+                });
+                                   
+                        //.attr("stroke", "black")
+                      //  console.log(d3.pointer)
+                        //var mouse = d3.pointer(this)
+                    //console.log(d3.mouse(this));
+                    //     // var nodeSelection = d3.select(this);
+                        //console.log(d3.event)
+                    //     console.log(node.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"])
+                        
+                    //  })
+                    // .append("svg:title")
+                    //     .text(function(d) { return d.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]; });
+                
 
             svg.append("g") //Apply attributes to text in graph
                 .attr('transform', "translate("+(width/2)+","+(height/2)+")")
@@ -134,11 +166,16 @@ const KnowledgeGraph = () => {
 
                 .clone(true).lower()
                 //.attr('stroke', function(d) { return applyColor(d); });
+            
+
 
 
             
-            
+
+
             })    
+
+            
     })
 
     return (
@@ -147,6 +184,5 @@ const KnowledgeGraph = () => {
         
     )
 }
-export default KnowledgeGraph;
 
- 
+export default KnowledgeGraph;
