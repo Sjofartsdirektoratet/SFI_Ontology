@@ -25,7 +25,7 @@ class Make_tree:
         Returns
         -------
         classes : list of tuples
-            (node name, parent name, overview group).
+            (node name, parent name, overview group, code, label, definition).
 
         '''
         self.root = Node("SFIConcept")
@@ -77,7 +77,13 @@ class Make_tree:
         classes = []
         for pre, fill, node in RenderTree(self.root):
             if node.parent:
-                classes.append((node.name, node.parent.name, node.group))
+                classes.append((node.name, #iden
+                                node.parent.name,#parent id
+                                node.group, #gruppe
+                                node.code, #coden
+                                node.label, #label
+                                node.definition #definition for node
+                                ))
                 
         return classes
 
@@ -117,15 +123,14 @@ class Convert_to_rdf:
 
         '''
         
-        root_group = Node("SFIConcept")
-        node1 = Node("MainGroup", parent=root_group); node2 = Node("Group", parent=node1)
-        node3 = Node("SubGroup", parent=node2); node4 = Node("DetailCode", parent=node3)
+        j = root_group = Node("SFIConcept")
+        for i in ["MainGroup", "Group", "SubGroup", "DetailCode"]:
+            j = Node(i, parent=j)
         
         self.all_text = []
-        for node, parent, overview_group in classes:
+        for node, parent, overview_group, code, label, definition in classes:
             node_orig = node.replace("'", "").replace('"', '')
-            code = node_orig.split(" ")[0]
-            node_label = " ".join(node_orig.split(" ")[1:])
+
             node = node.replace(" ", "_").replace(",", "")\
                 .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
                     .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
@@ -133,15 +138,13 @@ class Convert_to_rdf:
                 .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
                     .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
                     
-            code = node_orig.split(" ")[0]
-            definition = "Nothing yet"
         
             # Add for ottr o-sdir:CreateRelation template
             self.all_text.append(
                 'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", "{5}") .'.format(self.namespace_init,
                                                             node,
                                                             parent,
-                                                            node_label,
+                                                            label,
                                                             code, 
                                                             definition)
                 )
