@@ -128,29 +128,59 @@ class Convert_to_rdf:
                 )
             
             
-        # Add the four groups to each other..
-        for pre, fill, node in RenderTree(root_group):
+        # Add the four groups to each other
+        groupProperties = {"Ingen ting": "Ingen ting",
+                            "MainGroup":{"comment": "Main Group is the top level group in SFI Model. Explaining the main concept.",
+                                        "label": "hasGroup",
+                                        "domain": "SFIConcept",
+                                        "range": "Group"},
+                           "Group":{"comment": "Group is the second level group in SFI Model. Explaining the harder component in SFI.",
+                                        "label": "hasGroup",
+                                        "domain": "MainGroup",
+                                        "range": "SubGroup"},
+                           "SubGroup":{"comment": "Sub Group is the third level group in SFI Model. Explaining more deiltade group of components.",
+                                        "label": "hasGroup",
+                                        "domain": "Group",
+                                        "range": "DetalCode"},
+                           "DetailCode":{"comment": "Main Group is the lowest level group in SFI Model. Explaining the spesific code of a component.",
+                                        "label": "hasGroup",
+                                        "domain": "SubGroup",
+                                        "range": "xsd:string"}}
+        
+        for (pre, fill, node), groupProperty in zip(RenderTree(root_group), groupProperties):
             if node.parent:
                 self.all_text.append(
                     'o-sdir:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init, node.name,
                                                             node.parent.name)
                 )
+                self.all_text.append(
+                    'o-sdir:ExplainClasses({0}{1}, {0}{2}, {0}{3}, "{4}", "{5}"@en) .'
+                                                                     .format(self.namespace_init,
+                                                                     groupProperty,
+                                                                     groupProperties[groupProperty]['range'],
+                                                                     groupProperties[groupProperty]['domain'],
+                                                                     groupProperties[groupProperty]['label'],
+                                                                     groupProperties[groupProperty]['comment'])
+                    )
                 
         # Add all property codes
         properties = {"code":{"comment": "Code for exact position in SFI model",
                               "label": "hasCode",
-                              "domain": "sdir:SFIConcept",
+                              "domain": "SFIConcept",
                               "range": "xsd:string"}
                       }
         
         for prop in properties:
             self.all_text.append(
-                'o-sdir:ExplainProperty({0}, "{1}"@en, "{2}"@en, {3}, {4}) .'.format('sdir:'+prop, 
+                'o-sdir:ExplainProperty({0}{1}, "{2}"@en, "{3}"@en, {0}{4}, {5}) .'.format(self.namespace_init,
+                                                             prop, 
                                                              properties[prop]['comment'],
                                                              properties[prop]['label'],
                                                              properties[prop]['domain'],
                                                              properties[prop]['range'])
                 )
+            
+    
 
             
     
