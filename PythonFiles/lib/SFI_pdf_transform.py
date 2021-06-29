@@ -12,6 +12,10 @@ import re
 
 
 class SFI_pdf_transform:
+    '''
+    Tranform data from PDF to json
+    
+    '''
     def __init__(self):
         pass
     
@@ -55,7 +59,21 @@ class SFI_pdf_transform:
         i = data_unstack.index("3230.01 Travelling cranes, complete")
         data_unstack[i] = "323.01 Travelling cranes, complete"
         
-        return data_unstack
+        
+        # From list to json
+        
+        data_json = []
+        for e in data_unstack:
+            code = re.match(r"(\d+(\.\d+)?)", e).group(1)
+            label = re.sub("[0-9].", "", e)
+            definition = "something to define"
+            mydict = {e: {"code":code,
+                          "label":label,
+                          "defintion":definition}}
+            
+            data_json.append(mydict)
+        
+        return data_json
                 
     
     
