@@ -19,7 +19,7 @@ class Make_tree:
         '''
         Parameters
         ----------
-        data : list of all data
+        data : json of all data
             
 
         Returns
@@ -30,33 +30,54 @@ class Make_tree:
         '''
         self.root = Node("SFIConcept")
         nodegrupper = {}
-        for i in data:
-            tallet = float(i.split(" ")[0])
+        for info in data:
+            tallet = float(info["@value"]["code"])
+            label = info["@value"]["label"]
+            definition = info["@value"]["definition"]
             
             if tallet < 10:
-                nodegrupper[tallet] = (Node(i, parent=self.root), "MainGroup")
+                nodegrupper[tallet] = Node(info["@id"],
+                                           parent=self.root,
+                                           group="MainGroup", 
+                                           label=label, 
+                                           definition=definition,
+                                           code=tallet)
                 
             if tallet < 100 and tallet >= 10:
                 gruppe = math.floor(tallet/10)
-                parent = nodegrupper[gruppe][0]
-                nodegrupper[tallet] = (Node(i, parent=parent), "Group")
+                parent = nodegrupper[gruppe]
+                nodegrupper[tallet] = Node(info["@id"],
+                                           parent=parent,
+                                           group="Group",
+                                           label=label, 
+                                           definition=definition,
+                                           code=tallet)
                 
             if tallet < 1000 and tallet >= 100 and tallet.is_integer():
                 gruppe = math.floor(tallet/10)
-                parent = nodegrupper[gruppe][0]
-                nodegrupper[tallet] = (Node(i, parent=parent), "SubGroup")
+                parent = nodegrupper[gruppe]
+                nodegrupper[tallet] = Node(info["@id"], 
+                                           parent=parent,
+                                           group="SubGroup",
+                                           label=label,
+                                           definition=definition,
+                                           code=tallet)
         
             if tallet >= 100 and not tallet.is_integer():
                 gruppe = math.floor(tallet)
-                parent = nodegrupper[gruppe][0]
-                nodegrupper[tallet] = (Node(i, parent=parent), "DetailCode")
+                parent = nodegrupper[gruppe]
+                nodegrupper[tallet] = Node(info["@id"],
+                                           parent=parent,
+                                           group="DetailCode", 
+                                           label=label,
+                                           definition=definition,
+                                           code=tallet)
                 
         # Get class with parent        
         classes = []
         for pre, fill, node in RenderTree(self.root):
             if node.parent:
-                tallet = float(node.name.split(" ")[0])
-                classes.append((node.name, node.parent.name, nodegrupper[tallet][1]))
+                classes.append((node.name, node.parent.name, node.group))
                 
         return classes
 

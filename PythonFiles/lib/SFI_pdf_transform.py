@@ -67,9 +67,10 @@ class SFI_pdf_transform:
             code = re.match(r"(\d+(\.\d+)?)", e).group(1)
             label = re.sub("[0-9].", "", e)
             definition = "something to define"
-            mydict = {e: {"code":code,
+            mydict = {"@id":e,
+                      "@value": {"code":code,
                           "label":label,
-                          "defintion":definition}}
+                          "definition":definition}}
             
             data_json.append(mydict)
         
