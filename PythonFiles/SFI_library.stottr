@@ -11,13 +11,14 @@
 @prefix sdir: <https://www.sdir.no/SFI-model#> .
 
 
-o-sdir:CreateRelation[owl:Class ?group, owl:Class ?parent, ? ?label, ? xsd:string ?code] :: {
+o-sdir:CreateRelation[owl:Class ?group, owl:Class ?parent, ? ?label, ? xsd:string ?code, ? xsd:string ?definition] :: {
     # Define group and connect to parent
-	# define code and label for class
+	# define code, definition and label for class
 	
     ax:SubClassOf(?group, ?parent), 
 	ottr:Triple(?group, sdir:code, ?code),
-	ottr:Triple(?group, rdfs:label, ?label)
+	ottr:Triple(?group, rdfs:label, ?label),
+	ottr:Triple(?group, sdir:definition, ?definition)
 	
 }.
 
@@ -36,15 +37,4 @@ o-sdir:ExplainProperty[?p, ? ?comment, ? ?label, ? ?domain, ?range] :: {
 	ottr:Triple(?p, rdfs:comment, ?comment),
 	ottr:Triple(?p, rdfs:range, ?range),
 	ottr:Triple(?p, rdfs:domain, ?domain)
-}.
-
-o-sdir:ExplainClasses[owl:Class ?group, ?range, ? ?domain, ? ?label, ? ?comment ] :: {
-	# Define the range and domain of classes
-	# Er denne unødvending?
-	
-	# ottr.Triple(?group, rdf:type, rdf:Property), # Object property?
-	ottr:Triple(?group, rdfs:label, ?label),
-	ottr:Triple(?group, rdfs:comment, ?comment),
-	ottr:Triple(?group, rdfs:range, ?range),
-	ottr:Triple(?group, rdfs:domain, ?domain)
 }.

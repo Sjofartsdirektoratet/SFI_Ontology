@@ -113,12 +113,16 @@ class Convert_to_rdf:
                     .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
                     
             code = node_orig.split(" ")[0]
-        
+            definition = "Nothing yet"
         
             # Add for ottr o-sdir:CreateRelation template
             self.all_text.append(
-                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}") .'.format(self.namespace_init,
-                                                            node, parent, node_label, code)
+                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", "{5}") .'.format(self.namespace_init,
+                                                            node,
+                                                            parent,
+                                                            node_label,
+                                                            code, 
+                                                            definition)
                 )
             
             # Add for ottr o-sdir:GroupBelonging template
@@ -129,46 +133,22 @@ class Convert_to_rdf:
             
             
         # Add the four groups to each other
-        groupProperties = {"Ingen ting": "Ingen ting",
-                            "MainGroup":{"comment": "Main Group is the top level group in SFI Model. Explaining the main concept.",
-                                        "label": "hasGroup",
-                                        "domain": "SFIConcept",
-                                        "range": "Group"},
-                           "Group":{"comment": "Group is the second level group in SFI Model. Explaining the harder component in SFI.",
-                                        "label": "hasGroup",
-                                        "domain": "MainGroup",
-                                        "range": "SubGroup"},
-                           "SubGroup":{"comment": "Sub Group is the third level group in SFI Model. Explaining more deiltade group of components.",
-                                        "label": "hasGroup",
-                                        "domain": "Group",
-                                        "range": "DetalCode"},
-                           "DetailCode":{"comment": "Main Group is the lowest level group in SFI Model. Explaining the spesific code of a component.",
-                                        "label": "hasGroup",
-                                        "domain": "SubGroup",
-                                        "range": "xsd:string"}}
-        
-        for (pre, fill, node), groupProperty in zip(RenderTree(root_group), groupProperties):
+        for pre, fill, node in RenderTree(root_group):
             if node.parent:
                 self.all_text.append(
                     'o-sdir:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init, node.name,
                                                             node.parent.name)
                 )
-                self.all_text.append(
-                    'o-sdir:ExplainClasses({0}{1}, {0}{2}, {0}{3}, "{4}", "{5}"@en) .'
-                                                                     .format(self.namespace_init,
-                                                                     groupProperty,
-                                                                     groupProperties[groupProperty]['range'],
-                                                                     groupProperties[groupProperty]['domain'],
-                                                                     groupProperties[groupProperty]['label'],
-                                                                     groupProperties[groupProperty]['comment'])
-                    )
                 
         # Add all property codes
         properties = {"code":{"comment": "Code for exact position in SFI model",
                               "label": "hasCode",
                               "domain": "SFIConcept",
-                              "range": "xsd:string"}
-                      }
+                              "range": "xsd:string"},
+                      "definition":{"comment": "Definition on the class in SFI model",
+                              "label": "hasDefinition",
+                              "domain": "SFIConcept",
+                              "range": "xsd:string"}}
         
         for prop in properties:
             self.all_text.append(
