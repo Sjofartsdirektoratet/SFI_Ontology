@@ -108,6 +108,11 @@ class Convert_to_rdf:
             '@prefix o-sdir: <https://www.sdir.no/SFI-model/ottr#> .',
             '@prefix sdir: <https://www.sdir.no/SFI-model#> .\n']
         
+    def clean_string_id(self, string):
+        return string.replace(" ", "_").replace(",", "")\
+                .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
+                    .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
+        
     
     def transform(self, classes):
         '''
@@ -131,17 +136,18 @@ class Convert_to_rdf:
         for node, parent, overview_group, code, label, definition in classes:
             node_orig = node.replace("'", "").replace('"', '')
 
-            node = node.replace(" ", "_").replace(",", "")\
-                .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
-                    .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
-            parent = parent.replace(" ", "_").replace(",", "")\
-                .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
-                    .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
-                    
-        
+            node = self.clean_string_id(node)
+            parent = self.clean_string_id(parent)
+              
+                
+            # Definition is optinal in OTTR so add if there is one
+            if len(definition)>0:
+                definition = ', "'+definition.replace("'", "").replace('"', '').replace("\n", " ")+'"'
+            else:
+                definition = ',""'
             # Add for ottr o-sdir:CreateRelation template
             self.all_text.append(
-                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", "{5}") .'.format(self.namespace_init,
+                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}"{5}) .'.format(self.namespace_init,
                                                             node,
                                                             parent,
                                                             label,
@@ -190,9 +196,10 @@ class Convert_to_rdf:
     
         
     def make_stottr(self, fname="SFI_instances.stottr"):
-        with open("SFI_instances.stottr", "w") as f:
-            f.write("\n".join(self.prefixes))
-            f.write("\n".join(self.all_text))
+        self.a = '\n'.join(self.all_text)
+        with open("SFI_instances.stottr", "w", encoding='utf8') as f:
+            f.write('\n'.join(self.prefixes))
+            f.write(self.a)
     
             
     

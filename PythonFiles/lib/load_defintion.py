@@ -9,6 +9,14 @@ import rdflib
 from SPARQLWrapper import SPARQLWrapper, JSON, N3
 from pprint import pprint
 
+from SFI_pdf_transform import SFI_pdf_transform
+
+fname = "../../SFIDetailCode.pdf"
+sfi = SFI_pdf_transform()
+data = sfi.read_pdf(fname)
+data = sfi.transform(data)
+
+
 all_data = []
 
 for i, info in enumerate(classes):
@@ -16,7 +24,7 @@ for i, info in enumerate(classes):
     label = info[4].strip().replace(" ", "_").replace(",", "")\
                 .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
                     .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "").capitalize()
-                    
+    label_orig = label                
     if label[-3:].lower() == "ies":
         label = label[:-3] +"y"
     if label[-6:].lower() == "losses":
@@ -43,7 +51,7 @@ for i, info in enumerate(classes):
     
     try:
         res = qres['results']['bindings'][0]['ab']['value']
-        all_data.append((label, res))
+        all_data.append((label_orig, res))
         check = True
     except:
         pass
@@ -52,7 +60,7 @@ for i, info in enumerate(classes):
     
     
 all_data = dict(all_data)
-with open('../dbpediaINFO.pickle', 'wb') as handle:
+with open('dbpediaINFO.pickle', 'wb') as handle:
     pickle.dump(all_data, handle, protocol=pickle.HIGHEST_PROTOCOL)
     
 with open('../dbpediaINFO.pickle', 'rb') as handle:

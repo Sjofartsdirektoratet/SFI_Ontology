@@ -9,6 +9,7 @@ Created on Wed Jun 23 13:54:52 2021
 # Imports
 import PyPDF2
 import re
+import pickle
 
 
 class SFI_pdf_transform:
@@ -60,13 +61,22 @@ class SFI_pdf_transform:
         data_unstack[i] = "323.01 Travelling cranes, complete"
         
         
-        # From list to json
+        # Load definitions from pickle
+        with open('dbpediaINFO.pickle', 'rb') as f:
+            definitions = pickle.load(f)
+            
         
+        # From list to json
         data_json = []
+        count = 0
         for e in data_unstack:
+            
             code = re.match(r"(\d+(\.\d+)?)", e).group(1)
             label = re.sub("[0-9].", "", e)
-            definition = "something to define"
+            if label.capitalize().replace(" ", "_") in definitions.keys():
+                definition = definitions[label.capitalize().replace(" ", "_")]
+            else:
+                definition = ""
             mydict = {"@id":e,
                       "@value": {"code":code,
                           "label":label,
