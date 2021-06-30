@@ -196,10 +196,9 @@ class Convert_to_rdf:
     
         
     def make_stottr(self, fname="SFI_instances.stottr"):
-        self.a = '\n'.join(self.all_text)
         with open("SFI_instances.stottr", "w", encoding='utf8') as f:
             f.write('\n'.join(self.prefixes))
-            f.write(self.a)
+            f.write('\n'.join(self.all_text))
     
             
     

@@ -68,7 +68,6 @@ class SFI_pdf_transform:
         
         # From list to json
         data_json = []
-        count = 0
         for e in data_unstack:
             
             code = re.match(r"(\d+(\.\d+)?)", e).group(1)
