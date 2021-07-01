@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+## Documentation for Pythonfiles
+To see documentation for PythonFiles go to `PythonFiles` or click this link: [PythonFiles](https://github.com/Sjofartsdirektoratet/SFI_Ontology/tree/master/PythonFiles) .
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
