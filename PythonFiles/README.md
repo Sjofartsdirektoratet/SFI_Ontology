@@ -13,6 +13,7 @@ The RDF Ortology will be saved as a Turtle file. A JSON-LD file is made translat
 * `rdflib = 5.0.0`
 * `rdflib-jsonld = 0.5.0`
 * `pickle w/ protocol >= 4`
+* `nltk = 3.6.1, w/ wordnet`
 
 To check package `pip show package_name`  
 To install package `pip install package_name`

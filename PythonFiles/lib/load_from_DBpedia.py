@@ -8,6 +8,8 @@ Created on Wed Jun 30 09:55:35 2021
 import rdflib
 from SPARQLWrapper import SPARQLWrapper, JSON, N3
 import pickle
+from nltk.stem import WordNetLemmatizer
+import nltk
 
 class load_from_DBpedia:
     def __init__(self):
@@ -18,12 +20,10 @@ class load_from_DBpedia:
                         .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
                             .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "").capitalize()
         orig_label = new_label                
-        if label[-3:].lower() == "ies":
-            label = label[:-3] +"y"
-        if label[-6:].lower() == "losses":
-            label = label[:-2]
-        if label[-1:].lower() == "s":
-            label = label[:-1]
+        
+        new_label = new_label.split("_")
+        new_label[-1] = WordNetLemmatizer().lemmatize(new_label[-1])
+        new_label = "_".join(new_label)
         
         
         return orig_label, new_label
@@ -39,6 +39,17 @@ class load_from_DBpedia:
         -------
         None.
         '''
+        try:
+            nltk.data.find('corpora\wordnet.zip')
+        except:
+            svar = input("Wordnet.zip not found for lemmatizer, do you want to download? (y/n)")
+            if svar == "y":
+                nltk.download('wordnet.zip')
+                
+            else:
+                raise ValueError("*** Could not continue without wordnet.. ***")
+        
+        
         self.all_data = []
         for i, info in enumerate(classes):
             check = False
@@ -74,7 +85,7 @@ class load_from_DBpedia:
         
     def save_file(self, fname='dbpediaINFO.pickle'):
         with open(fname, 'wb') as handle:
-            pickle.dump(self.all_data, handle, protocol=pickle.HIGHEST_PROTOCOL)
+            pickle.dump(self.all_data, handle, protocol=4)
 
     
     
