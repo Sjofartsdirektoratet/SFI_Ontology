@@ -1,10 +1,13 @@
 # PythonFile Documentation
 
 ## Abstract
-Short about what to do
+This is a set of python scipts for making a RDF Ortology. They read and converts information to RDF with using ottr and lutra.  
+The RDF Ortology will be saved as a Turtle file. A JSON-LD file is made translated from RDF for used in the visualization web-app.
 
-### Package requirement
+### Package/program requirement
 * `Python >= 3.8`
+* `lutra latest`
+* `jdk >= 15.0.0`
 * `anytree =  2.8.0`
 * `PyPDF2 = 1.26.0`
 * `rdflib = 5.0.0`
@@ -13,9 +16,11 @@ Short about what to do
 
 To check package `pip show package_name`  
 To install package `pip install package_name`
+Link to [lutra](https://ottr.xyz/#Lutra)  
+jdk is java. Lutra only work with developer version
 
 
-## Read SFI-model from PDF
+## Read SFI-model from PDF and make RDF Ortology
 For scraping the SFI model from PDF and making a RDF Ontologi use:  
 `$ cd ~/SFI_Ontology/PythonFiles`  
 `$ python main.py`  
@@ -26,6 +31,7 @@ When running main.py this happens:
 * Making a .stottr file based corresponding on template `SFI_library.stottr`
 * Running Lutra on stottr file and template
 * Lutra outputs a RDF Ontologi written in Turtle (.ttl)
+* Translate RDF to JSON-LD for used in visualization
 
 
 ## Load information from DBpedia
@@ -43,4 +49,4 @@ When running load_dbpedia.py this happens:
 
 
 ## More in depth explantion
-Some more explanation
+Description on each file? Very short
