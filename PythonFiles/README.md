@@ -17,8 +17,8 @@ To install package `pip install package_name`
 
 ## Read SFI-model from PDF
 For scraping the SFI model from PDF and making a RDF Ontologi use:  
-`cd ~/SFI_Ontology/PythonFiles`  
-`python main.py`  
+`$ cd ~/SFI_Ontology/PythonFiles`  
+`$ python main.py`  
 
 When running main.py this happens:
 * Scarping PDF to JSON/dictionary
@@ -31,8 +31,8 @@ When running main.py this happens:
 ## Load information from DBpedia
 Some classes in the SFI model could be explained more deeply by DBpedia. Here is how to search for information based on the class name.  
 
-`cd ~/SFI_Ontology/PythonFiles`  
-`python load_dbpedia.py`
+`$ cd ~/SFI_Ontology/PythonFiles`  
+`$ python load_dbpedia.py`
 
 When running load_dbpedia.py this happens:
 * Scarping PDF to JSON/dictionary
