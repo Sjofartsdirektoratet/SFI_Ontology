@@ -71,9 +71,10 @@ class SFI_pdf_transform:
         for e in data_unstack:
             
             code = re.match(r"(\d+(\.\d+)?)", e).group(1)
-            label = re.sub("[0-9].", "", e)
-            if label.capitalize().replace(" ", "_") in definitions.keys():
-                definition = definitions[label.capitalize().replace(" ", "_")]
+            label = re.sub("[0-9].", "", e).strip().replace(" ", "_")\
+                .replace("(", "").replace(")","").capitalize()
+            if label in definitions.keys():
+                definition = definitions[label]
             else:
                 definition = ""
             mydict = {"@id":e,
