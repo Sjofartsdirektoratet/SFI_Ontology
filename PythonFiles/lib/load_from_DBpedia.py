@@ -10,7 +10,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON, N3
 import pickle
 
 class load_from_DBpedia:
-    def __init__(self, fname):
+    def __init__(self):
         pass
         
     def clean_label(self, label):
