@@ -67,7 +67,7 @@ Short discription about files
 `SFI_pdf_transform.py` - Reads the pdf document about SFI. Cleans up the lines and extract the important information. Return information in a JSON-LD like form.   
 `make_tree_to_rdf.py` - This file has two classes:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Make_tree`: This takes inn the JSON-like data and converts it into a tree. Their placement is 
-based on the number code the item has. Then class returns a list of tuples with enough information to make RDF.
+based on the number code the item has. Then class returns a list of tuples with enough information to make RDF.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Convert_to_pdf`: Continuing on list of tuples
 by iterating it, cleaning names for fitting as an URI, and rewriting to stottr file to match with the template. The whole stottr file is made and saved here.
 In the end lutra is activated with right flags and convert the stottr file to RDF triplets in Turtle format.  
