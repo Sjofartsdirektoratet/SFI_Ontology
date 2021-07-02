@@ -28,6 +28,35 @@ class load_from_DBpedia:
         
         return orig_label, new_label
     
+    def clean_label_manual(self, label):
+        if label[-3:].lower() == "ies":
+            label = label[:-3] +"y"
+        if label[-6:].lower() == "losses":
+            label = label[:-2]
+        if label[-1:].lower() == "s":
+            label = label[:-1]
+            
+        return label
+    
+    def send_query(self, label):
+        sparql = SPARQLWrapper("https://dbpedia.org/sparql")
+        query = '''
+                        select ?ab
+                        where {
+                            dbr:''' +label +''' dbo:abstract ?ab .
+                        
+                           FILTER (lang(?ab) = "en")
+                        } 
+                        
+                        LIMIT 10
+                        '''
+        sparql.setQuery(query)
+                        
+        sparql.setReturnFormat(JSON)
+        qres = sparql.query().convert()
+        return qres
+
+    
     def get_data(self, classes):
         '''
         Parameters
@@ -56,28 +85,21 @@ class load_from_DBpedia:
             label_orig, label = self.clean_label(info[4])
             
             
-            sparql = SPARQLWrapper("https://dbpedia.org/sparql")
-            query = '''
-                            select ?ab
-                            where {
-                                dbr:''' +label +''' dbo:abstract ?ab .
-                            
-                               FILTER (lang(?ab) = "en")
-                            } 
-                            
-                            LIMIT 10
-                            '''
-            sparql.setQuery(query)
-                            
-            sparql.setReturnFormat(JSON)
-            qres = sparql.query().convert()
+            qres = self.send_query(label)
             
             try:
                 res = qres['results']['bindings'][0]['ab']['value']
                 self.all_data.append((label_orig, res))
                 check = True
             except:
-                pass
+                try:
+                    if self.clean_label_manual(label_orig) != label:
+                        qres = self.send_query(self.clean_label_manual(label_orig))
+                        res = qres['results']['bindings'][0]['ab']['value']
+                        self.all_data.append((label_orig, res))
+                        check = True
+                except:
+                    pass
             
             print(f"{i} of {len(classes)-1}, found in DBpedia: {check} - {label}")
         self.all_data = dict(self.all_data)
