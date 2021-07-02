@@ -1,6 +1,6 @@
 # En god overskrift om appen og RDFen
 
-<img src="logo.PNG" width="500">  
+<img src="logo.PNG" width="300">  
 
 
 SFI_Ontologi is a project for SDIR trying to make an ortonology of the global SFI Coding and Classification System for marine and offshore industries.  
