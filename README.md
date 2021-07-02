@@ -1,16 +1,28 @@
 # En god overskrift om appen og RDFen
 
+![logo](logo.PNG)
+
+SFI_Ontologi is a project for SDIR trying to make an ortonology of the global SFI Coding and Classification System for marine and offshore industries.  
+This project has as goal to make a knowlegde graph of the system and a web-app to visualize relationship in the system.  
+
+Documentation for RDF could be found _HERE_.  
+Documentation for web-app and Pythonfiles below.
+
 ## Documentation for Pythonfiles
 To see documentation for PythonFiles go to `PythonFiles` or click this link: [PythonFiles](PythonFiles) .
 
 ## Documentation on web-app
+Bilde og noen godkjennelser?  
+
+SFI_Ontologi is a web-app 
+
 Write down how the app works here  
 How to download/copy repo
 
 ### How to start
 `$ cd ~/SFI_Ontology`  
 `$ npm start`  
-Go to `localhost:3000`
+Go to [http://localhost:3000](http://localhost:3000)
 
 ## Available Scripts - Remove this in the end
 
