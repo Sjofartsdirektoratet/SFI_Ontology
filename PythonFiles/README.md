@@ -63,4 +63,9 @@ Short discription about files
 `main.py` - Runs on files from lib. Reads the data and convert it into a knowlegde graph by combining the stottr files and running lutra.  
 `load_dbpedia.py` - Loads information from DBpedia based on the ID of each node in the knowlegde graph. Finds nodes by reading PDF.  
 
- 
+## Python lib
+`SFI_pdf_transform.py` - Reads the pdf document about SFI. Cleans up the lines and extract the important information. Return information in a JSON-LD like form.   
+`make_tree_to_rdf.py` - This file has two classes:
+			 *`Make_tree`: This takes inn the JSON-like data and converts it into a tree. Their placement is 
+based on the number code the item has. Then class returns a list of tuples with enough information to make RDF.
+			 *`Convert_to_pdf`: Some text
