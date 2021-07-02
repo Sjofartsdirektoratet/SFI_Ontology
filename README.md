@@ -1,11 +1,18 @@
-# Getting Started with Create React App
+# En god overskrift om appen og RDFen
 
 ## Documentation for Pythonfiles
 To see documentation for PythonFiles go to `PythonFiles` or click this link: [PythonFiles](PythonFiles) .
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Documentation on web-app
+Write down how the app works here  
+How to download/copy repo
 
-## Available Scripts
+### How to start
+`$ cd ~/SFI_Ontology`  
+`$ npm start`  
+Go to `localhost:3000`
+
+## Available Scripts - Remove this in the end
 
 In the project directory, you can run:
 
