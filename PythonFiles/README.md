@@ -71,6 +71,8 @@ based on the number code the item has. Then class returns a list of tuples with 
 * `Convert_to_pdf`: Continuing on list of tuples
 by iterating it, cleaning names for fitting as an URI, and rewriting to stottr file to match with the template. The whole stottr file is made and saved here.
 In the end lutra is activated with right flags and convert the stottr file to RDF triplets in Turtle format.  
+
+
 `rdf_to_json.py` - This file converts the RDF made above to a JSON-LD file used for visualization. Main root is added for making D3js to work properly. Saves is as a JSON file with defualt
 directory to the web-apps public folder.  
 `load_from_DBpedia.py` - Queries to DBpedia to enrichs the knowlegde graph. Lemmatizeses the last word in URI/label to get better hits in DBpedia. Saves results in a pickle file.
