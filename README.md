@@ -1,6 +1,6 @@
 # SFI model - an ontology with visualization
 
-<img src="logo.PNG" width="300">  
+<img src="images/logo.PNG" width="300">  
 
 
 SFI_Ontologi is a project for SDIR trying to make an ortonology of the global SFI Coding and Classification System for marine and offshore industries.  
