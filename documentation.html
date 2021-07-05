@@ -160,8 +160,7 @@
         <tbody><tr><th>Status:</th>
             <td><span property="vs:status">stable</span></td></tr>
         <tr><th>Properties include:</th>
-            <td>  <a href="#term_code">code</a>
-            <a href="#term_definition">definition</a>
+            <td>
         </td></tr>
         <tr><th>Used with:</th>
         <td>  
@@ -181,6 +180,66 @@
         <tbody><tr><th>Status:</th>
             <td><span property="vs:status">stable</span></td></tr>
         <tr><th>Properties include:</th>
+            <td>  
+        </td></tr>
+        <tr><th>Used with:</th>
+        <td>  
+        </td></tr>
+        </tbody>
+    </table>
+
+    <p> The <code><a href="#term_MainGroup">MainGroup</a></code> class is the top group in the hierarchy, containing the groups; 1 Ship General, 2 Hull, 3 Equipment For Cargo, 4 Ship Equipment, 5 Equipment For Crew and Passengers, 6 Machinery Main Components, 7 System For Machinery Main Components, 8 Ship Common Systems.</p>
+    <p style="float: right; font-size: small;">[<a href="#term_MainGroup">#</a>] <!-- MainGroup MainGroup --> [<a href="#glance">back to top</a>]</p>
+    <br>
+    </div>
+
+    <div class="specterm classterm " id="term_Group" about="documentation.html#term_Group" typeof="rdfs:Class">
+        <h3>Class: sdir:Group</h3> 
+        <em>Group</em> - The sub group of MainGroup in the hierarchy, containing several groups. <br>
+    <table style="th { float: top; }">
+        <tbody><tr><th>Status:</th>
+            <td><span property="vs:status">stable</span></td></tr>
+        <tr><th>Properties include:</th>
+            <td>  
+        </td></tr>
+        <tr><th>Used with:</th>
+        <td>  
+        </td></tr>
+        </tbody>
+    </table>
+
+    <p> The <code><a href="#term_Group">Group</a></code> class is the sub group of MainGroup.</p>
+    <p style="float: right; font-size: small;">[<a href="#term_Group">#</a>] <!-- Group Group --> [<a href="#glance">back to top</a>]</p>
+    <br>
+    </div>
+
+    <div class="specterm classterm " id="term_SubGroup" about="documentation.html#term_SubGroup" typeof="rdfs:Class">
+        <h3>Class: sdir:SubGroup</h3> 
+        <em>SubGroup</em> - The sub group of Group in the hierarchy, containing several sub groups. <br>
+    <table style="th { float: top; }">
+        <tbody><tr><th>Status:</th>
+            <td><span property="vs:status">stable</span></td></tr>
+        <tr><th>Properties include:</th>
+            <td>  
+        </td></tr>
+        <tr><th>Used with:</th>
+        <td>  
+        </td></tr>
+        </tbody>
+    </table>
+
+    <p> The <code><a href="#term_SubGroup">SubGroup</a></code> class is the sub group of Group.</p>
+    <p style="float: right; font-size: small;">[<a href="#term_SubGroup">#</a>] <!-- SubGroup SubGroup --> [<a href="#glance">back to top</a>]</p>
+    <br>
+    </div>
+
+    <div class="specterm classterm " id="term_DetailCode" about="documentation.html#term_DetailCode" typeof="rdfs:Class">
+        <h3>Class: sdir:DetailCode</h3> 
+        <em>DetailCode</em> - DetailCode is the lowest representation, detailing specific components. <br>
+    <table style="th { float: top; }">
+        <tbody><tr><th>Status:</th>
+            <td><span property="vs:status">stable</span></td></tr>
+        <tr><th>Properties include:</th>
             <td>  <a href="#term_code">code</a>
             <a href="#term_definition">definition</a>
         </td></tr>
@@ -190,19 +249,73 @@
         </tbody>
     </table>
 
-    <p> The <code><a href="#term_MainGroup">MainGroup</a></code> class is the top group in the hierarchy, containing the groups; 1 Ship General, 2 Hull, 3 Equipment For Cargo, 4 Ship Equipment, 5 Equipment For Crew and Passengers, 6 Machinery Main Components, 7 System For Machinery Main Components, 8 Ship Common Systems.</p>
-    <p style="float: right; font-size: small;">[<a href="#term_MainGroup">#</a>] <!-- SFIConcept SFIConcept --> [<a href="#glance">back to top</a>]</p>
+    <p> The <code><a href="#term_DetailCode">DetailCode</a></code> class details specific components.</p>
+    <p style="float: right; font-size: small;">[<a href="#term_DetailCode">#</a>] <!-- DetailCode DetailCode --> [<a href="#glance">back to top</a>]</p>
     <br>
     </div>
 
-    <h3 id="sec-ack">Acknowledgments</h3>
+
+    <h2>Properties</h2>
+
+    <div class="specterm propertyterm " id="term_code" about="documentation.html#term_code" typeof="rdf:Property">
+            <h3>Property: sdir:code</h3> 
+            <em>code</em> - code for the entity. <br>
+            
+        <table style="th { float: top; }">
+	    <tbody><tr><th>Status:</th>
+	    <td><span property="vs:status">stable</span></td></tr>
+            <tr><th>Domain:</th>
+    <td>having this property implies being a  <span rel="rdfs:domain" href="documentation.html#term_SFIConcept"><a href="#term_SFIConcept">SFIConcept</a></span>
+    </td></tr>
+            
+        </tbody>
+        </table>
+    <p>
+    The <code><a href="#term_code">code</a></code> property is a textual string of the unique code.
+    </p>
+
+
+    <p style="float: right; font-size: small;">[<a href="#term_code">#</a>] <!-- code code --> [<a href="#glance">back to top</a>]</p>
+    <br>
+    </div>
+
+    
+    <div class="specterm propertyterm " id="term_definition" about="documentation.html#term_definition" typeof="rdf:Property">
+            <h3>Property: sdir:definition</h3> 
+            <em>definition</em> - definition of the entity. <br>
+            
+        <table style="th { float: top; }">
+	    <tbody><tr><th>Status:</th>
+	    <td><span property="vs:status">stable</span></td></tr>
+            <tr><th>Domain:</th>
+    <td>having this property implies being a  <span rel="rdfs:domain" href="documentation.html#term_SFIConcept"><a href="#term_SFIConcept">SFIConcept</a></span>
+    </td></tr>
+            
+        </tbody>
+        </table>
+    <p>
+    The <code><a href="#term_definition">definition</a></code> property is a textual string describing the entity.
+    </p>
+
+
+    <p style="float: right; font-size: small;">[<a href="#term_definition">#</a>] <!-- definition definition --> [<a href="#glance">back to top</a>]</p>
+    <br>
+    </div>
+
+   
+
+    <h2 id="sec-ack">Acknowledgments</h2>
     <p>
         Thank you Veronika Heimsbakk for excellent guidance throughout this project. 
         Thank you Arild Viddal and the rest of the group from the Norwegian Maritime Authority for facilitating the project. 
         Thank you to Capgemini Norway for this opportunity.
     </p>
 
-
+    <h2 id="sec-changes">Recent Changes</h2>
+    <h3 id="sec-changes20210705">Changes in version 0.1 (2021-07-05)</h3>
+    <ul>
+        <li>'Document' type status changed from 'testing' to 'stable'</li>
+    </ul>
 
 </body>
 </html>
