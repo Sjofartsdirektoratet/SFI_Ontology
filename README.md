@@ -3,8 +3,8 @@
 <img src="logo.PNG" width="300">  
 
 
-SFI_Ontologi is a project for SDIR trying to make an ortonology of the global SFI Coding and Classification System for marine and offshore industries.  
-This project has as goal to make a knowlegde graph of the system and a web-app to visualize relationship in the system.  
+SFI_Ontology is a project for SDIR trying to make an ontology of the global SFI Coding and Classification System for marine and offshore industries.  
+This project has as goal to make a knowledge graph of the system and a web-app to visualize relationship in the system.  
 
 Documentation for RDF could be found _HERE_.  
 Documentation for web-app and Pythonfiles below.
@@ -15,10 +15,17 @@ To see documentation for PythonFiles go to `PythonFiles` or click this link: [Py
 ## Documentation on web-app
 Bilde og noen godkjennelser?  
 
-SFI_Ontologi is a web-app 
+SFI_Ontology is a web-app 
 
 Write down how the app works here  
 How to download/copy repo
+
+### D3.js 
+
+"D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation." [D3.js](https://d3js.org/)
+
+The visualization is realized using a D3.tree() with radial links. The data is parsed using d3.json()(could also be csv) and is used to create a d3.hierarchy which again is used as input to the D3.tree() object. The knowledge graph itself is a SVG element. 
+
 
 ### How to start
 `$ cd ~/SFI_Ontology`  
