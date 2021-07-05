@@ -48,7 +48,10 @@
     <h2 id="sec-status">Abstract</h2>
 
     <p>
-        Some text about abstract
+        The SFI Group System is the most widely used classification system for the maritime and offshore industry worldwide.
+         It is an international standard, which provides a functional subdivision of technical and financial ship or rig information.
+          SFI consists of a technical account structure covering all aspects of ship/rig specification, and it can be used as a basic standard for all systems in the shipping/offshore industry. 
+          More than 6000 SFI systems have been installed worldwide. SFI is used by shipping and offshore companies, shipyards, consultancies, software suppliers, authorities and classification societies.
     </p>
 
     <div class="status">
@@ -88,10 +91,116 @@
         <h2 id="glance">SFI model at a glance</h2>
         
         <p>SFI model description at first glance </p>
-    
+        
 
     </div>
 
+    <div>
+        <h3>Terms in SFI model</h3>
+
+        <p>
+            This is an overview of the main terms in the SFI model by class and by property.
+        </p>
+
+        <div class="azlist">
+            <p>Classes: | <a href="#term_SFIConcept">SFIConcept</a> |  <a href="#term_MainGroup">MainGroup</a> |  <a href="#term_Group">Group</a> |  <a href="#term_SubGroup">SubGroup</a> |  <a href="#term_DetailCode">DetailCode</a> |  
+            </p>
+            <p>Properties: | <a href="#term_code">code</a> |  <a href="#term_definition">definition</a> |
+            </p>
+        </div>
+
+        <p>
+
+        </p>
+
+    </div>
+    <h2 id="sec-example">Example</h2>
+    <p>Here is a very basic document describing a detail code:</p>
+    <div class="example">
+        <pre>sdir:641039_Salinometers
+        rdfs:label       "Salinometers"@en ;
+        rdfs:subClassOf  sdir:DetailCode , sdir:641_MAIN_BOILERS ;
+        sdir:code        "641.039" ;
+        sdir:definition  "A salinometer is a device designed to measure the salinity, or dissolved salt content,..." .
+    </pre>
+    </div>
+    <p>This brief example shows how a detail code is described using RDF.
+         It shows which group it is sub class of, which again shows where in the hierarchy it is located. 
+         It contains the property code which is the unique "ID" and the property definiton which describes the detail code further.  
+        </p>
+
+    <h2 id="sec-intro">1 Introduction: SFI Basics</h2>
+    <h3 id="sec-sw">The Semantic Web</h3>
+    <blockquote>
+        <p>
+        <em>
+          To a computer, the Web is a flat, boring world, devoid of meaning. 
+          This is a pity, as in fact documents on the Web describe real objects and 
+          imaginary concepts, and give particular relationships between them. For 
+          example, a document might describe a person. The title document to a house describes a house and also the ownership relation 
+          with a person. Adding semantics to the Web involves two things: allowing documents which have information 
+          in machine-readable forms, and allowing links to be created with relationship 
+          values. Only  when we have this extra level of semantics will we be able to use computer power 
+          to help us exploit the information to a greater extent than our own reading.
+        </em>
+        - Tim Berners-Lee "<a href="http://www.w3.org/Talks/WWW94Tim/">W3 future directions</a>" keynote, 1st World Wide Web Conference Geneva, May 1994
+        </p>
+        </blockquote>
+
+    <p>
+        The modelling of the SFI Coding and Classification System is an attempt to digitalize the model and automate the usage of the classification system.
+    </p>
+
+    <h2>Classes</h2>
+
+    <div class="specterm classterm " id="term_SFIConcept" about="documentation.html#term_SFIConcept" typeof="rdfs:Class">
+        <h3>Class: sdir:SFIConcept</h3> 
+        <em>SFIConcept</em> - The root concept of the ontology. Every group is sub class of this class. <br>
+    <table style="th { float: top; }">
+        <tbody><tr><th>Status:</th>
+            <td><span property="vs:status">stable</span></td></tr>
+        <tr><th>Properties include:</th>
+            <td>  <a href="#term_code">code</a>
+            <a href="#term_definition">definition</a>
+        </td></tr>
+        <tr><th>Used with:</th>
+        <td>  
+        </td></tr>
+        </tbody>
+    </table>
+
+    <p> The <code><a href="#term_SFIConcept">SFIConcept</a></code> class is the most basic concept in the SFI domain.</p>
+    <p style="float: right; font-size: small;">[<a href="#term_SFIConcept">#</a>] <!-- SFIConcept SFIConcept --> [<a href="#glance">back to top</a>]</p>
+    <br>
+    </div>
+
+    <div class="specterm classterm " id="term_MainGroup" about="documentation.html#term_MainGroup" typeof="rdfs:Class">
+        <h3>Class: sdir:MainGroup</h3> 
+        <em>MainGroup</em> - The top group in the hierarchy, containing 8 main groups. <br>
+    <table style="th { float: top; }">
+        <tbody><tr><th>Status:</th>
+            <td><span property="vs:status">stable</span></td></tr>
+        <tr><th>Properties include:</th>
+            <td>  <a href="#term_code">code</a>
+            <a href="#term_definition">definition</a>
+        </td></tr>
+        <tr><th>Used with:</th>
+        <td>  
+        </td></tr>
+        </tbody>
+    </table>
+
+    <p> The <code><a href="#term_MainGroup">MainGroup</a></code> class is the top group in the hierarchy, containing the groups; 1 Ship General, 2 Hull, 3 Equipment For Cargo, 4 Ship Equipment, 5 Equipment For Crew and Passengers, 6 Machinery Main Components, 7 System For Machinery Main Components, 8 Ship Common Systems.</p>
+    <p style="float: right; font-size: small;">[<a href="#term_MainGroup">#</a>] <!-- SFIConcept SFIConcept --> [<a href="#glance">back to top</a>]</p>
+    <br>
+    </div>
+
+    <h3 id="sec-ack">Acknowledgments</h3>
+    <p>
+        Thank you Veronika Heimsbakk for excellent guidance throughout this project. 
+        Thank you Arild Viddal and the rest of the group from the Norwegian Maritime Authority for facilitating the project. 
+        Thank you to Capgemini Norway for this opportunity.
+    </p>
 
 
 
