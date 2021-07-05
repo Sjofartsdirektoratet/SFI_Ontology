@@ -1,4 +1,4 @@
-# En god overskrift om appen og RDFen
+# SFI model - an ontology with visualization
 
 <img src="logo.PNG" width="300">  
 
