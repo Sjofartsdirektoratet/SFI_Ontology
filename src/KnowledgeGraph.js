@@ -203,7 +203,6 @@ function KnowledgeGraph(){
                     collapseLevel(d,node,fromJson,svg);
                 });
                                     
-            
 
             //Apply attributes to text in graph
             svg.append("g") 
