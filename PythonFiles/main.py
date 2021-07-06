@@ -22,14 +22,17 @@ data = sfi.read_pdf(fname)
 
 data = sfi.transform(data)
 print(f"{datetime.datetime.now()} - Data scraped from pdf")
+#sfi.save_json()
 
 
 # =============================================================================
 # Use Make_tree to assign the data in tree format
 # =============================================================================
 
-classes = Make_tree().transform(data)
+tree = Make_tree()
+classes = tree.transform(data)
 print(f"{datetime.datetime.now()} - Tree made")
+#tree.print_tree()
 
 
 # =============================================================================

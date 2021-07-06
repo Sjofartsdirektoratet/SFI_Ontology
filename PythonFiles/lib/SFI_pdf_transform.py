@@ -10,6 +10,7 @@ Created on Wed Jun 23 13:54:52 2021
 import PyPDF2
 import re
 import pickle
+import json
 
 
 class SFI_pdf_transform:
@@ -84,7 +85,16 @@ class SFI_pdf_transform:
             
             data_json.append(mydict)
         
+        self.data_json = data_json
         return data_json
+    
+    
+    def save_json(self):
+        # Save to json file
+        
+        with open('info.json', 'w') as f:
+            json.dump(self.data_json, f)
+        f.close()
                 
     
     
