@@ -6,19 +6,22 @@
 SFI_Ontology is a project for SDIR trying to make an ontology of the global SFI Coding and Classification System for marine and offshore industries.  
 This project has as goal to make a knowledge graph of the system and a web-app to visualize relationship in the system.  
 
-Documentation for RDF could be found _HERE_.  
+Documentation for RDF could be found locally on `~/SFI_Ontoloy/documentation.html`.  
 Documentation for web-app and Pythonfiles below.
 
 ## Documentation for Pythonfiles
 To see documentation for PythonFiles go to `PythonFiles` or click this link: [PythonFiles](PythonFiles) .
 
 ## Documentation on web-app
-Bilde og noen godkjennelser?  
+The web-app is a visualization of the SFI Ontology. In the app it's possible to see relations between the nodes and their positions.  
 
-SFI_Ontology is a web-app 
+To run the app either download/clone this repositry or go to _THIS WEBSITE_  
+`$ cd ~/SFI_Ontology`  
+`$ npm install -g serve`  
+`$ serve -s build`  
+Go to [localhost:5000](localhost:5000)
 
-Write down how the app works here  
-How to download/copy repo
+The app is used based on D3.js:
 
 ### D3.js 
 
