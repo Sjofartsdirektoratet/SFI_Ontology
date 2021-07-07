@@ -9,11 +9,19 @@ Created on Wed Jun 23 14:13:25 2021
 from anytree import Node, RenderTree
 import math
 import os
+import json
 
 
 class Make_tree:
     def __init__(self):
         pass
+    
+    def read_json(self, filename):
+        with open(filename, 'r') as f:
+            data = json.load(f)
+        f.close()
+        
+        return data
     
     def transform(self, data):
         '''
