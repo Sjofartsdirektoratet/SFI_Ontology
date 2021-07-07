@@ -59,7 +59,7 @@ function KnowledgeGraph(){
             d._children = null;
         }
     }
-    
+
 
     const [fromJson, setFromJson] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -94,17 +94,10 @@ function KnowledgeGraph(){
         }, []);
 
 
-        let height2 = 2500
-        let width2 = 2500
-        let radius = width2/2 - 50
+        
 
         var svg = d3.select(d3KGraph.current)
             
-        
-        const tree = d3.tree()
-            .size([2 * Math.PI, radius]) 
-            .separation((a, b) => (a.parent == b.parent ? 1 : 6)/ a.depth)
-
 
         if(!loading){
             if(firstTimeLoading){
@@ -118,6 +111,14 @@ function KnowledgeGraph(){
 
         function update(data, svg){
 
+            console.log(d3.max(data, (x) => {return x.depth}))
+
+            let height2 = 1500
+            let width2 = 1500
+            let radius = width2/2 - 50
+            const tree = d3.tree()
+            .size([2 * Math.PI, radius]) 
+            .separation((a, b) => (a.parent == b.parent ? 1 : 6)/ a.depth)
             
             const root = tree(data)
             
