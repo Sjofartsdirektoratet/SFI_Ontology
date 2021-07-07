@@ -15,13 +15,21 @@ To see documentation for PythonFiles go to `PythonFiles` or click this link: [Py
 ## Documentation on web-app
 The web-app is a visualization of the SFI Ontology. In the app it's possible to see relations between the nodes and their positions.  
 
+### How to start
 To run the app either download/clone this repositry or go to _THIS WEBSITE_  
+
+#### Run locally
 `$ cd ~/SFI_Ontology`  
+Some changes must be made for it to run locally. They're all done in `package.json`.  
+Remove:  
+`"homepage": "..."` and `"predeploy": "npm run build",`  
+
+Then:  
 `$ npm install -g serve`  
 `$ serve -s build`  
 Go to [localhost:5000](localhost:5000)
 
-The app is used based on D3.js:
+The app is build with react framework and based on the library D3.js managing the data and graph representation.
 
 ### D3.js 
 
@@ -29,11 +37,11 @@ The app is used based on D3.js:
 
 The visualization is realized using a D3.tree() with radial links. The data is parsed using d3.json()(could also be csv) and is used to create a d3.hierarchy which again is used as input to the D3.tree() object. The knowledge graph itself is a SVG element. 
 
-
-### How to start
-`$ cd ~/SFI_Ontology`  
-`$ npm start`  
-Go to [http://localhost:3000](http://localhost:3000)
+### Deploy updates with gh-pages
+It's easy to update the app with github pages. Push your update to repository and build/deploy the page in one command.  
+remember to add homepage and pre-deploy. Then use:  
+`npm run deploy`  
+And github makes/updates the branch gh-pages.
 
 ## Available Scripts - Remove this in the end
 
