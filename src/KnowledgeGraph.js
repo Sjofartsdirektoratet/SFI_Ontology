@@ -111,14 +111,14 @@ function KnowledgeGraph(){
 
         function update(data, svg){
 
-            console.log(d3.max(data, (x) => {return x.depth}))
+            const maxDepth = d3.max(data, (x) => {return x.depth})
 
-            let height2 = 1000
-            let width2 = 1000
+            let height2 = 2000-(200*maxDepth)
+            let width2 = 2000-(200*maxDepth)
             let radius = width2/2 - 50
             const tree = d3.tree()
             .size([2 * Math.PI, radius]) 
-            .separation((a, b) => (a.parent == b.parent ? 1 : 6)/ a.depth)
+            .separation((a, b) => (a.parent == b.parent ? 1 : 3)/ a.depth)
             
             const root = tree(data)
             
