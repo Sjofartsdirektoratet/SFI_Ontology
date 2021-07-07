@@ -45,7 +45,7 @@ function KnowledgeGraph(){
 
     function initialCollapse(d){
         
-        if (d.children && d.depth > 0) {
+        if (d.children && d.depth > 1) {
             d._children = d.children;
             d._children.forEach(initialCollapse)
             d.children = null;
@@ -113,8 +113,8 @@ function KnowledgeGraph(){
 
             console.log(d3.max(data, (x) => {return x.depth}))
 
-            let height2 = 500
-            let width2 = 500
+            let height2 = 1000
+            let width2 = 1000
             let radius = width2/2 - 50
             const tree = d3.tree()
             .size([2 * Math.PI, radius]) 
