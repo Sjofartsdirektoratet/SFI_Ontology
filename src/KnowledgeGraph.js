@@ -45,7 +45,7 @@ function KnowledgeGraph(){
 
     function initialCollapse(d){
         
-        if (d.children && d.depth > 1) {
+        if (d.children && d.depth > 0) {
             d._children = d.children;
             d._children.forEach(initialCollapse)
             d.children = null;
@@ -69,11 +69,7 @@ function KnowledgeGraph(){
         d3.json('jsontest_2.json').then(data => {
 
             var data2 = [] // New array to store triples with code property to avoid multiple root problem
-            for (const elem of data) {
-                    if(elem["https://www.sdir.no/SFI-model#code"]){
-                        data2.push(elem)
-                    }
-                }
+            data.filter(x => x["https://www.sdir.no/SFI-model#code"]).map(x => data2.push(x))
             
             const hierarchy = d3.stratify() // Builds d3.hierarchy object from json
             .id(function(d) { 
@@ -181,8 +177,8 @@ function KnowledgeGraph(){
                         .style("visibility", "visible");		
 
                     div.html(labels)    
-                        .style("left", xy[0] + 10 + "px")		
-                        .style("top", (xy[1] - 65) + "px")	
+                        .style("left", xy[0] + 5 + "px")		
+                        .style("top", (xy[1] - 55) + "px")	
                         .style("position", "absolute")
                         .style("border-radius", "25px")
                         .style("padding", "5px")
