@@ -113,8 +113,8 @@ function KnowledgeGraph(){
 
             console.log(d3.max(data, (x) => {return x.depth}))
 
-            let height2 = 1000
-            let width2 = 1000
+            let height2 = 500
+            let width2 = 500
             let radius = width2/2 - 50
             const tree = d3.tree()
             .size([2 * Math.PI, radius]) 
