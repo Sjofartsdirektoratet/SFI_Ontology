@@ -54,7 +54,7 @@ class load_from_DBpedia:
                         
         sparql.setReturnFormat(JSON)
         qres = sparql.query().convert()
-        return qres
+        return qres, "dbo:"+label
 
     
     def get_data(self, classes):
@@ -85,18 +85,18 @@ class load_from_DBpedia:
             label_orig, label = self.clean_label(info[4])
             
             
-            qres = self.send_query(label)
+            qres, output_label = self.send_query(label)
             
             try:
                 res = qres['results']['bindings'][0]['ab']['value']
-                self.all_data.append((label_orig, res))
+                self.all_data.append((label_orig, output_label))
                 check = True
             except:
                 try:
                     if self.clean_label_manual(label_orig) != label:
                         qres = self.send_query(self.clean_label_manual(label_orig))
                         res = qres['results']['bindings'][0]['ab']['value']
-                        self.all_data.append((label_orig, res))
+                        self.all_data.append((label_orig, output_label))
                         check = True
                 except:
                     pass

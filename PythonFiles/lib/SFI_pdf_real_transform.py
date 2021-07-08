@@ -7,6 +7,7 @@ Created on Thu Jul  8 09:56:32 2021
 
 
 import re
+import pickle
 
 ff = "SFI\xa0Manual for Ships Vrs. 7.12 - Norwegian Maritime Authority Sjøfartsdirektoratet Office - A4.pdf"
 
@@ -35,6 +36,9 @@ for page in pages[67:305]:
 
 remove_refenrances()
 grouping_lists_and_definitions()
+add_code_and_label()
+add_dbpedia()
+reforme_to_json()
     
 
 def make_dict(page_list):
@@ -93,8 +97,39 @@ def grouping_lists_and_definitions():
             except:
                 pass
         all_codes[i]["references"] = references             
+
              
-    
+def add_code_and_label():
+    for i in all_codes:    
+        code = re.match(r"(\d+(\.\d+)?)", i).group(1)
+        label = re.sub("[0-9].", "", i).strip().capitalize()
+        all_codes[i]["label"] = label
+        all_codes[i]["code"] = code
+        
+def add_dbpedia():
+    with open('../dbpediaINFO.pickle', 'rb') as f:
+            dbpedia_definitions = pickle.load(f)
+            
+    for i in all_codes:
+        if all_codes[i]['label'] in dbpedia_definitions.keys():
+            all_codes[i]['dbpedia'] = dbpedia_definitions[all_codes[i]['label']]
+
+        
+def reforme_to_json():
+    myjson = []
+    for i in all_codes:
+        mydict = {"@id": all_codes[i]['id'],
+                  "@value": {"code": all_codes[i]['code'],
+                             "label": all_codes[i]['label'],
+                             "definition": all_codes[i]['definition'],
+                             "references": all_codes[i]['references'],
+                             "dbpedia": all_codes[i]['dbpedia']
+                             }
+                 }
+        myjson.append(mydict)
+    return myjson
+        
+
    
         
 
