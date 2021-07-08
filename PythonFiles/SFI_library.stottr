@@ -11,17 +11,21 @@
 @prefix sdir: <https://www.sdir.no/SFI-model#> .
 
 
-o-sdir:CreateRelation[owl:Class ?group, owl:Class ?parent, ? ?label, ? xsd:string ?code, ? xsd:string ?definition] :: {
+o-sdir:CreateRelation[owl:Class ?group, owl:Class ?parent, ? ?label, ? xsd:string ?code, ? xsd:string ?definition, ? owl:Class ?dbpedia] :: {
     # Define group and connect to parent
 	# define code, definition and label for class
 	
     ax:SubClassOf(?group, ?parent), 
 	ottr:Triple(?group, sdir:code, ?code),
 	ottr:Triple(?group, rdfs:label, ?label),
-	ottr:Triple(?group, sdir:definition, ?definition)
+	ottr:Triple(?group, sdir:definition, ?definition),
+	ottr:Triple(?group, rdfs:seeAlso, ?dbpedia)
 	
 }.
 
+o-sdir:MakeReferences[owl:Class ?group,  NEList<owl:Class> ?references] :: {
+	cross | ottr:Triple(?group, sdir:reference, ++?references)
+}
 
 o-sdir:GroupBelonging[owl:Class ?group, owl:Class ?overview_group] :: {
 	# Defines in one of the four main groups

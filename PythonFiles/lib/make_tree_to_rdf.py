@@ -39,9 +39,11 @@ class Make_tree:
         self.root = Node("SFIConcept")
         nodegrupper = {}
         for info in data:
-            tallet = float(info["@value"]["code"])
+            tallet = int(info["@value"]["code"])
             label = info["@value"]["label"]
             definition = info["@value"]["definition"]
+            references = info["@value"]["references"]
+            dbpedia = info["@value"]["dbpedia"]
             
             if tallet < 10:
                 nodegrupper[tallet] = Node(info["@id"],
@@ -49,7 +51,9 @@ class Make_tree:
                                            group="MainGroup", 
                                            label=label, 
                                            definition=definition,
-                                           code=tallet)
+                                           code=tallet,
+                                           references=references,
+                                           dbpedia=dbpedia)
                 
             if tallet < 100 and tallet >= 10:
                 gruppe = math.floor(tallet/10)
@@ -59,9 +63,11 @@ class Make_tree:
                                            group="Group",
                                            label=label, 
                                            definition=definition,
-                                           code=tallet)
+                                           code=tallet,
+                                           references=references,
+                                           dbpedia=dbpedia)
                 
-            if tallet < 1000 and tallet >= 100 and tallet.is_integer():
+            if tallet < 1000 and tallet >= 100:
                 gruppe = math.floor(tallet/10)
                 parent = nodegrupper[gruppe]
                 nodegrupper[tallet] = Node(info["@id"], 
@@ -69,9 +75,11 @@ class Make_tree:
                                            group="SubGroup",
                                            label=label,
                                            definition=definition,
-                                           code=tallet)
+                                           code=tallet,
+                                           references=references,
+                                           dbpedia=dbpedia)
         
-            if tallet >= 100 and not tallet.is_integer():
+            if tallet >= 1000:
                 gruppe = math.floor(tallet)
                 parent = nodegrupper[gruppe]
                 nodegrupper[tallet] = Node(info["@id"],
@@ -79,7 +87,9 @@ class Make_tree:
                                            group="DetailCode", 
                                            label=label,
                                            definition=definition,
-                                           code=tallet)
+                                           code=tallet,
+                                           references=references,
+                                           dbpedia=dbpedia)
                 
         # Get class with parent        
         classes = []
@@ -90,7 +100,9 @@ class Make_tree:
                                 node.group, #gruppe
                                 node.code, #coden
                                 node.label, #label
-                                node.definition #definition for node
+                                node.definition, #definition for node
+                                node.references,
+                                node.dbpedia               
                                 ))
                 
         return classes
