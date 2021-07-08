@@ -54,7 +54,7 @@ class load_from_DBpedia:
                         
         sparql.setReturnFormat(JSON)
         qres = sparql.query().convert()
-        return qres, "dbo:"+label
+        return qres, "dbr:"+label
 
     
     def get_data(self, classes):
