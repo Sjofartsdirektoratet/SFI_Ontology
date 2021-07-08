@@ -16,7 +16,7 @@ To see documentation for PythonFiles go to `PythonFiles` or click this link: [Py
 The web-app is a visualization of the SFI Ontology. In the app it's possible to see relations between the nodes and their positions.  
 
 ### How to start
-To run the app either download/clone this repositry or go to _THIS WEBSITE_  
+To run the app either download/clone this repositry or go to [https://sjofartsdirektoratet.github.io/SFI_Ontology/](https://sjofartsdirektoratet.github.io/SFI_Ontology/) 
 
 #### Run locally
 `$ cd ~/SFI_Ontology`  
