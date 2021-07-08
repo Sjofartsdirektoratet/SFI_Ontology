@@ -45,7 +45,7 @@ function KnowledgeGraph(){
 
     function initialCollapse(d){
         
-        if (d.children && d.depth > 1) {
+        if (d.children && d.depth > 1) { 
             d._children = d.children;
             d._children.forEach(initialCollapse)
             d.children = null;
@@ -94,8 +94,6 @@ function KnowledgeGraph(){
         }, []);
 
 
-        
-
         var svg = d3.select(d3KGraph.current)
             
 
@@ -110,7 +108,8 @@ function KnowledgeGraph(){
             
 
         function update(data, svg){
-
+            
+            
             const maxDepth = d3.max(data, (x) => {return x.depth})
 
             let height2 = 1700-(200*maxDepth)
@@ -161,7 +160,7 @@ function KnowledgeGraph(){
                         translate(${d.y},0)
                         scale(${(Math.abs(4-d.depth)+1)*2})
                     `)
-                    .attr("fill", d => d.children ? "#555" : "#999")
+                    .attr("fill", function(d) { return applyColor(d); })
                     .attr('stroke', function(d) { return applyColor(d); })
                     .attr("r", 0.3)
                 .attr("cursor", "pointer")

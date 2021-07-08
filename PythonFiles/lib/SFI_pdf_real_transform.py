@@ -5,7 +5,7 @@ Created on Thu Jul  8 09:56:32 2021
 @author: steien
 """
 
-import pdfreader
+
 import re
 
 ff = "SFI\xa0Manual for Ships Vrs. 7.12 - Norwegian Maritime Authority Sjøfartsdirektoratet Office - A4.pdf"
@@ -30,7 +30,9 @@ with pdfplumber.open(ff) as pdf:
 all_codes = {}
 last_digit = 0
 ref_switch = 0
-test = pages[67][1:-1]
+test = pages[62:][1:-1]
+
+ 
 for i in test:
     if i[0].isdigit():
         ref_switch = 0
@@ -60,12 +62,31 @@ for i in all_codes:
             definition[-1] = "* "+definition[-1]
         else:
             definition.append(j)
-        
-        all_def.append(definition)
     
-        
-        
+    compressed_definition = [""]
     
+    for j in definition:
+        if '*' in j:
+            compressed_definition.append(j)
+        else:
+            if '*' not in compressed_definition[-1]:
+                compressed_definition[-1] +=j + " "
+            else:
+                compressed_definition.append(j)
+                
+    all_codes[i]["definition"] = "\n".join(compressed_definition)
+    
+    
+    for j in all_codes[i]["references"]:
+        try:
+            references.append(re.findall(r"\d+", j)[-1])
+        except:
+            pass
+    all_codes[i]["references"] = references             
+             
+    
+   
+        
 
 
 class SFI_pdf_real_transform:
@@ -88,6 +109,12 @@ class SFI_pdf_real_transform:
         return data
     
     def transform(self):
-        pass
+        #vi vil returne 
+                    mydict = {"@id":e,
+                      "@value": {"code":code,
+                          "label":label,
+                          "definition":definition,
+                          "references":references,
+                          "dbpedia":dbpedia}}
         
         
