@@ -13,76 +13,86 @@ ff = "SFI\xa0Manual for Ships Vrs. 7.12 - Norwegian Maritime Authority Sjøfarts
 fname = "SFI Manual for Ships Vrs. 7.12 - Norwegian Maritime Authority Sjøfartsdirektoratet Office - A4.pdf" 
 import pdfplumber
 
-pages = []
+def read_pdf():
+    pages = []
+    
+    with pdfplumber.open(ff) as pdf:
+        for page in pdf.pages:
+            try:
+                pages.append(page.extract_text(x_tolerance=1, y_tolerance=1).split("\n"))
+            except:
+                pass
+    return pages
 
-with pdfplumber.open(ff) as pdf:
-    for page in pdf.pages:
-        try:
-            pages.append(page.extract_text(x_tolerance=1, y_tolerance=1).split("\n"))
-        except:
-            pass
-    #first_page = pdf.pages[0]
-    #print(first_page.chars[0])
-
-#with open(fname, 'rb') as f:
-#    doc = slate3k.PDF(f)
 
 all_codes = {}
-last_digit = 0
-ref_switch = 0
-test = pages[62:][1:-1]
+pages = read_pdf()
+counter = 1
+for page in pages[67:305]:
+    print(f"{counter} of {len(pages[67:305])}")
+    counter += 1
+    make_dict(page[1:-1])
 
- 
-for i in test:
-    if i[0].isdigit():
-        ref_switch = 0
-        last_digit = i
-        all_codes[i] = {"id": i,
-                        "definition": [],
-                        "references": []}
-    else:
-        if (i != "Code Details") and (i != "Code Name"):
-            if i == "References:":
-                ref_switch = 1
-            if ref_switch and last_digit:
-                all_codes[last_digit]["references"].append(i)
-            elif last_digit:
-                all_codes[last_digit]["definition"].append(i)
-            
-for i in all_codes:
-    if "References:" in all_codes[i]["references"]:
-        del all_codes[i]["references"][0]
-        
-all_def = []
-for i in all_codes:
-    definition = []
-    references = []
-    for j in all_codes[i]["definition"]:
-        if j == "l":
-            definition[-1] = "* "+definition[-1]
-        else:
-            definition.append(j)
+remove_refenrances()
+grouping_lists_and_definitions()
     
-    compressed_definition = [""]
-    
-    for j in definition:
-        if '*' in j:
-            compressed_definition.append(j)
+
+def make_dict(page_list):
+    last_digit = 0
+    ref_switch = 0
+    for i in page_list:
+        if re.match(r"\d+ \w+", i):
+            ref_switch = 0
+            last_digit = i
+            all_codes[i] = {"id": i,
+                            "definition": [],
+                            "references": []}
         else:
-            if '*' not in compressed_definition[-1]:
-                compressed_definition[-1] +=j + " "
-            else:
-                compressed_definition.append(j)
+            if (i != "Code Details") and (i != "Code Name"):
+                if i == "References:":
+                    ref_switch = 1
+                if ref_switch and last_digit:
+                    all_codes[last_digit]["references"].append(i)
+                elif last_digit:
+                    all_codes[last_digit]["definition"].append(i)
                 
-    all_codes[i]["definition"] = "\n".join(compressed_definition)
-    
-    
-    for j in all_codes[i]["references"]:
-        try:
-            references.append(re.findall(r"\d+", j)[-1])
-        except:
-            pass
-    all_codes[i]["references"] = references             
+                
+  
+def remove_refenrances():
+    for i in all_codes:
+        if "References:" in all_codes[i]["references"]:
+            del all_codes[i]["references"][0]
+        
+def grouping_lists_and_definitions():        
+    for i in all_codes:
+        definition = []
+        references = []
+        for j in all_codes[i]["definition"]:
+            if j == "l":
+                definition[-1] = "* "+definition[-1]
+            else:
+                definition.append(j)
+        
+        compressed_definition = [""]
+        
+        for j in definition:
+            if '*' in j:
+                compressed_definition.append(j)
+            else:
+                if '*' not in compressed_definition[-1]:
+                    compressed_definition[-1] +=j + " "
+                else:
+                    compressed_definition.append(j)
+                    
+        all_codes[i]["definition"] = "\n".join(compressed_definition)
+        
+        
+        for j in all_codes[i]["references"]:
+            try:
+                references.extend(re.findall(r"\d+", j))
+            except:
+                pass
+        all_codes[i]["references"] = references             
              
     
    
