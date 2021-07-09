@@ -10,6 +10,7 @@ from anytree import Node, RenderTree
 import math
 import os
 import json
+import re
 
 
 class Make_tree:
@@ -134,6 +135,9 @@ class Convert_to_rdf:
                 .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
                     .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")\
                       .replace("\xa0","_")
+                      
+    def replace_all_non_ascii_and_snuts(self, text):
+        return re.sub(r'[^\x00-\x7F]+',' ', text).replace('"', "").replace("'", '')
         
     
     def transform(self, classes):
@@ -161,6 +165,8 @@ class Convert_to_rdf:
             parent = self.clean_string_id(parent)
             references = map(self.clean_string_id, references)
             references = "(" + str(",".join(["sdir:" + ref for ref in references])) + ")"
+            definition = self.replace_all_non_ascii_and_snuts(definition)
+            label = self.replace_all_non_ascii_and_snuts(label)
             
             if not dbpedia:
                 dbpedia = "dbr:Thing"
@@ -174,7 +180,7 @@ class Convert_to_rdf:
                                                             parent,
                                                             label,
                                                             code, 
-                                                            definition.replace("'", "").replace('"', ""),
+                                                            definition,
                                                             dbpedia)
                 )
             
