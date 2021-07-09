@@ -86,7 +86,7 @@ class SFI_pdf_real_transform:
             definition = []; references = []
             for j in self.all_codes[i]["definition"]:
                 if j == "l":
-                    definition[-1] = "* "+definition[-1]
+                    definition[-1] = "- "+definition[-1]
                 else:
                     definition.append(j)
             
