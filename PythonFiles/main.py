@@ -19,7 +19,7 @@ print(f"{datetime.datetime.now()} - starting")
 # Use SFI_pdf_real_transform to scrape data from pdf
 # =============================================================================
 
-fname = "SFI\xa0Manual for Ships Vrs. 7.12 - Norwegian Maritime Authority Sjøfartsdirektoratet Office - A4.pdf"
+fname = "../SFI\xa0Manual for Ships Vrs. 7.12 - Norwegian Maritime Authority Sjøfartsdirektoratet Office - A4.pdf"
 sfi = SFI_pdf_real_transform()
 data = sfi.read_pdf(fname)
 print(f"{datetime.datetime.now()} - Data read, starting preproccesseing")

@@ -158,9 +158,6 @@ class Convert_to_rdf:
         for node, parent, overview_group, code, label, definition, references, dbpedia in classes:
 
             node = self.clean_string_id(node)
-            if "172" in node:
-                print(node)
-                self.a = node
             parent = self.clean_string_id(parent)
             references = map(self.clean_string_id, references)
             references = "(" + str(",".join(["sdir:" + ref for ref in references])) + ")"
