@@ -9,6 +9,7 @@ Created on Thu Jul  8 09:56:32 2021
 import re
 import pickle
 import pdfplumber
+import json
  
 
 
@@ -99,7 +100,7 @@ class SFI_pdf_real_transform:
                     else:
                         compressed_definition.append(j)
                         
-            self.all_codes[i]["definition"] = "\n".join(compressed_definition)
+            self.all_codes[i]["definition"] = "\\n".join(compressed_definition)
             
             for j in self.all_codes[i]["references"]:
                 try:
@@ -110,6 +111,8 @@ class SFI_pdf_real_transform:
         
         
     def find_typo(self):
+        # One typo to fix
+        
         self.all_codes["1746040 Ship Mobilization Catering Costs"]["id"] = "174604 Ship Mobilization Catering Costs"
         self.all_codes["174604 Ship Mobilization Catering Costs"] =  self.all_codes["1746040 Ship Mobilization Catering Costs"]
         del self.all_codes["1746040 Ship Mobilization Catering Costs"]
@@ -168,3 +171,10 @@ class SFI_pdf_real_transform:
                      }
             myjson.append(mydict)
         return myjson
+    
+    def save_json(self):
+        # Save to json file
+        
+        with open('info.json', 'w') as f:
+            json.dump(self.data_json, f)
+        f.close()

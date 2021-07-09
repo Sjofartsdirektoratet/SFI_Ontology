@@ -26,7 +26,7 @@ o-sdir:CreateRelation[owl:Class ?group, owl:Class ?parent, ? ?label, ? xsd:strin
 
 o-sdir:MakeReferences[owl:Class ?group,  NEList<owl:Class> ?references] :: {
 	cross | ottr:Triple(?group, sdir:reference, ++?references)
-}
+}. 
 
 o-sdir:GroupBelonging[owl:Class ?group, owl:Class ?overview_group] :: {
 	# Defines in one of the four main groups

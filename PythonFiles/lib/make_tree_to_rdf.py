@@ -132,7 +132,8 @@ class Convert_to_rdf:
     def clean_string_id(self, string):
         return string.replace(" ", "_").replace(",", "")\
                 .replace(".", "").replace("'", "").replace('"', '').replace("\\", "_")\
-                    .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")
+                    .replace("/", "_").replace("&", "and").replace("(", "").replace(")", "")\
+                      .replace("\xa0","_")
         
     
     def transform(self, classes):
@@ -140,7 +141,7 @@ class Convert_to_rdf:
         Parameters
         ----------
         classes : list of all nodes with parent as tuple
-            (node, parent, overview_group)
+            (node, parent, overview_group, code, label, definition, references, dbpedia)
 
         Returns
         -------
@@ -157,6 +158,9 @@ class Convert_to_rdf:
         for node, parent, overview_group, code, label, definition, references, dbpedia in classes:
 
             node = self.clean_string_id(node)
+            if "172" in node:
+                print(node)
+                self.a = node
             parent = self.clean_string_id(parent)
             references = map(self.clean_string_id, references)
             references = "(" + str(",".join(["sdir:" + ref for ref in references])) + ")"
@@ -166,18 +170,18 @@ class Convert_to_rdf:
               
                 
             
-            # # Add for ottr o-sdir:CreateRelation template
+            # Add for ottr o-sdir:CreateRelation template
             self.all_text.append(
                 'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", "{5}", {6}) .'.format(self.namespace_init,
                                                             node,
                                                             parent,
                                                             label,
                                                             code, 
-                                                            definition,
+                                                            definition.replace("'", "").replace('"', ""),
                                                             dbpedia)
                 )
             
-            #Add for ottr o-sdir:MakeReferences template
+            # Add for ottr o-sdir:MakeReferences template
             if len(references) > 3: # length of empty tuple is 2
                 self.all_text.append(
                     "o-sdir:MakeReferences({0}{1}, {2}) .".format(self.namespace_init,
@@ -214,7 +218,7 @@ class Convert_to_rdf:
                       "reference": {"comment": "Reference to other SFI code",
                                     "label": "hasReference",
                                     "domain": "SFIConcept",
-                                    "range": "SFIConcept"}}
+                                    "range": "sdir:SFIConcept"}}
         
         for prop in properties:
             self.all_text.append(
