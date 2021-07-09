@@ -43,10 +43,16 @@ class SFI_pdf_real_transform:
         self.delete_dublicate_references()
         self.find_uri_references()
         
-        jj = self.reforme_to_json()
-        return jj
+        json_like_data = self.reforme_to_json()
+        return json_like_data
     
     def make_dict(self, page_list):
+        '''
+        Makes a dictonary of all the instances in pdf.
+        Sorts it so every URI gets its own place in dictonary with 
+        right references and definintion
+
+        '''
         last_digit = 0
         ref_switch = 0
         for i in page_list:
@@ -111,7 +117,7 @@ class SFI_pdf_real_transform:
         
         
     def find_typo(self):
-        # One typo to fix
+        # One typo to fix manually
         
         self.all_codes["1746040 Ship Mobilization Catering Costs"]["id"] = "174604 Ship Mobilization Catering Costs"
         self.all_codes["174604 Ship Mobilization Catering Costs"] =  self.all_codes["1746040 Ship Mobilization Catering Costs"]
@@ -119,6 +125,10 @@ class SFI_pdf_real_transform:
 
     
     def add_code_and_label(self):
+        '''
+        Makes code and label as an attribute to the URI in dict
+
+        '''
         for i in self.all_codes:    
             code = re.match(r"(\d+(\.\d+)?)", i).group(1)
             label = re.sub("[0-9].", "", i).strip().capitalize()
