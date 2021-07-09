@@ -159,13 +159,16 @@ class Convert_to_rdf:
             node = self.clean_string_id(node)
             parent = self.clean_string_id(parent)
             references = map(self.clean_string_id, references)
-            references = str(tuple(["sdir:" + ref for ref in references]))
+            references = "(" + str(",".join(["sdir:" + ref for ref in references])) + ")"
+            
+            if not dbpedia:
+                dbpedia = "dbr:Thing"
               
                 
             
-            # Add for ottr o-sdir:CreateRelation template
+            # # Add for ottr o-sdir:CreateRelation template
             self.all_text.append(
-                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", "{5}") .'.format(self.namespace_init,
+                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", "{5}", {6}) .'.format(self.namespace_init,
                                                             node,
                                                             parent,
                                                             label,
@@ -174,20 +177,20 @@ class Convert_to_rdf:
                                                             dbpedia)
                 )
             
-            # Add for ottr o-sdir:MakeReferences template
+            #Add for ottr o-sdir:MakeReferences template
             if len(references) > 3: # length of empty tuple is 2
                 self.all_text.append(
                     "o-sdir:MakeReferences({0}{1}, {2}) .".format(self.namespace_init,
-                                                           node,
-                                                           references.replace("'",""))
+                                                            node,
+                                                            references.replace("'",""))
                     
                     )
             
             
-            # Add for ottr o-sdir:GroupBelonging template
+            # # Add for ottr o-sdir:GroupBelonging template
             self.all_text.append(
                 'o-sdir:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init,
-                                                         node, overview_group)
+                                                          node, overview_group)
                 )
             
             
