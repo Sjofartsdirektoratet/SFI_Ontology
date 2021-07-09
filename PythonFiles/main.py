@@ -6,6 +6,7 @@ Created on Wed Jun 23 14:06:40 2021
 """
 
 from lib.SFI_pdf_transform import SFI_pdf_transform
+from lib.SFI_pdf_real_transform import SFI_pdf_real_transform
 from lib.make_tree_to_rdf import Make_tree, Convert_to_rdf
 from lib.rdf_to_jsonld import Rdf_to_Jsonld
 import datetime
@@ -16,13 +17,21 @@ print(f"{datetime.datetime.now()} - starting")
 # Use SFI_pdf_transform to scrape data from pdf
 # =============================================================================
 
-fname = "../SFIDetailCode.pdf"
-sfi = SFI_pdf_transform()
+# fname = "../SFIDetailCode.pdf"
+# sfi = SFI_pdf_transform()
+# data = sfi.read_pdf(fname)
+
+# data = sfi.transform(data)
+# print(f"{datetime.datetime.now()} - Data scraped from pdf")
+# #sfi.save_json()
+
+fname = "SFI\xa0Manual for Ships Vrs. 7.12 - Norwegian Maritime Authority Sjøfartsdirektoratet Office - A4.pdf"
+sfi = SFI_pdf_real_transform()
 data = sfi.read_pdf(fname)
+print(f"{datetime.datetime.now()} - Data read, starting preproccesseing")
 
 data = sfi.transform(data)
-print(f"{datetime.datetime.now()} - Data scraped from pdf")
-#sfi.save_json()
+print(f"{datetime.datetime.now()} - Data scraped and preproccesseing from pdf")
 
 
 # =============================================================================

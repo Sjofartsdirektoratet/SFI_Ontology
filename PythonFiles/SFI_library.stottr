@@ -6,6 +6,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rstr: <http://tpl.ottr.xyz/owl/restriction/0.1/> .
 @prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
 
 @prefix o-sdir: <https://www.sdir.no/SFI-model/ottr#> .
 @prefix sdir: <https://www.sdir.no/SFI-model#> .

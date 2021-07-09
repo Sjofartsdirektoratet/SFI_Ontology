@@ -80,7 +80,7 @@ class Make_tree:
                                            dbpedia=dbpedia)
         
             if tallet >= 1000:
-                gruppe = math.floor(tallet)
+                gruppe = math.floor(tallet/1000)
                 parent = nodegrupper[gruppe]
                 nodegrupper[tallet] = Node(info["@id"],
                                            parent=parent,
@@ -125,6 +125,7 @@ class Convert_to_rdf:
             '@prefix owl: <http://www.w3.org/2002/07/owl#> .',
             '@prefix rstr: <http://tpl.ottr.xyz/owl/restriction/0.1/> .',
             '@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .\n',
+            '@prefix dbr: <http://dbpedia.org/resource/> .',
             '@prefix o-sdir: <https://www.sdir.no/SFI-model/ottr#> .',
             '@prefix sdir: <https://www.sdir.no/SFI-model#> .\n']
         
@@ -153,27 +154,35 @@ class Convert_to_rdf:
             j = Node(i, parent=j)
         
         self.all_text = []
-        for node, parent, overview_group, code, label, definition in classes:
-            node_orig = node.replace("'", "").replace('"', '')
+        for node, parent, overview_group, code, label, definition, references, dbpedia in classes:
 
             node = self.clean_string_id(node)
             parent = self.clean_string_id(parent)
+            references = map(self.clean_string_id, references)
+            references = str(tuple(["sdir:" + ref for ref in references]))
               
                 
-            # Definition is optinal in OTTR so add if there is one
-            if len(definition)>0:
-                definition = ', "'+definition.replace("'", "").replace('"', '').replace("\n", " ")+'"'
-            else:
-                definition = ',""'
+            
             # Add for ottr o-sdir:CreateRelation template
             self.all_text.append(
-                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}"{5}) .'.format(self.namespace_init,
+                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", "{5}") .'.format(self.namespace_init,
                                                             node,
                                                             parent,
                                                             label,
                                                             code, 
-                                                            definition)
+                                                            definition,
+                                                            dbpedia)
                 )
+            
+            # Add for ottr o-sdir:MakeReferences template
+            if len(references) > 3: # length of empty tuple is 2
+                self.all_text.append(
+                    "o-sdir:MakeReferences({0}{1}, {2}) .".format(self.namespace_init,
+                                                           node,
+                                                           references.replace("'",""))
+                    
+                    )
+            
             
             # Add for ottr o-sdir:GroupBelonging template
             self.all_text.append(
@@ -198,7 +207,11 @@ class Convert_to_rdf:
                       "definition":{"comment": "Definition on the class in SFI model",
                               "label": "hasDefinition",
                               "domain": "SFIConcept",
-                              "range": "xsd:string"}}
+                              "range": "xsd:string"},
+                      "reference": {"comment": "Reference to other SFI code",
+                                    "label": "hasReference",
+                                    "domain": "SFIConcept",
+                                    "range": "SFIConcept"}}
         
         for prop in properties:
             self.all_text.append(
