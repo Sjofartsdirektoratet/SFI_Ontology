@@ -29,10 +29,10 @@ class SFI_pdf_real_transform:
 
     
     def transform(self, pages):
-        for page in pages[67:305]:
+        for page in pages[67:305]: # 67-305 pages containing information about the SFI codes
             self.make_dict(page[1:-1])
         
-        self.remove_refenrances()
+        self.remove_references()
         self.grouping_lists_and_definitions()
         
         self.find_typo()
@@ -40,10 +40,10 @@ class SFI_pdf_real_transform:
         self.add_code_and_label()
         self.add_dbpedia()
 
-        self.delete_dublicate_references()
+        self.delete_duplicate_references()
         self.find_uri_references()
         
-        json_like_data = self.reforme_to_json()
+        json_like_data = self.reform_to_json()
         return json_like_data
     
     def make_dict(self, page_list):
@@ -71,7 +71,7 @@ class SFI_pdf_real_transform:
                     elif last_digit:
                         self.all_codes[last_digit]["definition"].append(i)
     
-    def remove_refenrances(self):
+    def remove_references(self):
         for i in self.all_codes:
             if "References:" in self.all_codes[i]["references"]:
                 del self.all_codes[i]["references"][0]
@@ -147,7 +147,7 @@ class SFI_pdf_real_transform:
                 self.all_codes[i]['dbpedia'] = ""
                 
                 
-    def delete_dublicate_references(self):
+    def delete_duplicate_references(self):
         for i in self.all_codes:
             self.all_codes[i]["references"] = list(set(self.all_codes[i]["references"]))
             
@@ -168,7 +168,7 @@ class SFI_pdf_real_transform:
             self.all_codes[i]["references"] = uri_references
                 
                 
-    def reforme_to_json(self):
+    def reform_to_json(self):
         myjson = []
         for i in self.all_codes:
             mydict = {"@id": self.all_codes[i]['id'],

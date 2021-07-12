@@ -17,10 +17,10 @@ import datetime
 fname = "../SFI\xa0Manual for Ships Vrs. 7.12 - Norwegian Maritime Authority Sjøfartsdirektoratet Office - A4.pdf"
 sfi = SFI_pdf_real_transform()
 data = sfi.read_pdf(fname)
-print(f"{datetime.datetime.now()} - Data read, starting preproccesseing")
+print(f"{datetime.datetime.now()} - Data read, starting preprocessing")
 
 data = sfi.transform(data)
-print(f"{datetime.datetime.now()} - Data scraped and preproccesseing from pdf")
+print(f"{datetime.datetime.now()} - Data scraped and preprocessing from pdf")
 
 
 # =============================================================================

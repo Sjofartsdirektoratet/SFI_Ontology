@@ -96,10 +96,10 @@ class Make_tree:
         classes = []
         for pre, fill, node in RenderTree(self.root):
             if node.parent:
-                classes.append((node.name, #iden
+                classes.append((node.name, #id
                                 node.parent.name,#parent id
-                                node.group, #gruppe
-                                node.code, #coden
+                                node.group, #group
+                                node.code, #code
                                 node.label, #label
                                 node.definition, #definition for node
                                 node.references,
