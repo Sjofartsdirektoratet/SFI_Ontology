@@ -357,7 +357,7 @@ sdir:245_Decks_and_Stringers_Below_First_Deck_with_Stiffening
         rdfs:subClassOf  sdir:SubGroup , sdir:24_FOREBODY ;
         sdir:code        "245" ;
         sdir:definition  "Deck sections and stringers below upper deck in the forebody with stiffeners and strengtheners. Also included here are parts of plate frames, transverses, girders, stiffeners, bulkheads, pillars, shell, integrated gutters (ducts), etc., mounted with the plates. " ;
-        sdir:reference   sdir:246_Bow_and_Stem_Sections_Forebody_Bulkheads , sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:235_Decks_Below_First_Deck_with_Stiffening .
+        sdir:reference   sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:235_Decks_Below_First_Deck_with_Stiffening , sdir:246_Bow_and_Stem_Sections_Forebody_Bulkheads .
 
 sdir:425012_Stationary_Apparatus
         rdfs:label       "Stationary apparatus"@en ;
@@ -516,7 +516,7 @@ sdir:437_Towing_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:43_ANCHORING_MOORING_AND_TOWING_EQUIPMENT ;
         sdir:code        "437" ;
         sdir:definition  "Towing equipment for ordinary vessels, rescue ships, tugs, supply ships and similar, including such as: - Tow and fire wire/ropes (hawsers). - Towing brackets. - Hooks. - Rollers. - Towing winches with machinery, etc. (also towing-/anchor handling winches for supply ships). - Brackets and towing gallows. - Auxiliary equipment in connection with towing that cannot logically be included in other subgroups., e.g. for tug/supply ship equipment such as: Towing/hauling winches with possible separate hydraulic aggregate, alternatively cross bol- lards for towing. - Stern drum. - Storage drums with possible separate driving machinery for towing line/towing rope from other ship or own ropes in connection with towing. " ;
-        sdir:reference   sdir:328_Unassigned , sdir:436_Loose_Mooring_Equipment , sdir:43_ANCHORING_MOORING_AND_TOWING_EQUIPMENT .
+        sdir:reference   sdir:328_Unassigned , sdir:43_ANCHORING_MOORING_AND_TOWING_EQUIPMENT , sdir:436_Loose_Mooring_Equipment .
 
 sdir:156045_Grounding_Drill
         rdfs:label       "Grounding drill"@en ;
@@ -874,7 +874,7 @@ sdir:326_Pneumatic_Plants_for_Bulk_Cargo_Handling
         rdfs:subClassOf  sdir:SubGroup , sdir:32_SPECIAL_CARGO_HANDLING_EQUIPMENT ;
         sdir:code        "326" ;
         sdir:definition  "Pneumatic plant for bulk cargo handling, comprising such as: - Pneumatic discharging plant for cement or similar cargo with piping, loose tanks, separate compressor plant, etc. (Note! see also Ref.). - Grain vacuum/blower plant with similar equipment stated above. " ;
-        sdir:reference   sdir:35_LOADING_DISCHARGING_SYSTEMS_FOR_LIQUID_CARGO , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:73_COMPRESSED_AIR_SYSTEMS , sdir:313_Loose_Bulkheads_for_Cargo_Grain_Feeders .
+        sdir:reference   sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:35_LOADING_DISCHARGING_SYSTEMS_FOR_LIQUID_CARGO , sdir:313_Loose_Bulkheads_for_Cargo_Grain_Feeders , sdir:73_COMPRESSED_AIR_SYSTEMS .
 
 sdir:281015_Cafeteria
         rdfs:label       "Cafeteria"@en ;
@@ -912,7 +912,7 @@ sdir:47_ARMAMENT_WEAPON_AND_COUNTER_MEASURES
         rdfs:subClassOf  sdir:4_SHIP_EQUIPMENT , sdir:Group ;
         sdir:code        "47" ;
         sdir:definition  "The group includes only the particular naval equipment, while standard equipment (equipment to be found in most ves- sels), is included in the respective subgroup in other groups according to the function (Note! see also Ref.). The subgroups include, unless otherwise stated: - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transport costs (external). - Installation and adjustment. - Testing and inspection (in workshops and during installation). Also included in the subgroups are: - Instruments, regulating and control (operating) equipment. - Protection covers (excluding weather decks and cargo holds). - Spare parts. " ;
-        sdir:reference   sdir:421_GMDSS_System , sdir:881_Cable_Trays_and_Installation_in_Engine_and_Boiler_Rooms , sdir:813_Fire_Wash_Down_System_Emergency_Fire_Pumps_Sprinkler_System , sdir:485_Aircraft_Helicopters , sdir:321_Cargo_Lifts , sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:411_Radar_Plants , sdir:424_VHF_UHF_Telephones , sdir:486_Aux_Vessels , sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:31_EQUIPMENT_FOR_CARGO_IN_HOLDS_ON_DECK , sdir:504_Medical_First_Aid_and_Dental_Equipment_Medicines , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems .
+        sdir:reference   sdir:421_GMDSS_System , sdir:813_Fire_Wash_Down_System_Emergency_Fire_Pumps_Sprinkler_System , sdir:881_Cable_Trays_and_Installation_in_Engine_and_Boiler_Rooms , sdir:485_Aircraft_Helicopters , sdir:321_Cargo_Lifts , sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:411_Radar_Plants , sdir:424_VHF_UHF_Telephones , sdir:486_Aux_Vessels , sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:31_EQUIPMENT_FOR_CARGO_IN_HOLDS_ON_DECK , sdir:504_Medical_First_Aid_and_Dental_Equipment_Medicines , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems .
 
 sdir:761033_FW_Generator_Chemicals_Dosage_Aggregates
         rdfs:label       "Fw generator chemicals dosage aggregates"@en ;
@@ -1013,7 +1013,7 @@ sdir:422_Lifeboat_Radio_Transmitters_EPIRB_SART
         rdfs:subClassOf  sdir:SubGroup , sdir:42_COMMUNICATION_EQUIPMENT ;
         sdir:code        "422" ;
         sdir:definition  "Communication equipment, primarily for emergencies, including such as: - Portable radio equipment (lifeboat transmitter) with equipment and fixtures. - Emergency radio direction finder transmitters and emergency communication sets (VHF) with fixtures. - Antenna for lifeboats. - Permanent radio-telegraph installation for lifeboats. - Direct current transformer, loading rectifier for lifeboats. " ;
-        sdir:reference   sdir:501_Lifeboats_with_Equipment , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:424_VHF_UHF_Telephones , sdir:422_Lifeboat_Radio_Transmitters_EPIRB_SART .
+        sdir:reference   sdir:422_Lifeboat_Radio_Transmitters_EPIRB_SART , sdir:424_VHF_UHF_Telephones , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:501_Lifeboats_with_Equipment .
 
 sdir:558001_Work_Clothing_Washing_Machines
         rdfs:label       "Work clothing washing machines"@en ;
@@ -1562,7 +1562,7 @@ sdir:464_Trawling_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:46_HUNTING_AND_FISHING_EQUIPMENT ;
         sdir:code        "464" ;
         sdir:definition  "Fishing equipment in connection with trawling, including such as: - Trawls with trawl doors, bobbins, telemeter blocks/trawl indicator and other associated equipment. - Danish seine with associated equipment, rope blocks. - Trawl gallows/-davits, steel wire drums, transport apparatus and trawl bins. - Trawl winches or combined trawl-/seine winch, auxiliary winches such as sweep line winch, Gilson winch, bobbing winch, outhaul winch, cod end winch, etc. with drive units, brakes, couplings, spooling (reeling) apparatus etc. - Trawl bollards. - Lead blocks and blocks in connection with the above stated. - Operation and control equipment for the winches. " ;
-        sdir:reference   sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:2_HULL_SYSTEMS , sdir:465_Fish_Pumping_Plants_and_Landing_Equipment .
+        sdir:reference   sdir:465_Fish_Pumping_Plants_and_Landing_Equipment , sdir:2_HULL_SYSTEMS , sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log .
 
 sdir:338_Unassigned  rdfs:label  "Unassigned"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:33_DECK_CRANES_FOR_CARGO ;
@@ -1831,7 +1831,7 @@ sdir:125_Transportation_Excluding_Hull_Parts
         rdfs:subClassOf  sdir:SubGroup , sdir:12_QUALITY_ASSURANCE_GENERAL_WORK_MODELS ;
         sdir:code        "125" ;
         sdir:definition  "Internal transportation, including crane operation of materials and equipment (Note! see also Ref.) " ;
-        sdir:reference   sdir:145_Shifting_Towing_Excluding_Launching , sdir:202_Transportation_Sorting_and_Storage_of_Hull_Materials , sdir:126_Assistance_with_Owners_Supply .
+        sdir:reference   sdir:145_Shifting_Towing_Excluding_Launching , sdir:126_Assistance_with_Owners_Supply , sdir:202_Transportation_Sorting_and_Storage_of_Hull_Materials .
 
 sdir:788_Unassigned  rdfs:label  "Unassigned"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:78_UNASSIGNED ;
@@ -2074,7 +2074,7 @@ sdir:841_Heating_Oil_Treatment_Systems
         rdfs:subClassOf  sdir:SubGroup , sdir:84_CENTRAL_HEAT_TRANSFER_SYSTEMS_WITH_CHEMICAL_FLUIDS_OIL ;
         sdir:code        "841" ;
         sdir:definition  "System for treatment and heating of the chemical heat transfer liquid. This subgroup covers the part of heat oil system, that is between boiler (Note! see Ref.) and flanges for delivery- and return lines from the users. In heat oil treatment system is included such as: - Feed pumps with drive units. - Circulation pumps with drive units and possible circulator. - Expansion tank with mounted valves, gas pressure meter and similar. - De-gassing tank (including air pipe). - Storage tanks. - Flow-meter and -regulators and other local automation equipment (see also Ref.). - Piping with valves, filters, insulation etc. between mentioned system components and to/from oil fired and/or exhaust gas boiler (Note! see Ref.). Here is also included separate cooling water system for packing boxes and similar in e.g. heat oil circulation pumps, with own pump including drive unit, piping, etc. " ;
-        sdir:reference   sdir:797_Automation_Equipment_for_Other_Machinery_Components , sdir:648_Central_Heating_and_Thermal_Oil_Boilers , sdir:72_COOLING_SYSTEMS .
+        sdir:reference   sdir:72_COOLING_SYSTEMS , sdir:648_Central_Heating_and_Thermal_Oil_Boilers , sdir:797_Automation_Equipment_for_Other_Machinery_Components .
 
 sdir:813011_Fire_Hoses
         rdfs:label       "Fire hoses"@en ;
@@ -2185,7 +2185,7 @@ sdir:303_Cargo_Tank_Hatches
         rdfs:subClassOf  sdir:SubGroup , sdir:30_HATCHES_PORTS ;
         sdir:code        "303" ;
         sdir:definition  "Hatches for cargo tanks (in the hull) with such as: Covers, coamings, gaskets (packing) moving arrangement, fittings, etc. " ;
-        sdir:reference   sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves , sdir:312_Loose_Tanks_for_Cargo .
+        sdir:reference   sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:312_Loose_Tanks_for_Cargo .
 
 sdir:638059_Remote_Control_System
         rdfs:label       "Remote control system"@en ;
@@ -2248,7 +2248,7 @@ sdir:106_Drawing_Ordering_etc_Machinery_Components_Machinery_Ship_Systems
         rdfs:subClassOf  sdir:SubGroup , sdir:10_SPECIFICATION_ESTIMATING_DRAWING_INSTRUCTION_COURSES ;
         sdir:code        "106" ;
         sdir:definition  "Preparation of drawings, calculations etc. and ordering work concerning machinery main components and machinery/ship systems (w.r.t. machinery, systems and equipment in primary group 6, 7 and 8). Engine room arrangement. Photographing including work with film and negatives concerning engine room models (Note! see also Ref.). " ;
-        sdir:reference   sdir:127_Models_Albums_Photos , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables .
+        sdir:reference   sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:127_Models_Albums_Photos .
 
 sdir:278001_Hull_Rudder_Anodes
         rdfs:label       "Hull/rudder anodes"@en ;
@@ -2534,7 +2534,7 @@ sdir:14_WORK_ON_WAYS_LAUNCHING_DOCKING
         rdfs:subClassOf  sdir:Group , sdir:1_GENERAL ;
         sdir:code        "14" ;
         sdir:definition  "The subgroups include costs/expenses for work (time consumption) and materials, plus license/patent fees and test- ing/control in connection with the equipment. " ;
-        sdir:reference   sdir:13_PROVISIONAL_RIGGING , sdir:124_Snow_Clearing_De-icing , sdir:122_Work_Management_Fire_Guard_Supervision_Watch_Keeping , sdir:123_Clearing_and_Cleaning .
+        sdir:reference   sdir:13_PROVISIONAL_RIGGING , sdir:123_Clearing_and_Cleaning , sdir:124_Snow_Clearing_De-icing , sdir:122_Work_Management_Fire_Guard_Supervision_Watch_Keeping .
 
 sdir:186_Unassigned  rdfs:label  "Unassigned"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:18_CONSUMPTION_AND_GENERAL_USED_ITEMS ;
@@ -2552,7 +2552,7 @@ sdir:85_COMMON_ELECTRICAL_AND_ELECTRONIC_SYSTEMS
         rdfs:subClassOf  sdir:Group , sdir:8_COMMON_SYSTEMS ;
         sdir:code        "85" ;
         sdir:definition  "The group include, unless otherwise stated: - Main electrical drawings - Main electrical calculations - System drawings - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transport costs (external). - Installation and adjustment. - Testing and inspection (in workshops and during installation). Also included in the group is: - General information about electrical systems and components not mentioned in other groups.( Note! see also ref. ) - Spare parts. " ;
-        sdir:reference   sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:625_Electric_Generator_Electric_Motor_Plants , sdir:86_ELECTRIC_POWER_SUPPLY , sdir:442_General_Hand_and_Pneumatic_Tools , sdir:447_Clamps_Foundations_for_Spare_Parts , sdir:65_DIESEL_ENGINES_FOR_MAIN_ELECTRIC_POWER_PRODUCTION , sdir:855_Common_Computer_Systems , sdir:66_OTHER_AGGREGATES_FOR_ELECTRIC_POWER_PRODUCTION , sdir:89_ELECTRIC_CONSUMER_SYSTEMS , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS , sdir:42_COMMUNICATION_EQUIPMENT , sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT .
+        sdir:reference   sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:625_Electric_Generator_Electric_Motor_Plants , sdir:86_ELECTRIC_POWER_SUPPLY , sdir:442_General_Hand_and_Pneumatic_Tools , sdir:447_Clamps_Foundations_for_Spare_Parts , sdir:65_DIESEL_ENGINES_FOR_MAIN_ELECTRIC_POWER_PRODUCTION , sdir:855_Common_Computer_Systems , sdir:66_OTHER_AGGREGATES_FOR_ELECTRIC_POWER_PRODUCTION , sdir:89_ELECTRIC_CONSUMER_SYSTEMS , sdir:42_COMMUNICATION_EQUIPMENT , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS , sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT .
 
 sdir:376111_Pressure_Vacuum_Switch
         rdfs:label       "Pressure/vacuum switch"@en ;
@@ -2645,7 +2645,7 @@ sdir:516_Skylights_with_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:51_INSULATION_PANELS_BULKHEADS_DOORS_SIDE_SCUTTLES_SKYLIGHTS ;
         sdir:code        "516" ;
         sdir:definition  "All skylights on board, such as: - Engine room skylights. - Pump room skylights. - Galley skylights. - Smaller skylights. Complete skylights with or without glass and frames, including coamings, fittings, hinges, etc. and lifting adjusting and clos- ing arrangements (including possible separate drive units) etc. " ;
-        sdir:reference   sdir:515_Side_Scuttles_and_Windows_with_Equipment , sdir:252_Mast_Pump_Fan_and_Winch_Houses_Companion_Ways , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers .
+        sdir:reference   sdir:515_Side_Scuttles_and_Windows_with_Equipment , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:252_Mast_Pump_Fan_and_Winch_Houses_Companion_Ways .
 
 sdir:71_LO_SYSTEMS  rdfs:label  "Lo systems"@en ;
         rdfs:subClassOf  sdir:7_SYSTEMS_FOR_MACHINERY_MAIN_COMPONENTS , sdir:Group ;
@@ -2664,7 +2664,7 @@ sdir:544_Curtains_Carpets
         rdfs:subClassOf  sdir:SubGroup , sdir:54_FURNITURE_INVENTORY_ENTERTAINMENT_EQUIPMENT ;
         sdir:code        "544" ;
         sdir:definition  "All equipment (furnishings) of the following categories: - Curtains, porters, shower and bed curtains with curtain rails and opening arrangements. - Floor runners, mats and bedside carpets with possible securing. - Rugs and carpets (not wall-to-wall) with possible securing. - Wall-to-wall carpets/carpet-tiles, which are laid on top of normal deck covering, e.g. on linoleum (Note! see also Ref.). " ;
-        sdir:reference   sdir:547_Inventory_Smaller_Items , sdir:545_Decorations_Figureheads , sdir:552_Galley_Food_Preparation_and_Serving , sdir:522_Internal_Deck_Top_Covering_Linoleum_Tiles_Parquet_etc .
+        sdir:reference   sdir:547_Inventory_Smaller_Items , sdir:522_Internal_Deck_Top_Covering_Linoleum_Tiles_Parquet_etc , sdir:552_Galley_Food_Preparation_and_Serving , sdir:545_Decorations_Figureheads .
 
 sdir:223005_Main_Condenser_Foundation
         rdfs:label       "Main condenser foundation"@en ;
@@ -3209,7 +3209,7 @@ sdir:102_Drawing_Ordering_etc_Hull
         rdfs:subClassOf  sdir:SubGroup , sdir:10_SPECIFICATION_ESTIMATING_DRAWING_INSTRUCTION_COURSES ;
         sdir:code        "102" ;
         sdir:definition  "Preparation of drawings, steel specifications, calculations etc. and ordering work concerning hull (w.r.t. items included in primary group 2). Programming and/or optical drawing work including work with film and negatives, aluminum plate templates for frame plan, etc. Preparation of half model. " ;
-        sdir:reference   sdir:127_Models_Albums_Photos , sdir:121_Quality_Assurance_Planning_Work_Preparation , sdir:101_Contract_Specification_Work_General_Design_Model_Testing .
+        sdir:reference   sdir:127_Models_Albums_Photos , sdir:101_Contract_Specification_Work_General_Design_Model_Testing , sdir:121_Quality_Assurance_Planning_Work_Preparation .
 
 sdir:176020_Ship_Mobilization_Direct_Hire_Payroll_and_Burden
         rdfs:label       "Ship mobilization direct hire payroll and burden"@en ;
@@ -3323,7 +3323,7 @@ sdir:273_External_Decks
         rdfs:subClassOf  sdir:SubGroup , sdir:27_MATERIAL_PROTECTION_EXTERNAL ;
         sdir:code        "273" ;
         sdir:definition  "Material protection of weather decks by means of surface treatment such as painting etc. Included here is material protection of all external (open) decks, also deck house decks, together with gutters on these (see Ref.). " ;
-        sdir:reference   sdir:274_Equipment_on_External_Decks_Bulwark_Inboard_Side , sdir:532_External_Wood_Decks , sdir:531_External_Deck_Covering , sdir:523_Internal_Grating_and_Wood_Decks .
+        sdir:reference   sdir:274_Equipment_on_External_Decks_Bulwark_Inboard_Side , sdir:523_Internal_Grating_and_Wood_Decks , sdir:532_External_Wood_Decks , sdir:531_External_Deck_Covering .
 
 sdir:463018_Seine_Rollers
         rdfs:label       "Seine rollers"@en ;
@@ -3418,7 +3418,7 @@ sdir:647_Steam_Converters
         rdfs:subClassOf  sdir:SubGroup , sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS ;
         sdir:code        "647" ;
         sdir:definition  "Steam converters (separate steam generators) for production of low-pressure steam by means of high-pressure steam, for auxiliary machinery and heating. Here is also included steam generator heated by chemical liquid (e.g. heating oil). The plant also includes equivalent equipment, as mentioned in subgroup 641, as well as automation equipment for the con- verters (Note! see also Ref.). " ;
-        sdir:reference   sdir:761_FW_Production_System , sdir:794_Automation_Equipment_for_Boilers , sdir:581_Sanitary_Supply_Systems , sdir:641_Main_Steam_Boilers .
+        sdir:reference   sdir:761_FW_Production_System , sdir:641_Main_Steam_Boilers , sdir:581_Sanitary_Supply_Systems , sdir:794_Automation_Equipment_for_Boilers .
 
 sdir:406007_Flap_Operating_Panels
         rdfs:label       "Flap operating panels"@en ;
@@ -3741,14 +3741,14 @@ sdir:751_Primary_Full_Pressure_Steam_Systems
         rdfs:subClassOf  sdir:SubGroup , sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS ;
         sdir:code        "751" ;
         sdir:definition  "System for supply of primary steam (superheated and/or not superheated steam) with full (highest) outgoing boiler pres- sure (Note! not steam from such as steam converters). The system includes steam piping with valves, insulation, etc., from boiler to reduction/distribution centrals (junctions) or consumers, such as: - Steam propulsion turbines. - Turbo generators. - Loading and discharging pumps. - Heat exchangers, ejectors, glands, etc., which are supplied with full pressure steam. - Feed water pumps. " ;
-        sdir:reference   sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS , sdir:611_Steam_Turbines_with_Condensers , sdir:752_Primary_Reduced_Pressure_Steam_Systems_in_Engine_Room .
+        sdir:reference   sdir:611_Steam_Turbines_with_Condensers , sdir:752_Primary_Reduced_Pressure_Steam_Systems_in_Engine_Room , sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS .
 
 sdir:702_FO_Purification_Plants
         rdfs:label       "Fo purification plants"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:70_FUEL_SYSTEMS ;
         sdir:code        "702" ;
         sdir:definition  "Plants for purification and treatment of diesel and/or heavy oil (in the ships main fuel oil system), including such as: - Fuel oil separators with pumps including drive unit, valves, preheaters mixing units, homogenizers, filters, mounted pipes, loose tanks, etc. and/or plants for filtering, washing and portioning of additives, with associated equipment. - Pipelines between the above mentioned components and possible separate line for from settling tank (Note! see also Ref.). - Pipelines with valves, etc. from fuel oil separators to sludge tank and further, to sludge pump, including this, overboard, to garbage disposal plant and/or to land connection. - Combined fuel oil and lube oil spare separators and common pipeline for fuel oil and lube oil purification plant. " ;
-        sdir:reference   sdir:712_LO_Purification_Plants , sdir:445_Unassigned , sdir:701_FO_Transfer_and_Drain_Systems .
+        sdir:reference   sdir:712_LO_Purification_Plants , sdir:701_FO_Transfer_and_Drain_Systems , sdir:445_Unassigned .
 
 sdir:669031_Hydr_Oil_Storage_Tanks
         rdfs:label       "Hydr. oil storage tanks"@en ;
@@ -3949,7 +3949,7 @@ sdir:893_Electric_Lighting_Systems_for_Deck_and_Cargo_Holds
         rdfs:subClassOf  sdir:SubGroup , sdir:89_ELECTRIC_CONSUMER_SYSTEMS ;
         sdir:code        "893" ;
         sdir:definition  "Electrical lighting systems for cargo hold/weather deck or corresponding deck (main deck) also car deck, and adjoining decks and rooms, such as: - Forecastle deck and rooms below forecastle. - Small deck houses (winch houses, pump houses, fan houses, etc.). - Special rooms for machinery for cargo, for such as cargo freezing/refrigerating system, cargo ventilation system, load- ing/discharging pumps, etc., as well as cofferdams. - After deck as well as deck below after deck in ships with engine room placed amidships. The subgroup includes the following systems: (Note! see also Ref.): - Electrical lighting systems (main and emergency lights) with cables, clamps and fittings (switches, junction boxes, fuse boxes, etc.), lamps, searchlights for decks, mounted in masts, including control equipment and arrangement for remote control, light fittings and possible receptacles on the mentioned places. - Electrical heating systems with cables, etc., panel heaters, electric radiators, heating cables, heating lamps, etc., in the mentioned rooms. If small service leads (lines) - length and or cross-section - are branched from the electrical systems on the mentioned places, to other consumers (e.g. to light points in/beside hatch openings), these leads are also to be entered here. " ;
-        sdir:reference   sdir:874_Local_Starters_Group , sdir:882_Cable_Trays_with_Installation_in_Accommodation , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:42_COMMUNICATION_EQUIPMENT , sdir:535_Fore_and_Aft_Gangways_with_Equipment , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:427_Light_and_Signal_Equipment_Lanterns_Typhoons , sdir:883_Cable_Trays_and_Installation_on_Deck_and_in_Cargo_Holds , sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT .
+        sdir:reference   sdir:874_Local_Starters_Group , sdir:882_Cable_Trays_with_Installation_in_Accommodation , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:42_COMMUNICATION_EQUIPMENT , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:535_Fore_and_Aft_Gangways_with_Equipment , sdir:427_Light_and_Signal_Equipment_Lanterns_Typhoons , sdir:883_Cable_Trays_and_Installation_on_Deck_and_in_Cargo_Holds , sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT .
 
 sdir:351048_Hydr_Valves_and_Piping_Systems
         rdfs:label       "Hydr. valves and piping systems"@en ;
@@ -3971,7 +3971,7 @@ sdir:502_Liferafts_with_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:50_LIFESAVING_PROTECTION_MEDICAL_AND_SECURITY_EQUIPMENT ;
         sdir:code        "502" ;
         sdir:definition  "Liferafts with all equipment on board, loose and fixed, together with raft fasteners and corresp. equipment as mentioned in subgroup 501. Additionally this group covers the Marine Evacuation system. " ;
-        sdir:reference   sdir:443_Painting_Equipment_Scaffolding_Paint_Rafts_Boats_Gigs , sdir:501_Lifeboats_with_Equipment , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins .
+        sdir:reference   sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:501_Lifeboats_with_Equipment , sdir:443_Painting_Equipment_Scaffolding_Paint_Rafts_Boats_Gigs , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables .
 
 sdir:432045_Windlass_Hydr_Systems
         rdfs:label       "Windlass hydr. systems"@en ;
@@ -4031,7 +4031,7 @@ sdir:403_Steering_Gear_Columns_Telemoter_Rudder_Indicator_Emergency_Steering
         rdfs:subClassOf  sdir:SubGroup , sdir:40_MANOEUVRING_MACHINERY_AND_EQUIPMENT ;
         sdir:code        "403" ;
         sdir:definition  "Steering plants, including such as: - Steering gear with associated pumps, electric motors, pipes with valves etc., storage tanks, connections to rudder stocks, etc. - Here is also included separate steering gear for rudder flaps with similar equipment. - Steering columns with connections to steering gear (and possibly to active rudders) of electric, hydraulic (telemotor sys- tems) and/or pneumatic type, or a combination of these, complete with all system components. - Rudder indicators with associated equipment (transmissions etc.). - Equipment for remote start/stop of steering gear and other machinery in connection to steering gear (Note! see also Ref.). - Separate plans for emergency steering, including connections to steering gear/rudder stock. " ;
-        sdir:reference   sdir:793_Automation_Equipment_Prop_Machinery_and_Transmission_Engine_Telegraph , sdir:403_Steering_Gear_Columns_Telemoter_Rudder_Indicator_Emergency_Steering , sdir:413_Gyro_Plants_Autopilots_Compasses , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS .
+        sdir:reference   sdir:403_Steering_Gear_Columns_Telemoter_Rudder_Indicator_Emergency_Steering , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS , sdir:413_Gyro_Plants_Autopilots_Compasses , sdir:793_Automation_Equipment_Prop_Machinery_and_Transmission_Engine_Telegraph .
 
 sdir:397_Unassigned  rdfs:label  "Unassigned"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:39_UNASSIGNED ;
@@ -4108,14 +4108,14 @@ sdir:564_Shore_Gangways_with_Davits_Landing_Booms
         rdfs:subClassOf  sdir:SubGroup , sdir:56_TRANSPORT_EQUIPMENT_FOR_CREW_PASSENGERS_AND_PROVISIONS ;
         sdir:code        "564" ;
         sdir:definition  "Shore gangway and landing equipment, including such as: - Shore/accommodation ladder davits with rigging and separate winches with drive units. - Railing/bulwark steps (ladders), pilot ladder/hoist. - Landing booms (booms for setting people ashore in the St. Lawrence Seaway or similar) with rigging, derrick posts and possible separate lifting machinery, etc. " ;
-        sdir:reference   sdir:533_Handrails_Railing_Rail_Gates , sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:442_General_Hand_and_Pneumatic_Tools , sdir:534_External_Platforms_Steps_Ladders_and_Grating_with_Equipment .
+        sdir:reference   sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:534_External_Platforms_Steps_Ladders_and_Grating_with_Equipment , sdir:533_Handrails_Railing_Rail_Gates , sdir:442_General_Hand_and_Pneumatic_Tools .
 
 sdir:161_Mending_Work_After_Trials
         rdfs:label       "Mending work after trials"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:16_GUARANTEE_MENDING_WORK ;
         sdir:code        "161" ;
         sdir:definition  "Mending work on board after trials (Note! see also Ref.). " ;
-        sdir:reference   sdir:151_Machinery_Testing , sdir:162_Guarantee_Work_Including_Travelling , sdir:154_Trial_Trips .
+        sdir:reference   sdir:162_Guarantee_Work_Including_Travelling , sdir:154_Trial_Trips , sdir:151_Machinery_Testing .
 
 sdir:591010_Valves_and_Piping_Systems
         rdfs:label       "Valves and piping systems"@en ;
@@ -4281,7 +4281,7 @@ sdir:112_Classification_and_Statutory_Fees_and_Certificates
         rdfs:subClassOf  sdir:SubGroup , sdir:11_INSURANCE_FEES_CERTIFICATES_REPRESENTATION ;
         sdir:code        "112" ;
         sdir:definition  "Fees charged by classification society, maritime authorities and other institutions (Department of health, Ministry of Trans- port etc.), for classification, approvals and registry, issue of letters and certificates (Note! only certificates which cannot be referred to machinery and equipment in one subgroup) e.g.: - Certificates issued by the classification society - Certificates issued by the flag state - Certificates issued by the local Coast Guard. - Certificates related to oil production and storage. On this group included assistance to and all requisitions of  materials/equipment for surveyors of classification societies, authorities etc. " ;
-        sdir:reference   sdir:101_Contract_Specification_Work_General_Design_Model_Testing , sdir:152_Capacity_Inclination_Vibration_Measurements .
+        sdir:reference   sdir:152_Capacity_Inclination_Vibration_Measurements , sdir:101_Contract_Specification_Work_General_Design_Model_Testing .
 
 sdir:433039_Chain_Stoppers_Rollers
         rdfs:label       "Chain stoppers/rollers"@en ;
@@ -4495,7 +4495,7 @@ sdir:205_X-Ray_and_Ultrasonic_Testing_of_Hull_Parts
         rdfs:subClassOf  sdir:SubGroup , sdir:20_HULL_MATERIALS_GENERAL_HULL_WORK ;
         sdir:code        "205" ;
         sdir:definition  "X-ray, ultrasonic and other material testing of hull parts or hull materials and welding tests of materials. " ;
-        sdir:reference   sdir:204_Testing_of_Tanks_Bulkheads , sdir:2_HULL_SYSTEMS .
+        sdir:reference   sdir:2_HULL_SYSTEMS , sdir:204_Testing_of_Tanks_Bulkheads .
 
 sdir:261011_Owners_Marks
         rdfs:label       "Owners marks"@en ;
@@ -4876,7 +4876,7 @@ sdir:307_Side_Ports  rdfs:label  "Side ports"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:30_HATCHES_PORTS ;
         sdir:code        "307" ;
         sdir:definition  "All side ports, including combined side ports/hatch covers, with equipment as stated in subgroup 305. " ;
-        sdir:reference   sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:533_Handrails_Railing_Rail_Gates , sdir:555_Insulation_Lining_and_Battening_in_Provision_Rooms_Doors_and_Ports , sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps .
+        sdir:reference   sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:555_Insulation_Lining_and_Battening_in_Provision_Rooms_Doors_and_Ports , sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps , sdir:533_Handrails_Railing_Rail_Gates .
 
 sdir:42_COMMUNICATION_EQUIPMENT
         rdfs:label       "Communication equipment"@en ;
@@ -4990,7 +4990,7 @@ sdir:276_Galvanizing_Nickel_Plating_Metalizing
         rdfs:subClassOf  sdir:SubGroup , sdir:27_MATERIAL_PROTECTION_EXTERNAL ;
         sdir:code        "276" ;
         sdir:definition  "Galvanizing and other metalizing processes of deck equipment and internal components/piping. " ;
-        sdir:reference   sdir:28_MATERIAL_PROTECTION_INTERNAL , sdir:203_Blasting_Shop-Priming_Rolling_and_Cleaning_of_Materials , sdir:27_MATERIAL_PROTECTION_EXTERNAL .
+        sdir:reference   sdir:203_Blasting_Shop-Priming_Rolling_and_Cleaning_of_Materials , sdir:27_MATERIAL_PROTECTION_EXTERNAL , sdir:28_MATERIAL_PROTECTION_INTERNAL .
 
 sdir:469_Unassigned  rdfs:label  "Unassigned"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:46_HUNTING_AND_FISHING_EQUIPMENT ;
@@ -5239,7 +5239,7 @@ sdir:561_Personnel_Lifts_Escalators
         rdfs:subClassOf  sdir:SubGroup , sdir:56_TRANSPORT_EQUIPMENT_FOR_CREW_PASSENGERS_AND_PROVISIONS ;
         sdir:code        "561" ;
         sdir:definition  "Lifts (elevators) with doors and cars (gondolas) and/or escalators for crew and passengers, complete with machinery. " ;
-        sdir:reference   sdir:2_HULL_SYSTEMS , sdir:451_Engine_Room_Lifts , sdir:564_Shore_Gangways_with_Davits_Landing_Booms .
+        sdir:reference   sdir:451_Engine_Room_Lifts , sdir:2_HULL_SYSTEMS , sdir:564_Shore_Gangways_with_Davits_Landing_Booms .
 
 sdir:527001_Steps_with_Railing
         rdfs:label       "Steps with railing"@en ;
@@ -5474,7 +5474,7 @@ sdir:322_Roller_Ways_Roller_Conveyors_Turntables
         rdfs:subClassOf  sdir:SubGroup , sdir:32_SPECIAL_CARGO_HANDLING_EQUIPMENT ;
         sdir:code        "322" ;
         sdir:definition  "Roller ways and conveyors for cargo, including also those in lifts and on ramps. Turntables, e.g. for railway vehicles, cars and sea cables. The equipment also includes drive machinery, rails, fittings, etc. " ;
-        sdir:reference   sdir:563_Provision_Cranes_and_Derricks , sdir:49_FISH_PROCESSING_EQUIPMENT , sdir:325_Self_Loaders_Screw_Transporters_Conveyor_Belts , sdir:494_Meal_and_Oil_Factories .
+        sdir:reference   sdir:494_Meal_and_Oil_Factories , sdir:49_FISH_PROCESSING_EQUIPMENT , sdir:325_Self_Loaders_Screw_Transporters_Conveyor_Belts , sdir:563_Provision_Cranes_and_Derricks .
 
 sdir:181_Accommodation_Stores
         rdfs:label       "Accommodation stores"@en ;
@@ -5688,7 +5688,7 @@ sdir:355_Loading_Discharging_Systems_for_LPG_LNG_in_Gaseous_Phase
         rdfs:subClassOf  sdir:SubGroup , sdir:35_LOADING_DISCHARGING_SYSTEMS_FOR_LIQUID_CARGO ;
         sdir:code        "355" ;
         sdir:definition  "The part of the loading/discharging systems that conveys gaseous cargo during normal loading/discharging operations, including such as: - Gas return pipes between tanks and shore connection with valves etc. - Pressure distribution pipes between domes and tank systems. - Special branch lines for discharging by means of compressed gas. - Loading/discharging compressor with drive unit (Note! see also Ref.). - Loose hoses and adaptors for shore connection with associated stowage equipment. Even though the loading/discharging piping or part of it is also used for e.g. inert gas, air during loading/discharging, vent- ilation and as suction/pressure pipes for cooling system (recondensation) loading/discharging is considered to be the main function, and the piping comes under this subgroup. " ;
-        sdir:reference   sdir:376_Inert_Gas_Systems_with_Conditioning_Plant , sdir:36_FREEZING_REFRIGERATING_AND_HEATING_SYSTEMS_FOR_CARGO , sdir:312_Loose_Tanks_for_Cargo .
+        sdir:reference   sdir:36_FREEZING_REFRIGERATING_AND_HEATING_SYSTEMS_FOR_CARGO , sdir:312_Loose_Tanks_for_Cargo , sdir:376_Inert_Gas_Systems_with_Conditioning_Plant .
 
 sdir:558039_Ironing_Boards
         rdfs:label       "Ironing boards"@en ;
@@ -5857,7 +5857,7 @@ sdir:156_Health_Environment_Safety_Drills_and_Procedures
         rdfs:subClassOf  sdir:SubGroup , sdir:15_QUALITY_CONTROL_MEASUREMENTS_TESTS_TRIALS ;
         sdir:code        "156" ;
         sdir:definition  "All general work regarding health, environment and safety. Official requirements for internal control related to the ship and contingency plans. - Forms. - Routines. - Procedures. " ;
-        sdir:reference   sdir:121_Quality_Assurance_Planning_Work_Preparation , sdir:382_Tank_Cleaning_Systems_and_Equipment .
+        sdir:reference   sdir:382_Tank_Cleaning_Systems_and_Equipment , sdir:121_Quality_Assurance_Planning_Work_Preparation .
 
 sdir:649011_Compressor_Turbines
         rdfs:label       "Compressor turbines"@en ;
@@ -5886,7 +5886,7 @@ sdir:141_Keel_Blocks_Pillars_Cushions
         rdfs:subClassOf  sdir:SubGroup , sdir:14_WORK_ON_WAYS_LAUNCHING_DOCKING ;
         sdir:code        "141" ;
         sdir:definition  "Support of ship during construction including such as: - Mounting and adjustment of keel blocks. - Support of hull and superstructure/deck houses internal and external, and demounting  and work by berth workers. " ;
-        sdir:reference   sdir:13_PROVISIONAL_RIGGING , sdir:145_Shifting_Towing_Excluding_Launching , sdir:142_Launching_Arr_with_Cradle_Supports_Water_Filling_Platform .
+        sdir:reference   sdir:142_Launching_Arr_with_Cradle_Supports_Water_Filling_Platform , sdir:13_PROVISIONAL_RIGGING , sdir:145_Shifting_Towing_Excluding_Launching .
 
 sdir:123_Clearing_and_Cleaning
         rdfs:label       "Clearing and cleaning"@en ;
@@ -6273,14 +6273,14 @@ sdir:36_FREEZING_REFRIGERATING_AND_HEATING_SYSTEMS_FOR_CARGO
         rdfs:subClassOf  sdir:Group , sdir:3_CARGO_EQUIPMENT ;
         sdir:code        "36" ;
         sdir:definition  "The subgroups include, unless otherwise stated: - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transport costs (external). - Installation and adjustment. - Testing and inspection (in workshops and during installation). The system in subgroups include all associated systems components such as: - Pipes with bends, T-pieces, brackets, expansion arrangements, penetration pieces, safety and other valves, filters, insulation  and sheathing etc. - Air and drain pipes (for system components). - Fans, compressors, pumps with drive units and ejectors. - Evaporators, condensers, heat exchangers and loose tanks. - Local instruments and local regulating equipment (in the systems). - Local control (operating) equipment. - Protection covers (excluding weather decks and cargo holds). - Fitted flanges for connection to systems and associated components. - Spare parts. All auxiliary systems (connected systems) end at the intake flange on the system described in the subgroup. For freezing, refrigerating and heating systems common for cargo and provisions, cargo is considered to be the main func- tion, and the common systems are charged the respective subgroups in ..... group 36 " ;
-        sdir:reference   sdir:36_FREEZING_REFRIGERATING_AND_HEATING_SYSTEMS_FOR_CARGO , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins .
+        sdir:reference   sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:36_FREEZING_REFRIGERATING_AND_HEATING_SYSTEMS_FOR_CARGO .
 
 sdir:515_Side_Scuttles_and_Windows_with_Equipment
         rdfs:label       "Side scuttles and windows with equipment"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:51_INSULATION_PANELS_BULKHEADS_DOORS_SIDE_SCUTTLES_SKYLIGHTS ;
         sdir:code        "515" ;
         sdir:definition  "All side scuttles, windows and clear-view screens with fittings and equipment, such as: - Mosquito frames/netting. - Eye brows over windows/side scuttles, drip trays. - Window wiper plant.rotation mechanisms for clear-view screens. - Included are also cutting of holes onboard for side scuttles and windows. " ;
-        sdir:reference   sdir:511_Partition_Bulkheads_Paneling , sdir:571_Ventilation_Air_Conditioning_Systems_for_Accommodation , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:516_Skylights_with_Equipment .
+        sdir:reference   sdir:516_Skylights_with_Equipment , sdir:511_Partition_Bulkheads_Paneling , sdir:571_Ventilation_Air_Conditioning_Systems_for_Accommodation , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers .
 
 sdir:324_Bulldozers_Mechanical_Shovels_Trolleys_Trucks
         rdfs:label       "Bulldozers, mechanical shovels, trolleys, trucks"@en ;
@@ -6293,7 +6293,7 @@ sdir:274_Equipment_on_External_Decks_Bulwark_Inboard_Side
         rdfs:subClassOf  sdir:SubGroup , sdir:27_MATERIAL_PROTECTION_EXTERNAL ;
         sdir:code        "274" ;
         sdir:definition  "Material protection by means of surface treatment such as painting etc. of equipment on external decks, such as: - Mast, booms, derrick posts, derricks and ventilation pipes. - Gas tanks, external. - Lifeboat and life-saving equipment. - Deck machinery and other deck equipment. - Hatch covers and coamings, external. - Bulwark (inboard side), railings. " ;
-        sdir:reference   sdir:275_Superstructures_Deck_Houses_Mast_Houses , sdir:272_Top_Side , sdir:283_Cargo_Holds .
+        sdir:reference   sdir:283_Cargo_Holds , sdir:272_Top_Side , sdir:275_Superstructures_Deck_Houses_Mast_Houses .
 
 sdir:156025_Man_Overboard_Drill
         rdfs:label       "Man overboard drill"@en ;
@@ -6320,7 +6320,7 @@ sdir:634_Controllable_Pitch_Propeller_CPP_Plants_Incl_Nozzles
         rdfs:subClassOf  sdir:SubGroup , sdir:63_PROPELLERS_TRANSMISSIONS_FOILS ;
         sdir:code        "634" ;
         sdir:definition  "Propeller plants with controllable pitch, for propulsion, including such as: - Hydraulic auxiliary equipment like pressure oil box, oil pumps with drive unit, pipes, etc. (Note! see also Ref.). - Spare shafts, possible nozzles and similar equipment, as mentioned in subgroup 631. " ;
-        sdir:reference   sdir:793_Automation_Equipment_Prop_Machinery_and_Transmission_Engine_Telegraph , sdir:631_Fixed_Propeller_Plants_IncludingNozzles .
+        sdir:reference   sdir:631_Fixed_Propeller_Plants_IncludingNozzles , sdir:793_Automation_Equipment_Prop_Machinery_and_Transmission_Engine_Telegraph .
 
 sdir:801055_Hydr_Oil_Expansion_Tanks
         rdfs:label       "Hydr. oil expansion tanks"@en ;
@@ -6524,7 +6524,7 @@ sdir:661_Steam_Turbo_Aggregates
         rdfs:subClassOf  sdir:SubGroup , sdir:66_OTHER_AGGREGATES_FOR_ELECTRIC_POWER_PRODUCTION ;
         sdir:code        "661" ;
         sdir:definition  "Auxiliary steam turbines with generators (turbo generators) for main electric power production, also including such as: - Gear and couplings between turbine and generator, as well as clutches for possible connection to the main reduction gear. - Mounted pipes with fittings, admission valves, etc. " ;
-        sdir:reference   sdir:755_Primary_Condensate_Systems , sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS .
+        sdir:reference   sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS , sdir:755_Primary_Condensate_Systems .
 
 sdir:354_Loading_Discharging_Systems_in_Cargo_Tanks
         rdfs:label       "Loading/discharging systems in cargo tanks"@en ;
@@ -6584,7 +6584,7 @@ sdir:52_INTERNAL_DECK_COVERING_LADDERS_STEPS_RAILING
         rdfs:subClassOf  sdir:Group , sdir:5_CREW_AND_PASSENGER_EQUIPMENT ;
         sdir:code        "52" ;
         sdir:definition  "The subgroups include, unless otherwise stated: - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transportation costs (external). - Installation and adjustment. - Testing and inspection (in workshops and during installation). Also included in the subgroups are: - Spare parts " ;
-        sdir:reference   sdir:522_Internal_Deck_Top_Covering_Linoleum_Tiles_Parquet_etc , sdir:13_PROVISIONAL_RIGGING , sdir:28_MATERIAL_PROTECTION_INTERNAL .
+        sdir:reference   sdir:13_PROVISIONAL_RIGGING , sdir:522_Internal_Deck_Top_Covering_Linoleum_Tiles_Parquet_etc , sdir:28_MATERIAL_PROTECTION_INTERNAL .
 
 sdir:434047_Hydr_Pumps_with_Drive_Units
         rdfs:label       "Hydr. pumps with drive units"@en ;
@@ -6876,7 +6876,7 @@ sdir:351_Loading_Discharging_Pumps
         rdfs:subClassOf  sdir:SubGroup , sdir:35_LOADING_DISCHARGING_SYSTEMS_FOR_LIQUID_CARGO ;
         sdir:code        "351" ;
         sdir:definition  "Pumps with drive units, with possible couplings/gear, bulkhead/deck, penetrations etc. for loading/discharging of liquid cargo (oil, petroleum, chemicals, liquefied gas etc.). The pumps can be located in pump rooms, on deck or in the tanks (deep well pumps). Also included here are spray pumps for gas cargo. The subgroup also includes separate systems for equipment) for loading/discharging pumps or their drive units, such as: - Evacuation plant with vacuum pump (including drive unit), separation tank, etc. for loading/discharging pumps, so that these can also be used for stripping. - Lube oil system for loading/discharging pumps and for possible turbines and gears for these, complete with pipes, pumps with drive units, preheaters, valves, etc. - Hydraulic oil system for driving loading/discharging pumps complete with pumps, pipes, etc. (as described in subgroup 309). - Exhaust gas system and possible air supply system for gas turbines which drive loading/discharging pumps, complete with ducts, valves etc. - Here is also possibly included arrangement for filling (priming) of loading/discharging pumps with valves, nozzles, recir- culation tank etc. - Fuel system to gas turbines that drive loading/discharging pumps, complete with pipes, pumps with drive units, pre- heaters, valves etc. (see also Ref.). - Cooling and/or other separate system for loading/discharging pumps, complete with associated system components (see also Ref.). Even though loading/discharging pumps can also be used as ballast, tank washing and stripping pumps and for other sim- ilar functions, loading/discharging is considered to be their main function, and they come under this subgroup. " ;
-        sdir:reference   sdir:355_Loading_Discharging_Systems_for_LPG_LNG_in_Gaseous_Phase , sdir:356_Separate_Stripping_Systems , sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS , sdir:703_FO_Supply_Systems , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:71_LO_SYSTEMS , sdir:382_Tank_Cleaning_Systems_and_Equipment , sdir:715_LO_System_for_Gas_Gen_Common_LO_System_for_Other_Machinery , sdir:831_Special_Common_Hydr_Oil_Systems , sdir:72_COOLING_SYSTEMS , sdir:801_Ballast_Systems_Solid_Ballast , sdir:883_Cable_Trays_and_Installation_on_Deck_and_in_Cargo_Holds .
+        sdir:reference   sdir:355_Loading_Discharging_Systems_for_LPG_LNG_in_Gaseous_Phase , sdir:356_Separate_Stripping_Systems , sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS , sdir:703_FO_Supply_Systems , sdir:71_LO_SYSTEMS , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:382_Tank_Cleaning_Systems_and_Equipment , sdir:715_LO_System_for_Gas_Gen_Common_LO_System_for_Other_Machinery , sdir:831_Special_Common_Hydr_Oil_Systems , sdir:72_COOLING_SYSTEMS , sdir:801_Ballast_Systems_Solid_Ballast , sdir:883_Cable_Trays_and_Installation_on_Deck_and_in_Cargo_Holds .
 
 sdir:552104_Soaking_Thawing_Sinks
         rdfs:label       "Soaking/thawing sinks"@en ;
@@ -6982,7 +6982,7 @@ sdir:461_Hunting_Equipment_for_Whale_Seal
         rdfs:subClassOf  sdir:SubGroup , sdir:46_HUNTING_AND_FISHING_EQUIPMENT ;
         sdir:code        "461" ;
         sdir:definition  "Equipment for hunting whale, seal, bear, etc. with associated auxiliary equipment, including such as: - Whale gun with associated equipment and platform. - Harpoons with tails, hawsers, shackles etc. - Winding apparatus or equivalent for harpoon hawser. - Whale windlass with drive machinery etc. - Rifles, hooking spikes, mallets etc. - Flags etc. for whale marking. - Pulleys and wire for hauling in of hides. " ;
-        sdir:reference   sdir:494_Meal_and_Oil_Factories , sdir:49_FISH_PROCESSING_EQUIPMENT , sdir:312_Loose_Tanks_for_Cargo .
+        sdir:reference   sdir:49_FISH_PROCESSING_EQUIPMENT , sdir:494_Meal_and_Oil_Factories , sdir:312_Loose_Tanks_for_Cargo .
 
 sdir:552103_Dishwashing_Conveyors
         rdfs:label       "Dishwashing conveyors"@en ;
@@ -7059,7 +7059,7 @@ sdir:74_EXHAUST_SYSTEMS_AND_AIR_INTAKES
         rdfs:subClassOf  sdir:Group , sdir:7_SYSTEMS_FOR_MACHINERY_MAIN_COMPONENTS ;
         sdir:code        "74" ;
         sdir:definition  "This group includes the ships main exhaust gas and air intake systems, i.e. exhaust and air intake systems for machinery main components (machinery in primary group 6). The subgroups include, unless otherwise stated: - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transport costs (external). - Installation and adjustment. - Testing and inspection (in workshops and during installation). The systems in the subgroups include all associated system components, such as: - Fans with drive units, muffler, filters, spark arresters, water separators, etc. - Pipes and ducts with bends, T-pieces, flanges, suspensions, clamps, expansion arrangements, penetration pieces, insu- lation with lining,etc. - Local instruments (thermometers, manometers, etc.). - Protection covers (excluding weather decks and cargo holds/tanks). - Chemical additive equipment for cleaning of exhaust ducts. - Spare parts. All auxiliary systems connected systems) end at the intake flange on the system which is described in the subgroup. " ;
-        sdir:reference   sdir:376_Inert_Gas_Systems_with_Conditioning_Plant , sdir:6_MACHINERY_MAIN_COMPONENTS , sdir:268_Funnels , sdir:351_Loading_Discharging_Pumps , sdir:445_Unassigned , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves .
+        sdir:reference   sdir:6_MACHINERY_MAIN_COMPONENTS , sdir:376_Inert_Gas_Systems_with_Conditioning_Plant , sdir:268_Funnels , sdir:351_Loading_Discharging_Pumps , sdir:445_Unassigned , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves .
 
 sdir:403030_Rudder_Angle_Indicators
         rdfs:label       "Rudder angle indicators"@en ;
@@ -7111,7 +7111,7 @@ sdir:346_Manoeuvring_Winches_for_Derrick_Booms
         rdfs:subClassOf  sdir:SubGroup , sdir:34_MASTS_DERRICK_POSTS_RIGGING_AND_WINCHES_FOR_CARGO ;
         sdir:code        "346" ;
         sdir:definition  "Manoeuvring winches (motor or manually driven) for cargo derrick booms, including such as: - Topping winches. - Slewing winches (guy and preventer winches). Complete winches with steam, electrical or hydraulic machinery (system) heating elements, etc. and separate control and regulating equipment (Note! see also Ref.). " ;
-        sdir:reference   sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:344_Running_Rigging , sdir:345_Hoisting_Winches , sdir:347_Common_Plants_for_Cargo_Winches .
+        sdir:reference   sdir:344_Running_Rigging , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:347_Common_Plants_for_Cargo_Winches , sdir:345_Hoisting_Winches .
 
 sdir:493028_Glazing_Units
         rdfs:label       "Glazing units"@en ;
@@ -7287,7 +7287,7 @@ sdir:466_Special_Fishing_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:46_HUNTING_AND_FISHING_EQUIPMENT ;
         sdir:code        "466" ;
         sdir:definition  "Special hunting/fishing equipment that is not included in subgroups 461-465, including such as: - Light hunting equipment. - Electric fishing equipment, etc. Also included is auxiliary equipment in connection with fishing, which can not be included in other subgroups in group 46 and which have functions which can not be included in subgroups in other primary groups (Note! see also Ref.). " ;
-        sdir:reference   sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:486_Aux_Vessels , sdir:468_Unassigned .
+        sdir:reference   sdir:486_Aux_Vessels , sdir:468_Unassigned , sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log .
 
 sdir:376034_Gas_Dryers
         rdfs:label       "Gas dryers"@en ;
@@ -7489,7 +7489,7 @@ sdir:308_Cargo_Doors_in_Bulkheads
         rdfs:subClassOf  sdir:SubGroup , sdir:30_HATCHES_PORTS ;
         sdir:code        "308" ;
         sdir:definition  "Doors (ports) or closing arrangements (e.g. covers for tonnage openings) in bulkheads between cargo spaces (e.g. for car carriers, in freezing and refrigerated cargo holds) with associated equipment as stated in subgroup 305. Bridge front door for the movement of cargo from the stern to deck is also included here. " ;
-        sdir:reference   sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks , sdir:513_Other_Internal_Doors_with_Coamings , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps .
+        sdir:reference   sdir:513_Other_Internal_Doors_with_Coamings , sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks , sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers .
 
 sdir:625027_Clutch_Coupling
         rdfs:label       "Clutch/coupling"@en ;
@@ -7849,7 +7849,7 @@ sdir:292_Flame_Cutting
         rdfs:subClassOf  sdir:SubGroup , sdir:29_MISC_HULL_WORK_NOT_STANDARD ;
         sdir:code        "292" ;
         sdir:definition  "Cutting of materials by flame cutters on cutting lines before welding. " ;
-        sdir:reference   sdir:295_Burning_Chiseling_and_Grinding_for_Back_Welds , sdir:192_Gas_Oxygen_Coal_Oil .
+        sdir:reference   sdir:192_Gas_Oxygen_Coal_Oil , sdir:295_Burning_Chiseling_and_Grinding_for_Back_Welds .
 
 sdir:155005_Ammunition_Purchases
         rdfs:label       "Ammunition purchases"@en ;
@@ -8001,7 +8001,7 @@ sdir:48_SPECIAL_EQUIPMENT
         rdfs:subClassOf  sdir:Group , sdir:4_SHIP_EQUIPMENT ;
         sdir:code        "48" ;
         sdir:definition  "The group includes only the respective special equipment, while standard equipment (equipment to be found in most ves- sels) is included in the respective subgroup in other groups according to the function (Note! see also Ref.). The subgroups include, unless otherwise stated: - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transport costs (external). - Installation and adjustment. - Testing and inspection (in workshops and during installation). Also included: - Instruments, regulating and control (operating) equipment. - Protection covers (excluding weather decks and cargo holds). - Spare parts. " ;
-        sdir:reference   sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT , sdir:437_Towing_Equipment , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:442_General_Hand_and_Pneumatic_Tools .
+        sdir:reference   sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT , sdir:437_Towing_Equipment , sdir:442_General_Hand_and_Pneumatic_Tools , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables .
 
 sdir:713027_Stern_Tube_LO_Level_Tanks
         rdfs:label       "Stern tube lo level tanks"@en ;
@@ -8199,7 +8199,7 @@ sdir:201_Hull_Materials
         rdfs:subClassOf  sdir:SubGroup , sdir:20_HULL_MATERIALS_GENERAL_HULL_WORK ;
         sdir:code        "201" ;
         sdir:definition  "Purchase and selection of construction materials such as plates, profiles, bars, pipes etc. for primary group 2 which cannot be directly charged. (Note! see also Ref.). Here is also included costs of external transportation and storing of hull mater- ials. " ;
-        sdir:reference   sdir:218_Stern_Frame_Sections , sdir:203_Blasting_Shop-Priming_Rolling_and_Cleaning_of_Materials , sdir:25_DECK_HOUSES_AND_SUPERSTRUCTURES .
+        sdir:reference   sdir:203_Blasting_Shop-Priming_Rolling_and_Cleaning_of_Materials , sdir:218_Stern_Frame_Sections , sdir:25_DECK_HOUSES_AND_SUPERSTRUCTURES .
 
 sdir:59_PASSENGER_VESSELS_CABINS_PUBLIC_ROOMS_AND_POOLS_ETC
         rdfs:label       "Passenger vessels cabins, public rooms and pools, etc."@en ;
@@ -8262,7 +8262,7 @@ sdir:462_Longlines_with_Equipment_Nets_Hand_Fishing_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:46_HUNTING_AND_FISHING_EQUIPMENT ;
         sdir:code        "462" ;
         sdir:definition  "Fishing equipment included associated auxiliary equipment, of the following types: - Longlines with buoys and anchoring, longline tubs, spooling gear, longline droppers/-rollers, combined longline baiting and dropper equipment, longline windlass with machinery, etc. and auto line equipment. - Equipment in connection to bait and baiting, such as longline bating equipment, bait tables etc. - Nets with balls and buoys, net stones, equipment for dropping/handling and storing of net with such as net hauler, nets, spare equipment, transport rollers with drive unit, seine tracks, tubs etc. and control and operating equipment for mentioned machinery. - Hand fishing equipment, such as hand lines, hand line apparatus, fishing rods, jigs (spoon hooks), etc. - Fish traps with/without baits, with buoys etc. " ;
-        sdir:reference   sdir:49_FISH_PROCESSING_EQUIPMENT , sdir:2_HULL_SYSTEMS , sdir:546_Hobby_Sports_and_Entertainment_Equipment .
+        sdir:reference   sdir:2_HULL_SYSTEMS , sdir:546_Hobby_Sports_and_Entertainment_Equipment , sdir:49_FISH_PROCESSING_EQUIPMENT .
 
 sdir:644017_Soot_Blowers
         rdfs:label       "Soot blowers"@en ;
@@ -8466,7 +8466,7 @@ sdir:76_DISTILLED_AND_MAKE-UP_WATER_SYSTEMS
         rdfs:subClassOf  sdir:Group , sdir:7_SYSTEMS_FOR_MACHINERY_MAIN_COMPONENTS ;
         sdir:code        "76" ;
         sdir:definition  "The subgroups include, unless otherwise stated: - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transport costs (external). - Installation and adjustment. - Testing and control (in workshops and during installation). The subgroups include all associated system components, such as: - Pumps with drive units, loose tanks (e.g. make-up water tank), etc. - Pipes with bends, T-pieces, flanges, etc., valves, filters, suspensions, clamps, penetration pieces, insulation with lining, etc. - Local instruments (thermometers, manometers, etc.). - Protection covers (excluding weather decks and cargo holds/tanks). - Spare parts. Drain pipes and pots, air pipes, valves and sounding pipes with equipment, come under the subgroup for the component or system which is drained/deaerated (Note! See also Ref.). All auxiliary systems (connected systems) end at the intake flange on the system described in the subgroup. " ;
-        sdir:reference   sdir:821_Bleed_and_Overflow_Pipe_Systems , sdir:797_Automation_Equipment_for_Other_Machinery_Components , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins .
+        sdir:reference   sdir:821_Bleed_and_Overflow_Pipe_Systems , sdir:797_Automation_Equipment_for_Other_Machinery_Components , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables .
 
 sdir:541055_Refrigerators
         rdfs:label       "Refrigerators"@en ;
@@ -8528,14 +8528,14 @@ sdir:109_Maintenance_Systems_Instruction_Material
         rdfs:subClassOf  sdir:SubGroup , sdir:10_SPECIFICATION_ESTIMATING_DRAWING_INSTRUCTION_COURSES ;
         sdir:code        "109" ;
         sdir:definition  "Expenses/costs connected with instruction material and courses for crew and owners representatives. Preparation of main- tenance and spare parts systems for the ship, including forms etc. " ;
-        sdir:reference   sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:195_Equipment_for_Owners_Representatives .
+        sdir:reference   sdir:195_Equipment_for_Owners_Representatives , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables .
 
 sdir:535_Fore_and_Aft_Gangways_with_Equipment
         rdfs:label       "Fore and aft gangways with equipment"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:53_EXT_DECK_COVERING_LADDERS_STEPS_FORE_AND_AFT_GANGWAY ;
         sdir:code        "535" ;
         sdir:definition  "Fore-and-aft gangways (catwalk, storm bridge) with: - Brackets for pipe and cable ways where these are part of the construction. - Ladders, steps and platforms to gangway. - Railings on the gangway and associated ladders/steps. - Gratings, deck planking or covering on gangway. If the ship has railings on deck or over hatch covers, instead of a fore and-aft gangway (ships with high free board), this equipment comes under this subgroup. " ;
-        sdir:reference   sdir:534_External_Platforms_Steps_Ladders_and_Grating_with_Equipment , sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:387_Special_Structures_for_Loading_Discharging_Over_Stern_Stem , sdir:564_Shore_Gangways_with_Davits_Landing_Booms .
+        sdir:reference   sdir:564_Shore_Gangways_with_Davits_Landing_Booms , sdir:387_Special_Structures_for_Loading_Discharging_Over_Stern_Stem , sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:534_External_Platforms_Steps_Ladders_and_Grating_with_Equipment .
 
 sdir:815046_Halon_Release_Lockers
         rdfs:label       "Halon release lockers"@en ;
@@ -8742,7 +8742,7 @@ sdir:491_Raw_Material_Handling
         rdfs:subClassOf  sdir:49_FISH_PROCESSING_EQUIPMENT , sdir:SubGroup ;
         sdir:code        "491" ;
         sdir:definition  "Plant and equipment for reception of catch before processing, conveyor belts and chutes. Equipment for conservation of food in the production process (see also Ref.) Equipment for disposal of fish waste. " ;
-        sdir:reference   sdir:386_Equipment_for_Addition_of_Preservatives_Inhibitors_Spirits , sdir:362_Freezing_and_Refrigerating_Systems_for_Dry_Cargo , sdir:51_INSULATION_PANELS_BULKHEADS_DOORS_SIDE_SCUTTLES_SKYLIGHTS , sdir:317_Containers_Pallets , sdir:7_SYSTEMS_FOR_MACHINERY_MAIN_COMPONENTS , sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks , sdir:494_Meal_and_Oil_Factories , sdir:321_Cargo_Lifts , sdir:384_Separate_Cooling_Water_Systems_for_Cargo_Equipment .
+        sdir:reference   sdir:386_Equipment_for_Addition_of_Preservatives_Inhibitors_Spirits , sdir:362_Freezing_and_Refrigerating_Systems_for_Dry_Cargo , sdir:51_INSULATION_PANELS_BULKHEADS_DOORS_SIDE_SCUTTLES_SKYLIGHTS , sdir:317_Containers_Pallets , sdir:7_SYSTEMS_FOR_MACHINERY_MAIN_COMPONENTS , sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks , sdir:494_Meal_and_Oil_Factories , sdir:384_Separate_Cooling_Water_Systems_for_Cargo_Equipment , sdir:321_Cargo_Lifts .
 
 sdir:425037_Radio_Station_VHF_Transfer
         rdfs:label       "Radio station vhf transfer"@en ;
@@ -8848,7 +8848,7 @@ sdir:104_Drawing_Ordering_etc_Ship_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:10_SPECIFICATION_ESTIMATING_DRAWING_INSTRUCTION_COURSES ;
         sdir:code        "104" ;
         sdir:definition  "Preparation of drawings, calculations etc. and ordering work concerning ship equipment (w.r.t. machinery, systems and equipment in primary group 4). " ;
-        sdir:reference   sdir:105_Drawing_Ordering_etc_Equipment_for_Crew_and_Passengers , sdir:101_Contract_Specification_Work_General_Design_Model_Testing .
+        sdir:reference   sdir:101_Contract_Specification_Work_General_Design_Model_Testing , sdir:105_Drawing_Ordering_etc_Equipment_for_Crew_and_Passengers .
 
 sdir:101_Contract_Specification_Work_General_Design_Model_Testing
         rdfs:label       "Contract/specification work, general design, model testing"@en ;
@@ -9223,7 +9223,7 @@ sdir:28_MATERIAL_PROTECTION_INTERNAL
         rdfs:subClassOf  sdir:Group , sdir:2_HULL_SYSTEMS ;
         sdir:code        "28" ;
         sdir:definition  "The subgroups include, unless otherwise stated: - All pre-treatment work, such as: o Scrubbing, brushing, scraping, beating and washing. o Pickling, etching and flame cleaning. o Sandblasting, etc. (Note! after processing). - Coating, such as: o Priming (not shop priming, see Ref.), spackling and painting. o Floatation, cementing, etc. - Other expenses, such as: o Purchases (materials and equipment). o Transport costs (external). o Testing and inspection. o Possible license and patent fees. " ;
-        sdir:reference   sdir:13_PROVISIONAL_RIGGING , sdir:203_Blasting_Shop-Priming_Rolling_and_Cleaning_of_Materials , sdir:261_Hull_and_House_Markings , sdir:276_Galvanizing_Nickel_Plating_Metalizing .
+        sdir:reference   sdir:276_Galvanizing_Nickel_Plating_Metalizing , sdir:261_Hull_and_House_Markings , sdir:13_PROVISIONAL_RIGGING , sdir:203_Blasting_Shop-Priming_Rolling_and_Cleaning_of_Materials .
 
 sdir:301049_Hydr_Oil_Preheaters
         rdfs:label       "Hydr. oil preheaters"@en ;
@@ -9325,7 +9325,7 @@ sdir:138_Tarpaulin_Rentals
         rdfs:subClassOf  sdir:SubGroup , sdir:13_PROVISIONAL_RIGGING ;
         sdir:code        "138" ;
         sdir:definition  "Rental of tarpaulins in connection with storing, covering, stages etc. " ;
-        sdir:reference   sdir:374_Vent_Gas_Freeing_Systems_for_Tanks_Wind_Sails_with_Equipment , sdir:537_Deck_Tables_and_Chairs_Swimming_Pools , sdir:536_Awnings_with_Equipment , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins .
+        sdir:reference   sdir:536_Awnings_with_Equipment , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:537_Deck_Tables_and_Chairs_Swimming_Pools , sdir:374_Vent_Gas_Freeing_Systems_for_Tanks_Wind_Sails_with_Equipment .
 
 sdir:893020_Flood_Lighting
         rdfs:label       "Flood lighting"@en ;
@@ -9376,7 +9376,7 @@ sdir:13_PROVISIONAL_RIGGING
         rdfs:subClassOf  sdir:Group , sdir:1_GENERAL ;
         sdir:code        "13" ;
         sdir:definition  "The subgroups include, unless otherwise stated, the following costs to the extent they are specific for - or can be referred (spread) to - the respective ship. - Production costs. - Purchases (materials and equipment). - External transportation. - Installation and adjustment, de-mounting (removal) (also of lifting eyes for transportation etc.). - License/patent fees and testing/control connected with the equipment. " ;
-        sdir:reference   sdir:443_Painting_Equipment_Scaffolding_Paint_Rafts_Boats_Gigs , sdir:564_Shore_Gangways_with_Davits_Landing_Booms , sdir:53_EXT_DECK_COVERING_LADDERS_STEPS_FORE_AND_AFT_GANGWAY , sdir:52_INTERNAL_DECK_COVERING_LADDERS_STEPS_RAILING .
+        sdir:reference   sdir:52_INTERNAL_DECK_COVERING_LADDERS_STEPS_RAILING , sdir:53_EXT_DECK_COVERING_LADDERS_STEPS_FORE_AND_AFT_GANGWAY , sdir:443_Painting_Equipment_Scaffolding_Paint_Rafts_Boats_Gigs , sdir:564_Shore_Gangways_with_Davits_Landing_Booms .
 
 sdir:856009_Bar_Code_Readers
         rdfs:label       "Bar code readers"@en ;
@@ -9688,7 +9688,7 @@ sdir:333_Travelling_Traverse_Cranes_with_Rails
         rdfs:subClassOf  sdir:SubGroup , sdir:33_DECK_CRANES_FOR_CARGO ;
         sdir:code        "333" ;
         sdir:definition  "Travelling, traverse cranes (gantry cranes) for cargo, including such as: - Gantry construction. - Carriage with lifting machinery and house. - Rails. - Locking (parking) brackets. - Flexible cable guide/spooling apparatus with loose cable. - Other equipment as stated in subgroup 331. " ;
-        sdir:reference   sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:334_Other_Cranes_with_Equipment_for_Cargo , sdir:327_Grabbing_Lifting_Equipment_for_Cranes_Masts_and_Booms_for_Cargo .
+        sdir:reference   sdir:334_Other_Cranes_with_Equipment_for_Cargo , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:327_Grabbing_Lifting_Equipment_for_Cranes_Masts_and_Booms_for_Cargo .
 
 sdir:436003_Hawsers  rdfs:label  "Hawsers"@en ;
         rdfs:subClassOf  sdir:DetailCode , sdir:436_Loose_Mooring_Equipment ;
@@ -9704,7 +9704,7 @@ sdir:476_Mine_Sweeping_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:47_ARMAMENT_WEAPON_AND_COUNTER_MEASURES ;
         sdir:code        "476" ;
         sdir:definition  "Plants for sweeping of mines, including such as: Electro-static induction sweeping equipment for sweeping of acoustic, magnetic and pressure mines, complete with asso- ciated special aggregates, panels, cables, control equipment, lifting gear, lashing devices, deck fittings, etc. Sweeping equipment for anchored mines, complete with special winches and cranes, paravanes, wire, control equipment, lashing devices, deck fittings, etc. " ;
-        sdir:reference   sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:477_De-Gassing_Plants .
+        sdir:reference   sdir:477_De-Gassing_Plants , sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:88_ELECTRIC_CABLE_INSTALLATION .
 
 sdir:515001_Side_Scuttles_Complete
         rdfs:label       "Side scuttles, complete"@en ;
@@ -10204,7 +10204,7 @@ sdir:268_Funnels  rdfs:label  "Funnels"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:26_HULL_OUTFITTING ;
         sdir:code        "268" ;
         sdir:definition  "Funnel(s) - outer funnel - also comprising: - Throttle with transmission. - Stays and lugs, stiffeners for silencer. " ;
-        sdir:reference   sdir:525_Loose_Floor_Plates_Platforms_and_Ladders_in_Engine_and_Pump_Rooms , sdir:261_Hull_and_House_Markings , sdir:74_EXHAUST_SYSTEMS_AND_AIR_INTAKES , sdir:534_External_Platforms_Steps_Ladders_and_Grating_with_Equipment .
+        sdir:reference   sdir:534_External_Platforms_Steps_Ladders_and_Grating_with_Equipment , sdir:525_Loose_Floor_Plates_Platforms_and_Ladders_in_Engine_and_Pump_Rooms , sdir:261_Hull_and_House_Markings , sdir:74_EXHAUST_SYSTEMS_AND_AIR_INTAKES .
 
 sdir:282008_Boiler_Room
         rdfs:label       "Boiler room"@en ;
@@ -10391,7 +10391,7 @@ sdir:10_SPECIFICATION_ESTIMATING_DRAWING_INSTRUCTION_COURSES
         rdfs:subClassOf  sdir:Group , sdir:1_GENERAL ;
         sdir:code        "10" ;
         sdir:definition  "The subgroups include, unless otherwise stated, costs/expenses for items such as the following: - Design and calculations. - Drawing including tracing. - Preparation of specifications, lists, tables, etc. - Purchasing (drawing offices). " ;
-        sdir:reference   sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:109_Maintenance_Systems_Instruction_Material , sdir:101_Contract_Specification_Work_General_Design_Model_Testing .
+        sdir:reference   sdir:109_Maintenance_Systems_Instruction_Material , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:101_Contract_Specification_Work_General_Design_Model_Testing .
 
 sdir:288030_SW_Chlorine_Dosing_Aggregate
         rdfs:label       "Sw chlorine dosing aggregate"@en ;
@@ -10707,7 +10707,7 @@ sdir:748_Ash_Slag_Handling_Systems
         rdfs:subClassOf  sdir:SubGroup , sdir:74_EXHAUST_SYSTEMS_AND_AIR_INTAKES ;
         sdir:code        "748" ;
         sdir:definition  "System for handling ash/slag - fly-ash, heavy ash/slag from boiler grating and slag ash from burning of solid fuel such as e.g. coal. Ash/slag handling system could be pneumatic, hydraulic (water/ejector) or mechanical (conveyor belt) and consists of such as: System for handling and transport of heavy ash/slag from boiler grating (see Ref.) and over board, with silo, crusher, ash separator, storage silo, filter unit, ventilator etc., and pipelines/ducts between above mentioned and over board including pumps/fans/ejectors/machinery with drive unit. Part system for handling and transport of fly ash from cyclone/separator (including this) in exhaust gas system (See Ref.) and over board with similar components as mentioned in above mentioned system. Part system for handling and transport of slag ash from boiler to silo, including this, and further over board or back to the boiler, with separate fan including drive unit, ducts/pipelines etc. (See also Ref.). Auxiliary systems for last mentioned, part system only, such as separate water system for ejectors with pumps, including drive unit, compressed air systems with compressors/fans with drive units, vacuum pumps with drive unit units, etc. " ;
-        sdir:reference   sdir:797_Automation_Equipment_for_Other_Machinery_Components , sdir:641_Main_Steam_Boilers , sdir:794_Automation_Equipment_for_Boilers , sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS .
+        sdir:reference   sdir:797_Automation_Equipment_for_Other_Machinery_Components , sdir:794_Automation_Equipment_for_Boilers , sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS , sdir:641_Main_Steam_Boilers .
 
 sdir:501011_Release_Mechanism_Hooks
         rdfs:label       "Release mechanism/hooks"@en ;
@@ -10837,7 +10837,7 @@ sdir:278_External_Cathodic_Protection_and_Antifouling_System
         rdfs:subClassOf  sdir:SubGroup , sdir:27_MATERIAL_PROTECTION_EXTERNAL ;
         sdir:code        "278" ;
         sdir:definition  "Cathodic protection of external hull, rudder and propeller. Included here are consumable anodes with fittings, and equipment for impressed current with anodes, reference cells, con- trolling unit, power unit and cables between these and anode shields (NB! see also Ref.). " ;
-        sdir:reference   sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:288_Internal_Cathodic_Protection_and_Antifouling_System .
+        sdir:reference   sdir:288_Internal_Cathodic_Protection_and_Antifouling_System , sdir:88_ELECTRIC_CABLE_INSTALLATION .
 
 sdir:431015_Spare_Anchor_Davit
         rdfs:label       "Spare anchor davit"@en ;
@@ -10969,7 +10969,7 @@ sdir:192_Gas_Oxygen_Coal_Oil
         rdfs:subClassOf  sdir:SubGroup , sdir:19_CONSUMPTION_ARTICLES_USED_DURING_CONSTRUCTION ;
         sdir:code        "192" ;
         sdir:definition  "All consumption of gas and oxygen for the ship including consumption of argon, propane etc. Consumption of coal and oil for hearths, frame ovens etc. " ;
-        sdir:reference   sdir:505_Loose_Firefighting_Apparatuses_and_Equipment_Firemens_Outfit , sdir:122_Work_Management_Fire_Guard_Supervision_Watch_Keeping , sdir:2_HULL_SYSTEMS .
+        sdir:reference   sdir:505_Loose_Firefighting_Apparatuses_and_Equipment_Firemens_Outfit , sdir:2_HULL_SYSTEMS , sdir:122_Work_Management_Fire_Guard_Supervision_Watch_Keeping .
 
 sdir:483003_Lateral_Thruster
         rdfs:label       "Lateral thruster"@en ;
@@ -11279,7 +11279,7 @@ sdir:116_Brokers_Commissions
         rdfs:subClassOf  sdir:SubGroup , sdir:11_INSURANCE_FEES_CERTIFICATES_REPRESENTATION ;
         sdir:code        "116" ;
         sdir:definition  "Commissions to brokers for services rendered in connection with contracts for new buildings, re-buildings and/or repairs. " ;
-        sdir:reference   sdir:113_Building_Advance_Interest_Discount_Finance_Costs , sdir:108_Purchase_Renting_of_Drawings_Patents_Licences_and_Consultation .
+        sdir:reference   sdir:108_Purchase_Renting_of_Drawings_Patents_Licences_and_Consultation , sdir:113_Building_Advance_Interest_Discount_Finance_Costs .
 
 sdir:722003_Main_FW_Cooling_Pumps
         rdfs:label       "Main fw cooling pumps"@en ;
@@ -11470,14 +11470,14 @@ sdir:142_Launching_Arr_with_Cradle_Supports_Water_Filling_Platform
         rdfs:subClassOf  sdir:SubGroup , sdir:14_WORK_ON_WAYS_LAUNCHING_DOCKING ;
         sdir:code        "142" ;
         sdir:definition  "Arrangement and preparation work for launching, including such as: - Sideways transfer of the ship for launching. - Arrangement of cradles and ways. - External and internal supports for launching. - Mounting for launch supports with knees, cradle stoppers, pumps for pushing, buoyancy tanks for launching, etc. - Arrangement of drag chains, wires and brake arrangements. - Removal of dock gate, work with filling of building dock and other preparations. - Securing of rudders, propellers, loose equipment etc. and checking of bottom plugs etc. - Water filling for trimming of hull for launching/de-docking including water consumption. - Arranging of launching platform, masts and flags, buzzer systems, loudspeaker systems, decorations etc. - De-mounting of equipment mentioned above and work by berth workers. " ;
-        sdir:reference   sdir:141_Keel_Blocks_Pillars_Cushions , sdir:143_Crew_Pilots_Tugs_Clearing_at_Launching , sdir:118_Launching_and_Delivery_Representation , sdir:152_Capacity_Inclination_Vibration_Measurements .
+        sdir:reference   sdir:141_Keel_Blocks_Pillars_Cushions , sdir:143_Crew_Pilots_Tugs_Clearing_at_Launching , sdir:152_Capacity_Inclination_Vibration_Measurements , sdir:118_Launching_and_Delivery_Representation .
 
 sdir:275_Superstructures_Deck_Houses_Mast_Houses
         rdfs:label       "Superstructures, deck houses, mast houses"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:27_MATERIAL_PROTECTION_EXTERNAL ;
         sdir:code        "275" ;
         sdir:definition  "Material protection by means of surface treatment like painting etc. of such as: - Superstructures. - Deck houses. - Mast houses, companion ways, pump houses, etc. - Forecastle and poop bulkheads. - Funnels. " ;
-        sdir:reference   sdir:261_Hull_and_House_Markings , sdir:273_External_Decks .
+        sdir:reference   sdir:273_External_Decks , sdir:261_Hull_and_House_Markings .
 
 sdir:733016_Service_Air_Compressor_Silencers
         rdfs:label       "Service air compressor silencers"@en ;
@@ -11843,7 +11843,7 @@ sdir:302_Cargo_Hatch_Covers_with_Equipment_on_Tween_Decks
         rdfs:subClassOf  sdir:SubGroup , sdir:30_HATCHES_PORTS ;
         sdir:code        "302" ;
         sdir:definition  "Tween deck hatch covers (on hull decks in cargo holds) with associated equipment as stated in subgroup 301. " ;
-        sdir:reference   sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps , sdir:301_Cargo_Hatch_Covers_with_Equipment_on_Weather_Decks .
+        sdir:reference   sdir:301_Cargo_Hatch_Covers_with_Equipment_on_Weather_Decks , sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps .
 
 sdir:551004_Microwave_Oven
         rdfs:label       "Microwave oven"@en ;
@@ -11919,7 +11919,7 @@ sdir:288_Internal_Cathodic_Protection_and_Antifouling_System
         rdfs:subClassOf  sdir:SubGroup , sdir:28_MATERIAL_PROTECTION_INTERNAL ;
         sdir:code        "288" ;
         sdir:definition  "Cathodic protection of internal tanks by the same means as mentioned in subgroup 278. " ;
-        sdir:reference   sdir:278_External_Cathodic_Protection_and_Antifouling_System , sdir:611_Steam_Turbines_with_Condensers .
+        sdir:reference   sdir:611_Steam_Turbines_with_Condensers , sdir:278_External_Cathodic_Protection_and_Antifouling_System .
 
 sdir:358021_CCTV_System
         rdfs:label       "Cctv system"@en ;
@@ -11952,7 +11952,7 @@ sdir:135_Provisional_Electric_Power_Lighting_Machinery
         rdfs:subClassOf  sdir:SubGroup , sdir:13_PROVISIONAL_RIGGING ;
         sdir:code        "135" ;
         sdir:definition  "Provisional arrangement for electric power supply, lighting (electric, paraffin or carbide lamps) and telephones. Including also connections to machines (provisional) such as welding transformers, saws, melting pots, cranes and lifting gear etc. and shifting and mounting of welding transformers. (See also Ref.) Here is also included possible delivery of electric current (according to account) and renting of telephone. " ;
-        sdir:reference   sdir:139_Provisional_Lifting_and_Transport_Equipment , sdir:136_Provisional_Steam_Water_Heating_and_Ventilation_Plants .
+        sdir:reference   sdir:136_Provisional_Steam_Water_Heating_and_Ventilation_Plants , sdir:139_Provisional_Lifting_and_Transport_Equipment .
 
 sdir:548009_Sofas  rdfs:label  "Sofas"@en ;
         rdfs:subClassOf  sdir:DetailCode , sdir:548_Furniture_for_Passengers ;
@@ -11985,7 +11985,7 @@ sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems
         rdfs:subClassOf  sdir:SubGroup , sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY ;
         sdir:code        "792" ;
         sdir:definition  "Common automation equipment for the following subgroups in group 79, including equipment such as: - Components in the engine room alarm system such as A/D converters, time indicators, alarm central, control unit, pan- els in engine room/control room, on bridge and possibly in cabins, etc. (including components in the alarm calling sys- tem), alarm printer, alarm executants (sirens and lights), etc. (Note! see also Ref.). - Common data loggers i.e., data loggers which are common for more than one of the following subgroups in group 79, and/or are common for automation plants for cargo and automation plants in group 79, with possible separate scanner and alarm components. - EDP plant for the automation functions (control, recording, alarm, etc.), for machinery in engine room, as well as for other machinery in primary groups 6, 7 and 8, including such as computer (central processing unit, memory, etc.) input/output equipment (interface equipment, selectors, A/D converters, etc.), other peripheral equipment (printers, punchers, real time clock, band stations, drums, etc.) and other equipment which is special for the EDP plant. - TV-sets with associated equipment, for supervision of rooms. - Batteries (separate spare/stand by power source) for automation equipment is posted on this subgroup. " ;
-        sdir:reference   sdir:798_Cables_Leads_and_Piping_for_Automation_Systems_for_Machinery , sdir:2_HULL_SYSTEMS , sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:546_Hobby_Sports_and_Entertainment_Equipment , sdir:734_Instrument_Air_Supply_Systems , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY , sdir:815_Fire_Fighting_Systems_with_Gas_CO2_Halon_etc , sdir:421_GMDSS_System , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:416_Navigation_TV , sdir:882_Cable_Trays_with_Installation_in_Accommodation , sdir:866_Batteries_and_Chargers .
+        sdir:reference   sdir:798_Cables_Leads_and_Piping_for_Automation_Systems_for_Machinery , sdir:2_HULL_SYSTEMS , sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:546_Hobby_Sports_and_Entertainment_Equipment , sdir:734_Instrument_Air_Supply_Systems , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:815_Fire_Fighting_Systems_with_Gas_CO2_Halon_etc , sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY , sdir:421_GMDSS_System , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:416_Navigation_TV , sdir:882_Cable_Trays_with_Installation_in_Accommodation , sdir:866_Batteries_and_Chargers .
 
 sdir:302047_Hydr_Oil_Pumps_with_Drive_Units
         rdfs:label       "Hydr. oil pumps with drive units"@en ;
@@ -12017,7 +12017,7 @@ sdir:195_Equipment_for_Owners_Representatives
         rdfs:subClassOf  sdir:SubGroup , sdir:19_CONSUMPTION_ARTICLES_USED_DURING_CONSTRUCTION ;
         sdir:code        "195" ;
         sdir:definition  "All requisition of material and equipment for owners representatives, including such as: - Working clothes and gloves. - Protection equipment. - Flash lights and batteries. - Requisitions etc. Here is included renting of equipment and also laundry and subsistence for repair representatives. " ;
-        sdir:reference   sdir:109_Maintenance_Systems_Instruction_Material , sdir:112_Classification_and_Statutory_Fees_and_Certificates , sdir:126_Assistance_with_Owners_Supply .
+        sdir:reference   sdir:109_Maintenance_Systems_Instruction_Material , sdir:126_Assistance_with_Owners_Supply , sdir:112_Classification_and_Statutory_Fees_and_Certificates .
 
 sdir:427040_Lanterns_with_Control_Unit
         rdfs:label       "Lanterns with control unit"@en ;
@@ -12165,7 +12165,7 @@ sdir:118_Launching_and_Delivery_Representation
         rdfs:subClassOf  sdir:SubGroup , sdir:11_INSURANCE_FEES_CERTIFICATES_REPRESENTATION ;
         sdir:code        "118" ;
         sdir:definition  "Representation in connection with launching, tests, trial trips and delivery, including costs/expenses for such as: - Catering. - Entertainment. - Gifts, photographs and film, telegrams. - Lodging, etc. Including also all costs/expenses for trips with the vessel for representation and public relation purposes and/or receptions at for inst. Quay for similar purposes. " ;
-        sdir:reference   sdir:15_QUALITY_CONTROL_MEASUREMENTS_TESTS_TRIALS , sdir:127_Models_Albums_Photos , sdir:14_WORK_ON_WAYS_LAUNCHING_DOCKING , sdir:117_Representation_Travels_Conferences .
+        sdir:reference   sdir:117_Representation_Travels_Conferences , sdir:127_Models_Albums_Photos , sdir:14_WORK_ON_WAYS_LAUNCHING_DOCKING , sdir:15_QUALITY_CONTROL_MEASUREMENTS_TESTS_TRIALS .
 
 sdir:661202_TG_Air_Coolers
         rdfs:label       "Tg air coolers"@en ;
@@ -12222,7 +12222,7 @@ sdir:475_Mine_Laying_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:47_ARMAMENT_WEAPON_AND_COUNTER_MEASURES ;
         sdir:code        "475" ;
         sdir:definition  "Complete plant for laying down mines (against surface vessels) including such as: - Racks. - Drop apparatus. - Lashing devices and deck fittings. - Control and safety devices, etc. " ;
-        sdir:reference   sdir:473_Torpedo_Plants , sdir:476_Mine_Sweeping_Equipment , sdir:474_Anti-Submarine_Weapons .
+        sdir:reference   sdir:476_Mine_Sweeping_Equipment , sdir:473_Torpedo_Plants , sdir:474_Anti-Submarine_Weapons .
 
 sdir:483001_Underwater_ROVs
         rdfs:label       "Underwater rovs"@en ;
@@ -12295,7 +12295,7 @@ sdir:17_SHIP_REPAIR_SPECIAL_SERVICES
         rdfs:subClassOf  sdir:Group , sdir:1_GENERAL ;
         sdir:code        "17" ;
         sdir:definition  "This group covers special services to ships that undergo repair original conversions. " ;
-        sdir:reference   sdir:137_Provisional_Gas_Oxygen_and_Compressed_Air_Plants , sdir:195_Equipment_for_Owners_Representatives , sdir:135_Provisional_Electric_Power_Lighting_Machinery , sdir:136_Provisional_Steam_Water_Heating_and_Ventilation_Plants .
+        sdir:reference   sdir:135_Provisional_Electric_Power_Lighting_Machinery , sdir:195_Equipment_for_Owners_Representatives , sdir:136_Provisional_Steam_Water_Heating_and_Ventilation_Plants , sdir:137_Provisional_Gas_Oxygen_and_Compressed_Air_Plants .
 
 sdir:414033_Hydrophones
         rdfs:label       "Hydrophones"@en ;
@@ -12348,7 +12348,7 @@ sdir:646_Exhaust_Gas_Boilers
         rdfs:subClassOf  sdir:SubGroup , sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS ;
         sdir:code        "646" ;
         sdir:definition  "Exhaust gas boilers and combined fired boiler/exhaust gas boiler for steam production (or equivalent) primarily for aux- iliary machinery and heating. The plant also includes equivalent equipment, as mentioned in subgroup 641, as well as automation equipment for boilers (Note! see also Ref.). " ;
-        sdir:reference   sdir:745_Exhaust_Gas_Systems_for_Boilers , sdir:648_Central_Heating_and_Thermal_Oil_Boilers , sdir:794_Automation_Equipment_for_Boilers .
+        sdir:reference   sdir:648_Central_Heating_and_Thermal_Oil_Boilers , sdir:794_Automation_Equipment_for_Boilers , sdir:745_Exhaust_Gas_Systems_for_Boilers .
 
 sdir:759020_Steam_Generator_Ion_Exchange_Filters
         rdfs:label       "Steam generator ion exchange filters"@en ;
@@ -12439,7 +12439,7 @@ sdir:536_Awnings_with_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:53_EXT_DECK_COVERING_LADDERS_STEPS_FORE_AND_AFT_GANGWAY ;
         sdir:code        "536" ;
         sdir:definition  "Awnings (permanent and/or loose), complete with supports, beams, ridge poles and stretchers, sail makers articles or sim- ilar, deck fittings, etc. " ;
-        sdir:reference   sdir:804_Gutter_Pipes_Outside_Accommodation , sdir:534_External_Platforms_Steps_Ladders_and_Grating_with_Equipment , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:374_Vent_Gas_Freeing_Systems_for_Tanks_Wind_Sails_with_Equipment .
+        sdir:reference   sdir:534_External_Platforms_Steps_Ladders_and_Grating_with_Equipment , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:374_Vent_Gas_Freeing_Systems_for_Tanks_Wind_Sails_with_Equipment , sdir:804_Gutter_Pipes_Outside_Accommodation .
 
 sdir:713045_Cyl_LO_Filters
         rdfs:label       "Cyl. lo filters"@en ;
@@ -12556,7 +12556,7 @@ sdir:347_Common_Plants_for_Cargo_Winches
         rdfs:subClassOf  sdir:SubGroup , sdir:34_MASTS_DERRICK_POSTS_RIGGING_AND_WINCHES_FOR_CARGO ;
         sdir:code        "347" ;
         sdir:definition  "Common plants for cargo winches include equipment that serves (or is common for) both lifting and manoeuvring winches for cargo derricks, as for example: - Common control equipment (stationary or portable controllers, etc.). - Common regulation equipment (Ward-Leonard aggregate or similar, with associated equipment, etc.). - Common hydraulic oil system with pumps, expansion tanks, pipelines, etc., as described under subgroup 309, for cargo winches and possibly other equipment provided that the latter do not determine the hydr. Oil systems capacity require- ment (Note! see also Ref.). - Other common equipment for cargo winches. " ;
-        sdir:reference   sdir:439_Common_Hydr_Oil_System_for_Anchoring_Mooring_Cargo_Winches , sdir:831_Special_Common_Hydr_Oil_Systems .
+        sdir:reference   sdir:831_Special_Common_Hydr_Oil_Systems , sdir:439_Common_Hydr_Oil_System_for_Anchoring_Mooring_Cargo_Winches .
 
 sdir:794061_Gas_System_Regulators
         rdfs:label       "Gas system regulators"@en ;
@@ -12955,7 +12955,7 @@ sdir:815_Fire_Fighting_Systems_with_Gas_CO2_Halon_etc
         rdfs:subClassOf  sdir:SubGroup , sdir:81_FIRE_AND_LIFEBOAT_ALARM_FIRE_FIGHTING_AND_WASH_DOWN_SYSTEMS ;
         sdir:code        "815" ;
         sdir:definition  "Plants/systems for fire-fighting with gas, e.g. CO2, Halon and similar in such as: - Engine room - Pump room, side thruster room, etc. - Storage rooms. - Cargo tanks/-holds, etc. The systems include bottles/containers and bottle racks with equipment, pipes with nozzles, valves, fittings etc. from these to the mentioned rooms, possible system with suction fan to detectors (analysers) including these, on for example bridge, control panel, remote control arrangement and arrangement for (CO2) alarm with monitoring installation, signal trans- mission cables etc. and similar for connections to doors (including magnet closing arrangement etc. and e.g. fans). Here is also included separate refrigerating plants for gas fire extinguishing systems, with all system components con- cerned, pipes etc. " ;
-        sdir:reference   sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:505_Loose_Firefighting_Apparatuses_and_Equipment_Firemens_Outfit , sdir:376_Inert_Gas_Systems_with_Conditioning_Plant .
+        sdir:reference   sdir:376_Inert_Gas_Systems_with_Conditioning_Plant , sdir:505_Loose_Firefighting_Apparatuses_and_Equipment_Firemens_Outfit , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems .
 
 sdir:579003_Fire_Dampers_Pneumatic
         rdfs:label       "Fire dampers, pneumatic"@en ;
@@ -13168,7 +13168,7 @@ sdir:265_Guide_Trim_and_Cover_Plates
         rdfs:subClassOf  sdir:SubGroup , sdir:26_HULL_OUTFITTING ;
         sdir:code        "265" ;
         sdir:definition  "Guide, trim and cover plates in cargo holds. " ;
-        sdir:reference   sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:314_Hold_Battens_and_Grating .
+        sdir:reference   sdir:314_Hold_Battens_and_Grating , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins .
 
 sdir:16_GUARANTEE_MENDING_WORK
         rdfs:label       "Guarantee/mending work"@en ;
@@ -13282,7 +13282,7 @@ sdir:744_Exhaust_Gas_Systems_for_Motor_Aggregates
         rdfs:subClassOf  sdir:SubGroup , sdir:74_EXHAUST_SYSTEMS_AND_AIR_INTAKES ;
         sdir:code        "744" ;
         sdir:definition  "Exhaust gas systems for machinery main components in groups 65 and 66 (electric power producing machinery), such as: - Exhaust gas system for motor aggregates (motor generators) including ducts with insulation, etc. from tur- bocharger/receiver to open air (Note! see also Ref.). - Exhaust gas system for gas turbo aggregates (turbo generators) with ducts, etc., to open air. " ;
-        sdir:reference   sdir:6_MACHINERY_MAIN_COMPONENTS , sdir:376_Inert_Gas_Systems_with_Conditioning_Plant , sdir:651_Aux_Diesel_Generator_Aggregates .
+        sdir:reference   sdir:651_Aux_Diesel_Generator_Aggregates , sdir:6_MACHINERY_MAIN_COMPONENTS , sdir:376_Inert_Gas_Systems_with_Conditioning_Plant .
 
 sdir:803020_Bilge_Water_Filters
         rdfs:label       "Bilge water filters"@en ;
@@ -13461,7 +13461,7 @@ sdir:793_Automation_Equipment_Prop_Machinery_and_Transmission_Engine_Telegraph
         rdfs:subClassOf  sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY , sdir:SubGroup ;
         sdir:code        "793" ;
         sdir:definition  "Automation equipment for propulsion machinery and transmissions (for machinery in groups 60, 61, 62 and 63), as well as engine telegraph, including such as: - Equipment for remote start/stop and manoeuvring (control) as well as for programmed starting/control of the propul- sion machinery (diesel engines, turbines with main condenser, etc.) and transmissions (controllable pitch propeller plant, couplings, etc.), including regulation and safety equipment. - Engine telegraph with transmitter on the bridge and receiver in the engine room, including bracket, printer, separate alarm, etc. - Equipment for indicating and recording of pressure, temperature in systems for instance in bearings (measuring on/by the mentioned machinery for condition control), as well as of runs per minute, direction of rotation, propeller pitch, shaft power, etc. - Sensors with muffs, etc. on propulsion machinery and transmissions, for recording, indications, alarm, etc., are also included. " ;
-        sdir:reference   sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:601_Diesel_Engines , sdir:63_PROPELLERS_TRANSMISSIONS_FOILS , sdir:793_Automation_Equipment_Prop_Machinery_and_Transmission_Engine_Telegraph , sdir:62_OTHER_TYPES_OF_PROPULSION_MACHINERY , sdir:611_Steam_Turbines_with_Condensers , sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS , sdir:6_MACHINERY_MAIN_COMPONENTS , sdir:791_Manoeuvring_Consoles_Main_Consoles , sdir:797_Automation_Equipment_for_Other_Machinery_Components , sdir:73_COMPRESSED_AIR_SYSTEMS , sdir:798_Cables_Leads_and_Piping_for_Automation_Systems_for_Machinery .
+        sdir:reference   sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:601_Diesel_Engines , sdir:63_PROPELLERS_TRANSMISSIONS_FOILS , sdir:793_Automation_Equipment_Prop_Machinery_and_Transmission_Engine_Telegraph , sdir:62_OTHER_TYPES_OF_PROPULSION_MACHINERY , sdir:611_Steam_Turbines_with_Condensers , sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems , sdir:797_Automation_Equipment_for_Other_Machinery_Components , sdir:6_MACHINERY_MAIN_COMPONENTS , sdir:791_Manoeuvring_Consoles_Main_Consoles , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS , sdir:73_COMPRESSED_AIR_SYSTEMS , sdir:798_Cables_Leads_and_Piping_for_Automation_Systems_for_Machinery .
 
 sdir:585016_Instruments_Sensors_Flowmeters_etc
         rdfs:label       "Instruments, sensors, flowmeters, etc."@en ;
@@ -13602,7 +13602,7 @@ sdir:416_Navigation_TV
         rdfs:subClassOf  sdir:SubGroup , sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT ;
         sdir:code        "416" ;
         sdir:definition  "Television equipment for navigational purposes (e.g. mounted on bow), complete with all components, transmission cables, etc. Periscopes are also included here and equipment to take thermal pictures in order to ease navigation, manoeuvring etc. " ;
-        sdir:reference   sdir:546_Hobby_Sports_and_Entertainment_Equipment , sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems .
+        sdir:reference   sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems , sdir:546_Hobby_Sports_and_Entertainment_Equipment .
 
 sdir:801061_Valves_and_Piping_Systems
         rdfs:label       "Valves and piping systems"@en ;
@@ -13619,7 +13619,7 @@ sdir:513_Other_Internal_Doors_with_Coamings
         rdfs:subClassOf  sdir:51_INSULATION_PANELS_BULKHEADS_DOORS_SIDE_SCUTTLES_SKYLIGHTS , sdir:SubGroup ;
         sdir:code        "513" ;
         sdir:definition  "Internal doors (purchase/production and installation) of other types than those included in subgroup 512, such as: - Water-tight doors. - Spray-tight doors. - Gas-tight doors. - Insulated doors (see also Ref.). - Emergency doors. - Store doors (Note! see also Ref.). Included are complete doors with coamings, fittings and equipment, such as: - Hinges and handles. - Locks and locking/closing mechanisms. - Storm hooks and door stoppers. - Foot plates and sill plates. - Covers. - Gaskets. - Ventilation throttles. - Local release mechanisms for water-tight doors (i.e. on board passenger ships) with arrangements for remote control (Note! see also Ref.). " ;
-        sdir:reference   sdir:542_Office_Equipment_and_Special_Furniture , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:514_External_Doors_with_Coamings , sdir:30_HATCHES_PORTS , sdir:511_Partition_Bulkheads_Paneling , sdir:512_Doors_with_Coamings_in_Accommodation , sdir:555_Insulation_Lining_and_Battening_in_Provision_Rooms_Doors_and_Ports , sdir:308_Cargo_Doors_in_Bulkheads , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:446_Outfitting_in_Store_Rooms_and_Workshops .
+        sdir:reference   sdir:542_Office_Equipment_and_Special_Furniture , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:514_External_Doors_with_Coamings , sdir:30_HATCHES_PORTS , sdir:511_Partition_Bulkheads_Paneling , sdir:512_Doors_with_Coamings_in_Accommodation , sdir:555_Insulation_Lining_and_Battening_in_Provision_Rooms_Doors_and_Ports , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:308_Cargo_Doors_in_Bulkheads , sdir:446_Outfitting_in_Store_Rooms_and_Workshops .
 
 sdir:261010_Tank_Marks
         rdfs:label       "Tank marks"@en ;
@@ -13792,7 +13792,7 @@ sdir:866_Batteries_and_Chargers
         rdfs:subClassOf  sdir:SubGroup , sdir:86_ELECTRIC_POWER_SUPPLY ;
         sdir:code        "866" ;
         sdir:definition  "Equipment connected to the ships main electrical distribution plant including such as: - Batteries with battery boxes, charging equipment, etc. common for more consumers, e.g. emergency light. (Note! see also Ref.). " ;
-        sdir:reference   sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:665_Emergency_Generator_Aggregates_with_Equipment , sdir:881_Cable_Trays_and_Installation_in_Engine_and_Boiler_Rooms , sdir:813_Fire_Wash_Down_System_Emergency_Fire_Pumps_Sprinkler_System .
+        sdir:reference   sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:881_Cable_Trays_and_Installation_in_Engine_and_Boiler_Rooms , sdir:665_Emergency_Generator_Aggregates_with_Equipment , sdir:813_Fire_Wash_Down_System_Emergency_Fire_Pumps_Sprinkler_System .
 
 sdir:423015_Fleet-77  rdfs:label  "Fleet-"@en ;
         rdfs:subClassOf  sdir:DetailCode , sdir:423_Satellite_Communication_Data_Transmission_Plants ;
@@ -14272,7 +14272,7 @@ sdir:223_Inner_Bottom_with_Stiffening_Engine_Foundations
         rdfs:subClassOf  sdir:SubGroup , sdir:22_ENGINE_AREA ;
         sdir:code        "223" ;
         sdir:definition  "Inner bottom (i.e., double bottom and tank top) in the engine area with stiffeners and strengtheners. Also included here are parts of floors, frames, girders, knees and strengthening, e.g. foundations for engine, turbine etc., which are mounted together with the inner bottom plates, plus parts of sea chests, bilge wells and gutters which are integ- rated in the inner bottom. If bottom and keel plates are mounted on the inner bottom, these sections are included here. " ;
-        sdir:reference   sdir:263_Foundations , sdir:233_Inner_Bottom_with_Stiffening , sdir:262_Bottom_Plugs_Sea_Chests_Bilge_Wells_Water_Jet_Intake , sdir:721_SW_Cooling_Systems .
+        sdir:reference   sdir:262_Bottom_Plugs_Sea_Chests_Bilge_Wells_Water_Jet_Intake , sdir:721_SW_Cooling_Systems , sdir:233_Inner_Bottom_with_Stiffening , sdir:263_Foundations .
 
 sdir:453055_Hydr_Oil_Expansion_Tanks
         rdfs:label       "Hydr. oil expansion tanks"@en ;
@@ -14538,7 +14538,7 @@ sdir:344_Running_Rigging
         rdfs:subClassOf  sdir:SubGroup , sdir:34_MASTS_DERRICK_POSTS_RIGGING_AND_WINCHES_FOR_CARGO ;
         sdir:code        "344" ;
         sdir:definition  "Running rigging for masts and derrick posts for cargo, including such as: - Wire, rope and chain (also for topping and slewing). - Rigging details; shackles, blocks, cargo hooks, swivels, etc. - Deck fittings. - Measuring and weighing equipment which is part of the running rigging. - Anti-swinging arrangement. " ;
-        sdir:reference   sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps , sdir:30_HATCHES_PORTS .
+        sdir:reference   sdir:30_HATCHES_PORTS , sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps .
 
 sdir:183003_Valves  rdfs:label  "Valves"@en ;
         rdfs:subClassOf  sdir:DetailCode , sdir:183_Engine_Department_Stores ;
@@ -14646,7 +14646,7 @@ sdir:237_Longitudinal_Bulkheads_with_Stiffening
         rdfs:subClassOf  sdir:SubGroup , sdir:23_CARGO_AREA_HULL_SMALL_VESSELS ;
         sdir:code        "237" ;
         sdir:definition  "Longitudinal bulkheads below main deck in the cargo area with stiffeners and strengtheners, plus possible base tanks and/or casings under deck for strengthening of bulkheads. Also included here are parts of stiffeners, transverses, decks, shell, etc.which are mounted with the bulkhead plates. " ;
-        sdir:reference   sdir:313_Loose_Bulkheads_for_Cargo_Grain_Feeders , sdir:239_Top_Side_Tanks_etc_Special_Upper_Constructions , sdir:265_Guide_Trim_and_Cover_Plates , sdir:231_Shell_Panels_Separate_Shell_Plates .
+        sdir:reference   sdir:313_Loose_Bulkheads_for_Cargo_Grain_Feeders , sdir:231_Shell_Panels_Separate_Shell_Plates , sdir:265_Guide_Trim_and_Cover_Plates , sdir:239_Top_Side_Tanks_etc_Special_Upper_Constructions .
 
 sdir:641001_Main_Boilers_Complete
         rdfs:label       "Main boilers, complete"@en ;
@@ -14996,7 +14996,7 @@ sdir:134_Provisional_Hatches_Ladders_Stages_in_Engine_Room_and_Accommodation
         rdfs:subClassOf  sdir:SubGroup , sdir:13_PROVISIONAL_RIGGING ;
         sdir:code        "134" ;
         sdir:definition  "Provisional rigging internal during construction period excluding Cargo holds/tanks, similarly as mentioned in subgroup 131. " ;
-        sdir:reference   sdir:133_Provisional_Hatches_Ladders_Stages_in_Cargo_Holds_Tanks , sdir:131_Provisional_Gangways_Roofs_Hatches_Stairs_Stages_for_Hull_Ext .
+        sdir:reference   sdir:131_Provisional_Gangways_Roofs_Hatches_Stairs_Stages_for_Hull_Ext , sdir:133_Provisional_Hatches_Ladders_Stages_in_Cargo_Holds_Tanks .
 
 sdir:288018_Power_Unit
         rdfs:label       "Power unit"@en ;
@@ -15072,7 +15072,7 @@ sdir:814_Fire_Fighting_Systems_for_External_Fires
         rdfs:subClassOf  sdir:SubGroup , sdir:81_FIRE_AND_LIFEBOAT_ALARM_FIRE_FIGHTING_AND_WASH_DOWN_SYSTEMS ;
         sdir:code        "814" ;
         sdir:definition  "Systems primarily for extinguishing of external fires (fires outside the vessel) for e.g. salvage vessels, fire-fighting vessels, supply vessels and similar (Note! for fires onboard own vessel, the other subgroups in group 81, to be used). The fire-fighting system, with for example water and/or foam or similar, includes such as: - Fire pumps with drive units, e.g. diesel engines. - Separate systems and equipment for drive unit as e.g. fuel and lube oil systems, exhaust gas ducts, cooling water sys- tem etc., with separate piping, pumps, loose tanks and similar. - Foam tanks with valves etc., foam generator, foam mixing units. - Water- and foam guns with possible separate platforms, nozzles, hoses, hose-drums and lockers. - Piping with valves etc. from sea-chests, to pumps and further to cannons, nozzles, and possibly to sprinkler/wash down systems (Note! see also Ref.). - Arrangement for remote operation and aiming of guns (with valves etc.) and monitoring of the plant with separate con- trol desk, signal transmission cables, instruments/meters, etc. " ;
-        sdir:reference   sdir:813_Fire_Wash_Down_System_Emergency_Fire_Pumps_Sprinkler_System , sdir:505_Loose_Firefighting_Apparatuses_and_Equipment_Firemens_Outfit .
+        sdir:reference   sdir:505_Loose_Firefighting_Apparatuses_and_Equipment_Firemens_Outfit , sdir:813_Fire_Wash_Down_System_Emergency_Fire_Pumps_Sprinkler_System .
 
 sdir:631061_Propeller_Shaft_Grounding
         rdfs:label       "Propeller shaft grounding"@en ;
@@ -15119,7 +15119,7 @@ sdir:439_Common_Hydr_Oil_System_for_Anchoring_Mooring_Cargo_Winches
         rdfs:subClassOf  sdir:SubGroup , sdir:43_ANCHORING_MOORING_AND_TOWING_EQUIPMENT ;
         sdir:code        "439" ;
         sdir:definition  "Common hydraulic oil system for operation and control of both winches/windlasses included in group 43 and winches included in primary group 3, as well as smaller equipment and machinery that will not influence the capacity requirements for the common system. The system includes similar equipment as described in subgroup 438. " ;
-        sdir:reference   sdir:438_Common_Hydr_Oil_System_for_Anchoring_Mooring_Equipment , sdir:831_Special_Common_Hydr_Oil_Systems .
+        sdir:reference   sdir:831_Special_Common_Hydr_Oil_Systems , sdir:438_Common_Hydr_Oil_System_for_Anchoring_Mooring_Equipment .
 
 sdir:437025_Combined_Power_Packs
         rdfs:label       "Combined power packs"@en ;
@@ -15185,7 +15185,7 @@ sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems
         rdfs:subClassOf  sdir:SubGroup , sdir:38_AUX_SYSTEMS_AND_EQUIPMENT_FOR_CARGO ;
         sdir:code        "381" ;
         sdir:definition  "Arrangement (systems) and equipment for sounding, control (supervision/monitoring) and operating control for systems in primary group 3, included such as: - Local sounding apparatus for cargo tanks with local reading and/or equipment for remote sounding of cargo tanks (pos- sibly also of other tanks where these are sounded remotely in an integrated system together with the cargo tanks), with transmission lines and measuring instruments (ullage and fluid level measurements). Here is also included com- bined arrangement for measuring draft and remote level sounding of cargo tanks and possibly other tanks. - Local instruments and indicating equipment (which is not fitted in the systems), for instance thermometers, mano- meters, hydrometers, O2 meters, gas indicators, oxygen indicators, etc. (gas measuring instruments). - Arrangement for remotely indicating and registering of the above mentioned and of status parameters in the systems and system components such as loading/discharging pumps, compressors, fans, etc. - Also included here are sensors, transmission lines and measuring instruments, together with data logger for cargo (Note! see also Ref.). - Spindle extensions for valves in the loading/discharging system and possibly other cargo systems. Also included are hydraulic oil systems or similar for remote control of valves in the loading/discharging system and possibly in other cargo systems (together with possibly other systems, for example ballast and other sea water systems where the valves in these are remotely controlled by an integrated system together with valves in the cargo systems). Also included here are machinery, tanks, transmission lines, etc. for the remote control function (Note! see also Ref.). - Equipment for remote control (and programmed control) and checking of loading/discharging pumps, compressors, fans and other components in the cargo systems, with transmission lines, etc. - Control consoles and panels, lockers, etc., for the installation of above automation equipment for cargo, with signs, con- nection materials, instruments, heating elements and similar against condensation, etc. - Separate EDP plant for above functions for cargo, with associated equipment as described under subgroup 423. The subgroup includes mechanical, electrical, hydraulic and/or pneumatic equipment and systems, or combinations of these, for the above functions, together with separate equipment for adjusting (regulation), protection and alarm in con- nection with the above. " ;
-        sdir:reference   sdir:415_Electronic_Charting , sdir:821_Bleed_and_Overflow_Pipe_Systems , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:883_Cable_Trays_and_Installation_on_Deck_and_in_Cargo_Holds , sdir:347_Common_Plants_for_Cargo_Winches , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps , sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS , sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems , sdir:42_COMMUNICATION_EQUIPMENT , sdir:801_Ballast_Systems_Solid_Ballast , sdir:797_Automation_Equipment_for_Other_Machinery_Components , sdir:30_HATCHES_PORTS , sdir:734_Instrument_Air_Supply_Systems , sdir:3_CARGO_EQUIPMENT , sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves , sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY .
+        sdir:reference   sdir:415_Electronic_Charting , sdir:821_Bleed_and_Overflow_Pipe_Systems , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:883_Cable_Trays_and_Installation_on_Deck_and_in_Cargo_Holds , sdir:347_Common_Plants_for_Cargo_Winches , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps , sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:792_Common_Automation_Equipment_Engine_Room_Alarm_Systems , sdir:801_Ballast_Systems_Solid_Ballast , sdir:42_COMMUNICATION_EQUIPMENT , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS , sdir:797_Automation_Equipment_for_Other_Machinery_Components , sdir:30_HATCHES_PORTS , sdir:734_Instrument_Air_Supply_Systems , sdir:3_CARGO_EQUIPMENT , sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves , sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY .
 
 sdir:601120_ME_Frame_Bedplate_Group
         rdfs:label       "Me frame/bedplate group"@en ;
@@ -15255,7 +15255,7 @@ sdir:621_Gas_Turbines_with_Air_Preheaters_for_Propulsion
         rdfs:subClassOf  sdir:SubGroup , sdir:62_OTHER_TYPES_OF_PROPULSION_MACHINERY ;
         sdir:code        "621" ;
         sdir:definition  "Gas turbines for propulsion (for similar drive alternatives as mentioned in subgroup 601). Jet engines for propulsion. The plants include such as: - Gas generator and turbine combined in one unit (Note! see also Ref.). - Air preheaters and possible intermediate coolers. - Starting machinery/auxiliary turbine and possible auxiliary gears. - Mounted equipment like pipes with fittings, filters, fuel oil pumps and injection valves, integrated lock mech- anism/brake etc. " ;
-        sdir:reference   sdir:377_Unassigned , sdir:637_Main_Reduction_Gears_with_Thrust_Bearings_and_Couplings , sdir:376_Inert_Gas_Systems_with_Conditioning_Plant .
+        sdir:reference   sdir:637_Main_Reduction_Gears_with_Thrust_Bearings_and_Couplings , sdir:376_Inert_Gas_Systems_with_Conditioning_Plant , sdir:377_Unassigned .
 
 sdir:274030_Deck_Machinery
         rdfs:label       "Deck machinery"@en ;
@@ -15338,7 +15338,7 @@ sdir:345_Hoisting_Winches
         rdfs:subClassOf  sdir:SubGroup , sdir:34_MASTS_DERRICK_POSTS_RIGGING_AND_WINCHES_FOR_CARGO ;
         sdir:code        "345" ;
         sdir:definition  "Hoisting winches for cargo, complete with steam, electrical or hydraulic machinery (separate machinery), heating ele- ments, fitted measuring and weighing equipment etc., together with own control and regulating equipment (Note! see also Ref.). Also included here are lifting winches that also can top and slew derrick booms. " ;
-        sdir:reference   sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:831_Special_Common_Hydr_Oil_Systems , sdir:439_Common_Hydr_Oil_System_for_Anchoring_Mooring_Cargo_Winches , sdir:347_Common_Plants_for_Cargo_Winches .
+        sdir:reference   sdir:439_Common_Hydr_Oil_System_for_Anchoring_Mooring_Cargo_Winches , sdir:347_Common_Plants_for_Cargo_Winches , sdir:831_Special_Common_Hydr_Oil_Systems , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins .
 
 sdir:576002_Charge_Air_Fans
         rdfs:label       "Charge air fans"@en ;
@@ -15483,7 +15483,7 @@ sdir:356_Separate_Stripping_Systems
         rdfs:subClassOf  sdir:SubGroup , sdir:35_LOADING_DISCHARGING_SYSTEMS_FOR_LIQUID_CARGO ;
         sdir:code        "356" ;
         sdir:definition  "System for stripping cargo tanks of cargo remains, ballast, washing water etc. The stripping system includes such as: - Piping with valves, etc. in tanks, pump rooms, on deck and to bilge water separator (see also Ref.). - Pumps with drive units or ejectors with pipelines for drive fluid (from e.g. loading discharging pumps/system, fire pump/system or similar). - Separate pump with drive unit etc. for delivery of drive fluid to stripping ejectors. - Separator or piping system for connection to slop tanks (see also Ref.) If the stripping system and loading/discharging system have common piping, only the piping that is solely for the stripping function is to be charged this subgroup. " ;
-        sdir:reference   sdir:374_Vent_Gas_Freeing_Systems_for_Tanks_Wind_Sails_with_Equipment , sdir:382_Tank_Cleaning_Systems_and_Equipment , sdir:262_Bottom_Plugs_Sea_Chests_Bilge_Wells_Water_Jet_Intake , sdir:351_Loading_Discharging_Pumps .
+        sdir:reference   sdir:351_Loading_Discharging_Pumps , sdir:262_Bottom_Plugs_Sea_Chests_Bilge_Wells_Water_Jet_Intake , sdir:374_Vent_Gas_Freeing_Systems_for_Tanks_Wind_Sails_with_Equipment , sdir:382_Tank_Cleaning_Systems_and_Equipment .
 
 sdir:573014_Inlet_Nozzles
         rdfs:label       "Inlet nozzles"@en ;
@@ -15544,7 +15544,7 @@ sdir:447_Clamps_Foundations_for_Spare_Parts
         rdfs:subClassOf  sdir:SubGroup , sdir:44_REPAIR_MAINT_CLEAN_EQUIPMENT_WORKSHOP_STORE_OUTFIT_NAME_PLATES ;
         sdir:code        "447" ;
         sdir:definition  "Prefabrication and mounting of clamps and foundations for spare parts and fastening of the spare parts (Note! see also Ref.). " ;
-        sdir:reference   sdir:263_Foundations , sdir:223_Inner_Bottom_with_Stiffening_Engine_Foundations , sdir:431_Anchors_with_Chains_and_Equipment , sdir:63_PROPELLERS_TRANSMISSIONS_FOILS .
+        sdir:reference   sdir:263_Foundations , sdir:431_Anchors_with_Chains_and_Equipment , sdir:63_PROPELLERS_TRANSMISSIONS_FOILS , sdir:223_Inner_Bottom_with_Stiffening_Engine_Foundations .
 
 sdir:515015_Sliding_Windows_Complete
         rdfs:label       "Sliding windows, complete"@en ;
@@ -15787,7 +15787,7 @@ sdir:486_Aux_Vessels  rdfs:label  "Aux. vessels"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:48_SPECIAL_EQUIPMENT ;
         sdir:code        "486" ;
         sdir:definition  "Special auxiliary vessels, except lifeboats and paint rafts, such as: - Dories, light (lamp) boats, headman boats, towing boats, etc., for hunting and fishing purposes. - Launches, pinnaces, etc. for naval vessels. Included is all equipment in these vessels, plus davits, winches, etc. and other equipment for the auxiliary vessels, that can- not naturally be included in other subgroups. " ;
-        sdir:reference   sdir:466_Special_Fishing_Equipment , sdir:443_Painting_Equipment_Scaffolding_Paint_Rafts_Boats_Gigs , sdir:565_Misc_Conveyance_Equipment , sdir:501_Lifeboats_with_Equipment .
+        sdir:reference   sdir:565_Misc_Conveyance_Equipment , sdir:443_Painting_Equipment_Scaffolding_Paint_Rafts_Boats_Gigs , sdir:466_Special_Fishing_Equipment , sdir:501_Lifeboats_with_Equipment .
 
 sdir:665010_EG_FO_Systems
         rdfs:label       "Eg fo systems"@en ;
@@ -15814,7 +15814,7 @@ sdir:211_Shell_Panels_Separate_Shell_Plates
         rdfs:subClassOf  sdir:SubGroup , sdir:21_AFTERBODY ;
         sdir:code        "211" ;
         sdir:definition  "Separate shell plates and shell panels (i.e. shell sections with plates, stiffeners and strengtheners) in the afterbody. " ;
-        sdir:reference   sdir:216_Stern_Sections_Stern_Tube_Bulkheads , sdir:266_Hawse_Pipes , sdir:262_Bottom_Plugs_Sea_Chests_Bilge_Wells_Water_Jet_Intake , sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:264_Fender_and_Wear_Bars_Ice_Fins_Bilge_Keels_Air_Cushion_Arr , sdir:218_Stern_Frame_Sections , sdir:214_First_Deck_with_Stiffening , sdir:261_Hull_and_House_Markings .
+        sdir:reference   sdir:266_Hawse_Pipes , sdir:216_Stern_Sections_Stern_Tube_Bulkheads , sdir:262_Bottom_Plugs_Sea_Chests_Bilge_Wells_Water_Jet_Intake , sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:264_Fender_and_Wear_Bars_Ice_Fins_Bilge_Keels_Air_Cushion_Arr , sdir:218_Stern_Frame_Sections , sdir:214_First_Deck_with_Stiffening , sdir:261_Hull_and_House_Markings .
 
 sdir:427041_Lantern_Battery_Chargers
         rdfs:label       "Lantern battery chargers"@en ;
@@ -15890,7 +15890,7 @@ sdir:195_or_which_cannot_be_referred_to_other_subgroups_including_consumption_of
         rdfs:subClassOf  sdir:SubGroup , sdir:19_CONSUMPTION_ARTICLES_USED_DURING_CONSTRUCTION ;
         sdir:code        "195" ;
         sdir:definition  "- Bolts, nuts etc. taken aboard for general consumption. - Lubricants like graphite, fat, oil, grease etc. - Paint brushes, rollers, marking paint, model varnish etc. - Steel brushes, sand paper, emery cloth, emery wheels, etc. - Consumption/renting of work clothing for special jobs (Note! see also Remarks. " ;
-        sdir:reference   sdir:28_MATERIAL_PROTECTION_INTERNAL , sdir:27_MATERIAL_PROTECTION_EXTERNAL .
+        sdir:reference   sdir:27_MATERIAL_PROTECTION_EXTERNAL , sdir:28_MATERIAL_PROTECTION_INTERNAL .
 
 sdir:504016_Controlled_Drugs
         rdfs:label       "Controlled drugs"@en ;
@@ -15907,7 +15907,7 @@ sdir:796_Automation_Equipment_for_Nuclear_Reactor_Plants
         rdfs:subClassOf  sdir:SubGroup , sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY ;
         sdir:code        "796" ;
         sdir:definition  "Automation equipment for nuclear reactor plant (for machinery in group 67), including equipment for the automation func- tions defined in group 79s general text. " ;
-        sdir:reference   sdir:7_SYSTEMS_FOR_MACHINERY_MAIN_COMPONENTS , sdir:797_Automation_Equipment_for_Other_Machinery_Components .
+        sdir:reference   sdir:797_Automation_Equipment_for_Other_Machinery_Components , sdir:7_SYSTEMS_FOR_MACHINERY_MAIN_COMPONENTS .
 
 sdir:414046_Sound_Transmitters
         rdfs:label       "Sound transmitters"@en ;
@@ -15940,7 +15940,7 @@ sdir:32_SPECIAL_CARGO_HANDLING_EQUIPMENT
         rdfs:subClassOf  sdir:Group , sdir:3_CARGO_EQUIPMENT ;
         sdir:code        "32" ;
         sdir:definition  "The subgroups include, unless otherwise stated: - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transport costs (external). - Installation and adjustment. - Testing and inspection (in workshops and during installation). Also included in the subgroups are: - Instruments, regulating and control (operating) equipment. - Protection covers (excluding weather decks and cargo holds). - Spare parts. " ;
-        sdir:reference   sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins .
+        sdir:reference   sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables .
 
 sdir:371021_Ozone_Generators
         rdfs:label       "Ozone generators"@en ;
@@ -16140,7 +16140,7 @@ sdir:526_Ladders_Platforms_and_Railing_in_Ballast_and_Fuel_Tanks
         rdfs:subClassOf  sdir:SubGroup , sdir:52_INTERNAL_DECK_COVERING_LADDERS_STEPS_RAILING ;
         sdir:code        "526" ;
         sdir:definition  "Similar outfitting as mentioned in subgroup 524, in ballast tanks, fuel tanks, freshwater tanks and similar. " ;
-        sdir:reference   sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:527_Platforms_Ladders_and_Railing_in_Cargo_Tanks .
+        sdir:reference   sdir:527_Platforms_Ladders_and_Railing_in_Cargo_Tanks , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers .
 
 sdir:282038_Computer_EDB_Room
         rdfs:label       "Computer/edb room"@en ;
@@ -16398,7 +16398,7 @@ sdir:882_Cable_Trays_with_Installation_in_Accommodation
         rdfs:subClassOf  sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:SubGroup ;
         sdir:code        "882" ;
         sdir:definition  "Electrical cables and trays for accommodation and external on superstructure (accommodation houses), in rooms/on places such as: - Cabins, messes and day rooms. - Wheelhouse and radio room. - Galley, laundry, etc. - Provision rooms and rooms for machinery for provisions. - Fan room (accommodation ventilation). - On superstructure/deck houses, external, (accommodation houses). The subgroup includes the following systems with supply cables from main distributors (switchboards mentioned in group 87) directly to consumers and/or to consumers via sub-distribution switchboards, including these (Note! see also Ref.): - Electrical power supply systems with cables, clamps and fittings (switches, junction boxes, fuse lockers, etc.) to machinery and equipment in the mentioned rooms (to machinery for provisions galley machinery, accommodation fans, navigation and communication systems, etc.) and at the mentioned places (for lifeboat winches, gangway winches, etc. on the superstructure). - Electrical lighting systems (main and emergency lights), with cables, clamps, pipes for cables, fittings, lamps, lighting fitting (armature) and receptacles in the mentioned rooms and external on superstructure, such as lamps above doors, searchlights, including these, on superstructure (Note! see also Ref.). - Electrical supply systems for lanterns and signal lights on superstructure are also included here (Note! see also Ref.). - Electrical heating systems with cables, etc., panel heaters, electric radiators, heating cables, heating lamps, etc., in the mentioned rooms. - Alarm system in connection with refrigerated rooms for provisions including alarms, cables, etc. If small service leads (lines) - length and/or cross- section - are branched from the electrical systems in the accom- modation, to other consumers (rooms), these leads are also to be entered here. " ;
-        sdir:reference   sdir:427_Light_and_Signal_Equipment_Lanterns_Typhoons , sdir:881_Cable_Trays_and_Installation_in_Engine_and_Boiler_Rooms , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:417_Nautical_Utility_Equipment_Clockworks_Weather_Facsimile , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS , sdir:883_Cable_Trays_and_Installation_on_Deck_and_in_Cargo_Holds , sdir:546_Hobby_Sports_and_Entertainment_Equipment , sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:89_ELECTRIC_CONSUMER_SYSTEMS , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:577_Central_Heating_Systems_with_Radiators , sdir:798_Cables_Leads_and_Piping_for_Automation_Systems_for_Machinery .
+        sdir:reference   sdir:427_Light_and_Signal_Equipment_Lanterns_Typhoons , sdir:881_Cable_Trays_and_Installation_in_Engine_and_Boiler_Rooms , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS , sdir:417_Nautical_Utility_Equipment_Clockworks_Weather_Facsimile , sdir:883_Cable_Trays_and_Installation_on_Deck_and_in_Cargo_Holds , sdir:546_Hobby_Sports_and_Entertainment_Equipment , sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY , sdir:811_Fire_Detection_Fire_and_Lifeboat_Alarm_Systems , sdir:89_ELECTRIC_CONSUMER_SYSTEMS , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:577_Central_Heating_Systems_with_Radiators , sdir:798_Cables_Leads_and_Piping_for_Automation_Systems_for_Machinery .
 
 sdir:327001_Grabs  rdfs:label  "Grabs"@en ;
         rdfs:seeAlso     dbr:Grabs ;
@@ -16436,7 +16436,7 @@ sdir:287_FO_and_LO_Tanks_Integrated_in_Hull
         rdfs:subClassOf  sdir:SubGroup , sdir:28_MATERIAL_PROTECTION_INTERNAL ;
         sdir:code        "287" ;
         sdir:definition  "Protection of fuel oil, lube oil tanks and combined fuel and ballast tanks and slop tanks by means of surface treatment such as painting etc. Included here is the protection of piping, ladders, etc. in the tanks. " ;
-        sdir:reference   sdir:285_Ballast_SW_and_Stability_Tanks_Cofferdams_Chain_Lockers , sdir:286_FW_and_Misc_Tanks .
+        sdir:reference   sdir:286_FW_and_Misc_Tanks , sdir:285_Ballast_SW_and_Stability_Tanks_Cofferdams_Chain_Lockers .
 
 sdir:451003_Lift_Machinery
         rdfs:label       "Lift machinery"@en ;
@@ -16980,7 +16980,7 @@ sdir:813_Fire_Wash_Down_System_Emergency_Fire_Pumps_Sprinkler_System
         rdfs:subClassOf  sdir:SubGroup , sdir:81_FIRE_AND_LIFEBOAT_ALARM_FIRE_FIGHTING_AND_WASH_DOWN_SYSTEMS ;
         sdir:code        "813" ;
         sdir:definition  "Systems for supply of fire extinguishing and/or wash down water, including such as: - Piping with valves, spindle extensions or corresponding equipment, equipment for land (shore) connection, taps, nozzles (for sprinkler system), etc. - Hoses with couplings, nozzles, drums and hose lockers. - Pressure tank (for class F). - Fire/wash down pumps with drive units. - General service pumps with drive unit. - Emergency fire pump with separate drive unit (or own hydraulic operating system, including machinery) and possible transmissions, possible separate starting battery and charging rectifier, as well as separate systems for drive unit, such as exhaust gas system, air suction system, fuel oil system, lube oil system, cooling water system, etc., complete with all system components (Note! see also Ref.). - If other machinery is mounted on the emergency fire pump drive unit (by e.g. hydraulic operation) the emergency fire pump is to be considered the main function and the drive unit (or the common hydraulic machinery) is to be charged to this group. Sprinkler system e.g. in accommodation, for tankers for cooling of decks over tanks/loose tanks, as well as sprinkler/wash down system for naval vessels, complete with associated system components, as described above. " ;
-        sdir:reference   sdir:382_Tank_Cleaning_Systems_and_Equipment , sdir:731_Starting_Air_Systems_High_Pressure , sdir:803_Bilge_Systems , sdir:814_Fire_Fighting_Systems_for_External_Fires .
+        sdir:reference   sdir:814_Fire_Fighting_Systems_for_External_Fires , sdir:731_Starting_Air_Systems_High_Pressure , sdir:803_Bilge_Systems , sdir:382_Tank_Cleaning_Systems_and_Equipment .
 
 sdir:351033_Hydr_Oil_Preheaters
         rdfs:label       "Hydr. oil preheaters"@en ;
@@ -17147,7 +17147,7 @@ sdir:453_External_Lifting_Gear_for_Machinery_Components
         rdfs:subClassOf  sdir:SubGroup , sdir:45_LIFTING_AND_TRANSPORT_EQUIPMENT_FOR_MACHINERY_COMPONENTS ;
         sdir:code        "453" ;
         sdir:definition  "Lifting and transport equipment on external decks for machinery components, including such as: - Cranes. - Masts and derrick with rigging, etc. (Note! See also Ref.). - Derricks booms, separate, or suspended to derrick post for cargo/cargo oil houses. - Winches, etc. If this lifting gear is also used for handling such as cargo hoses, dry cargo, provisions, etc., the main function, i.e. the func- tion that determines the lifting capacity, decides the subgroup it comes under (see also Ref.). " ;
-        sdir:reference   sdir:63_PROPELLERS_TRANSMISSIONS_FOILS , sdir:33_DECK_CRANES_FOR_CARGO , sdir:32_SPECIAL_CARGO_HANDLING_EQUIPMENT , sdir:56_TRANSPORT_EQUIPMENT_FOR_CREW_PASSENGERS_AND_PROVISIONS , sdir:383_Lifting_Gear_for_Cargo_Hoses , sdir:34_MASTS_DERRICK_POSTS_RIGGING_AND_WINCHES_FOR_CARGO , sdir:402_Rudder_Carriers_Rudder_Stocks_Rudder_Bearings .
+        sdir:reference   sdir:63_PROPELLERS_TRANSMISSIONS_FOILS , sdir:33_DECK_CRANES_FOR_CARGO , sdir:32_SPECIAL_CARGO_HANDLING_EQUIPMENT , sdir:56_TRANSPORT_EQUIPMENT_FOR_CREW_PASSENGERS_AND_PROVISIONS , sdir:383_Lifting_Gear_for_Cargo_Hoses , sdir:402_Rudder_Carriers_Rudder_Stocks_Rudder_Bearings , sdir:34_MASTS_DERRICK_POSTS_RIGGING_AND_WINCHES_FOR_CARGO .
 
 sdir:408033_Network_Stationary_DP_Vessel_System_Station_System_SDP_SVS_SSS
         rdfs:label       "Network, stationary dp, vessel system, station system (sdp, svs, sss)"@en ;
@@ -17219,7 +17219,7 @@ sdir:239_Top_Side_Tanks_etc_Special_Upper_Constructions
         rdfs:subClassOf  sdir:SubGroup , sdir:23_CARGO_AREA_HULL_SMALL_VESSELS ;
         sdir:code        "239" ;
         sdir:definition  "Special hull constructions in upper part of the cargo area, comprising: - Top side tanks with parts of shell, decks, bulkheads, etc. integrated in the tank section. - Upper passageway formed as a top side tank. Included here are plate constructions with stiffeners and strengtheners which are mounted with the plates. " ;
-        sdir:reference   sdir:236_Transverse_Bulkheads_with_Stiffening , sdir:252_Mast_Pump_Fan_and_Winch_Houses_Companion_Ways , sdir:231_Shell_Panels_Separate_Shell_Plates , sdir:312_Loose_Tanks_for_Cargo .
+        sdir:reference   sdir:231_Shell_Panels_Separate_Shell_Plates , sdir:236_Transverse_Bulkheads_with_Stiffening , sdir:252_Mast_Pump_Fan_and_Winch_Houses_Companion_Ways , sdir:312_Loose_Tanks_for_Cargo .
 
 sdir:574030_Cooling_Heating_Batteries
         rdfs:label       "Cooling/heating batteries"@en ;
@@ -17245,7 +17245,7 @@ sdir:493_Shrimp_Factories
         rdfs:subClassOf  sdir:SubGroup , sdir:49_FISH_PROCESSING_EQUIPMENT ;
         sdir:code        "493" ;
         sdir:definition  "Plant and equipment for processing of catch to food products, including such as: - Cleaning equipment. - Plate refrigerators with pressure feeders, equipment in the refrigeration tunnel, glazing equipment (see also Ref.). - Packing machines, pallet binders, equipment for weighing. - Equipment for carton production, carton transporters. - Buffer stores and outfitting e.g. shelves, workbenches, etc, in the factories. - Conveyor belts and chutes between the above stated components. - Equipment for preserving food products during the production process (see also Ref.). - Equipment for disposal of waste. " ;
-        sdir:reference   sdir:362_Freezing_and_Refrigerating_Systems_for_Dry_Cargo , sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks , sdir:317_Containers_Pallets , sdir:321_Cargo_Lifts .
+        sdir:reference   sdir:362_Freezing_and_Refrigerating_Systems_for_Dry_Cargo , sdir:317_Containers_Pallets , sdir:321_Cargo_Lifts , sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks .
 
 sdir:405010_Inclination_Indicator
         rdfs:label       "Inclination indicator"@en ;
@@ -17595,7 +17595,7 @@ sdir:418_Radar_Signal_Observation_and_Antenna_Masts
         rdfs:subClassOf  sdir:SubGroup , sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT ;
         sdir:code        "418" ;
         sdir:definition  "Radar and signal masts, observation masts or other masts for support of antennas (aerials) and signal equipment (see also Ref.), with items such as: - Rigging with fittings (fixtures). - Lantern screens. - Ladders, railings and possible crows nest. - Grounding (earthling) wires with plates. " ;
-        sdir:reference   sdir:341_Masts_Derrick_Posts , sdir:25_DECK_HOUSES_AND_SUPERSTRUCTURES , sdir:37_GAS_VENTILATION_SYSTEMS_FOR_CARGO_HOLDS_TANKS , sdir:427_Light_and_Signal_Equipment_Lanterns_Typhoons .
+        sdir:reference   sdir:427_Light_and_Signal_Equipment_Lanterns_Typhoons , sdir:25_DECK_HOUSES_AND_SUPERSTRUCTURES , sdir:341_Masts_Derrick_Posts , sdir:37_GAS_VENTILATION_SYSTEMS_FOR_CARGO_HOLDS_TANKS .
 
 sdir:511001_Window_Recesses
         rdfs:label       "Window recesses"@en ;
@@ -17851,7 +17851,7 @@ sdir:483_Diving_Equipment_and_Oceanographic_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:48_SPECIAL_EQUIPMENT ;
         sdir:code        "483" ;
         sdir:definition  "Special equipment of the following categories: - Diving equipment such as suits, air/oxygen-apparatus, diving bells, decompression chambers with equipment, special air supply machinery, special lifting gear, etc. Here is also included trunk (moon pool) for lowering of diving bell etc. - Oceanographic measuring equipment such as turning thermometers, current meter, water testing apparatus, seabed testing apparatus, salinometers, equipment for recording of wave and water movements, equipment for colour mark- ing of icebergs, etc. - Special meteorological instruments for measuring of temperature, pressure, wind direction and force, rain, evap- oration, sun, etc. (measurements for research purposes). - Special measuring equipment in connection with plankton and fish survey. - Special lifting gears for the above. - EDP-plant only for oceanographic research purpose with associated equipment. " ;
-        sdir:reference   sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:484_Laboratory_Equipment , sdir:417_Nautical_Utility_Equipment_Clockworks_Weather_Facsimile .
+        sdir:reference   sdir:417_Nautical_Utility_Equipment_Clockworks_Weather_Facsimile , sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:484_Laboratory_Equipment , sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log .
 
 sdir:755011_AuxCondenser_Vacuum_Pumps
         rdfs:label       "Aux.condenser vacuum pumps"@en ;
@@ -18260,7 +18260,7 @@ sdir:203_Blasting_Shop-Priming_Rolling_and_Cleaning_of_Materials
         rdfs:subClassOf  sdir:SubGroup , sdir:20_HULL_MATERIALS_GENERAL_HULL_WORK ;
         sdir:code        "203" ;
         sdir:definition  "Work and material consumption (sand, cleaning ingredient, thinners, primers etc.) in connection with sandblasting shop- priming, straight rolling and possible cleaning of hull materials before preparation. " ;
-        sdir:reference   sdir:124_Snow_Clearing_De-icing , sdir:123_Clearing_and_Cleaning , sdir:28_MATERIAL_PROTECTION_INTERNAL , sdir:27_MATERIAL_PROTECTION_EXTERNAL .
+        sdir:reference   sdir:124_Snow_Clearing_De-icing , sdir:28_MATERIAL_PROTECTION_INTERNAL , sdir:27_MATERIAL_PROTECTION_EXTERNAL , sdir:123_Clearing_and_Cleaning .
 
 sdir:488015_Seismic_Air_Compressor_FW_Pumps
         rdfs:label       "Seismic air compressor fw pumps"@en ;
@@ -18438,7 +18438,7 @@ sdir:588_Incinerator_with_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:58_SANITARY_AND_WASTE_SYSTEMS ;
         sdir:code        "588" ;
         sdir:definition  "Incinerator for garbage, etc. (or other garbage disposal device), for rubbish, kitchen refuse, sanitary system sludge, fuel and lubricating oil sludge, and possible other waste, complete with all fixtures and equipment, and associated systems and equipment such as: - Garbage filling chutes and emergency chute with ducts, etc. and feeding transporters (Note! See also Ref.). - Fuel oil arrangement with storage tanks, pipes, valves and pumps with drive unit, filters, etc. - Fans and other equipment for air supply. - Exhaust system with ducts, insulation, flaps, fans with drive unit, suspensions, penetration pieces, expansion devices, equipment for cleaning and inspection of exhaust, possible heat exchangers, etc. - Ash and slag chute with ducts, etc. and ash transporter and discharge equipment. - Separate cooling/washing system with pipes, pumps with drive units, valves, etc. and other systems/equipment for the destruction unit only. " ;
-        sdir:reference   sdir:444_Cleaning_Equipment_Garbage_Chutes , sdir:70_FUEL_SYSTEMS , sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:382_Tank_Cleaning_Systems_and_Equipment .
+        sdir:reference   sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:382_Tank_Cleaning_Systems_and_Equipment , sdir:444_Cleaning_Equipment_Garbage_Chutes , sdir:70_FUEL_SYSTEMS .
 
 sdir:676_Unassigned  rdfs:label  "Unassigned"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:67_NUCLEAR_REACTOR_PLANTS ;
@@ -18531,7 +18531,7 @@ sdir:484_Laboratory_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:48_SPECIAL_EQUIPMENT ;
         sdir:code        "484" ;
         sdir:definition  "Laboratory equipment for particular purposes, e.g. for oceanographic research vessels, hospital ships, etc. " ;
-        sdir:reference   sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS , sdir:504_Medical_First_Aid_and_Dental_Equipment_Medicines .
+        sdir:reference   sdir:504_Medical_First_Aid_and_Dental_Equipment_Medicines , sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS .
 
 sdir:408022_Load_and_Stability_Calculator
         rdfs:label       "Load and stability calculator"@en ;
@@ -18558,7 +18558,7 @@ sdir:435_Fixed_Mooring_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:43_ANCHORING_MOORING_AND_TOWING_EQUIPMENT ;
         sdir:code        "435" ;
         sdir:definition  "Fixed mooring and warping (shifting) equipment, including such as: - Mooring pipes with covers, mooring cups, chocks, Panama chocks, etc. - Fairleads, vertical lead rollers. - Rollers. - Bollards, rotor bollards, etc. " ;
-        sdir:reference   sdir:264_Fender_and_Wear_Bars_Ice_Fins_Bilge_Keels_Air_Cushion_Arr , sdir:263_Foundations , sdir:266_Hawse_Pipes .
+        sdir:reference   sdir:266_Hawse_Pipes , sdir:264_Fender_and_Wear_Bars_Ice_Fins_Bilge_Keels_Air_Cushion_Arr , sdir:263_Foundations .
 
 sdir:311015_Twin_Deck_Ramps
         rdfs:label       "Twin deck ramps"@en ;
@@ -18590,7 +18590,7 @@ sdir:286_FW_and_Misc_Tanks
         rdfs:subClassOf  sdir:SubGroup , sdir:28_MATERIAL_PROTECTION_INTERNAL ;
         sdir:code        "286" ;
         sdir:definition  "Protection of fresh water tanks and other tanks (not naturally belonging to types mentioned in any other subgroup in group 28) by means of surface treatment such as painting etc. Included here is the protection of piping, ladders, etc. in the tanks. " ;
-        sdir:reference   sdir:285_Ballast_SW_and_Stability_Tanks_Cofferdams_Chain_Lockers , sdir:287_FO_and_LO_Tanks_Integrated_in_Hull .
+        sdir:reference   sdir:287_FO_and_LO_Tanks_Integrated_in_Hull , sdir:285_Ballast_SW_and_Stability_Tanks_Cofferdams_Chain_Lockers .
 
 sdir:434003_Capstans  rdfs:label  "Capstans"@en ;
         rdfs:subClassOf  sdir:DetailCode , sdir:434_Capstans_Warping_and_Mooring_Winches ;
@@ -18783,7 +18783,7 @@ sdir:546_Hobby_Sports_and_Entertainment_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:54_FURNITURE_INVENTORY_ENTERTAINMENT_EQUIPMENT ;
         sdir:code        "546" ;
         sdir:definition  "Equipment for entertainment and leisure time activities for crew and passengers, including such as: - Gymnastic equipment and equipment in Finnish bath (or similar). - Sport fishing equipment. - Darkroom equipment. - Library equipment and books (not furniture). - Film projection equipment. - Television sets, radios, gramophones (record players) and tape recorders, cassette players, video plants etc. - Music plant with loud speakers, signal transmitting cables, etc. (see also Ref.). - Games and gaming machines. - Common aerial system for radio and TV in cabins, etc., complete with aerials, signal transmitting cables, etc. " ;
-        sdir:reference   sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:882_Cable_Trays_with_Installation_in_Accommodation , sdir:537_Deck_Tables_and_Chairs_Swimming_Pools , sdir:42_COMMUNICATION_EQUIPMENT .
+        sdir:reference   sdir:42_COMMUNICATION_EQUIPMENT , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:882_Cable_Trays_with_Installation_in_Accommodation , sdir:537_Deck_Tables_and_Chairs_Swimming_Pools .
 
 sdir:827_Unassigned  rdfs:label  "Unassigned"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:82_AIR_AND_SOUNDING_SYSTEMS_FROM_TANKS_TO_DECK ;
@@ -19057,7 +19057,7 @@ sdir:482_Dredging_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:48_SPECIAL_EQUIPMENT ;
         sdir:code        "482" ;
         sdir:definition  "Special equipment for dredging of the seabed, including such as: - Dredging plant, sand suction apparatus or similar, etc. Extra equipment in connection with dredging, that cannot naturally be included in other subgroups, is included here. " ;
-        sdir:reference   sdir:357_Mud_Systems_with_Pumps_Piping , sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log .
+        sdir:reference   sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:357_Mud_Systems_with_Pumps_Piping .
 
 sdir:123010_Accommodation_Spaces_Cleaning
         rdfs:label       "Accommodation spaces cleaning"@en ;
@@ -19375,7 +19375,7 @@ sdir:15_QUALITY_CONTROL_MEASUREMENTS_TESTS_TRIALS
         rdfs:subClassOf  sdir:Group , sdir:1_GENERAL ;
         sdir:code        "15" ;
         sdir:definition  "The subgroups include, unless otherwise stated, measurements and trials at sea and alongside quay. The subgroups include costs/expenses for work (time consumption) and materials to the extent they can be referred to the ship. " ;
-        sdir:reference   sdir:15_QUALITY_CONTROL_MEASUREMENTS_TESTS_TRIALS , sdir:118_Launching_and_Delivery_Representation , sdir:101_Contract_Specification_Work_General_Design_Model_Testing .
+        sdir:reference   sdir:118_Launching_and_Delivery_Representation , sdir:15_QUALITY_CONTROL_MEASUREMENTS_TESTS_TRIALS , sdir:101_Contract_Specification_Work_General_Design_Model_Testing .
 
 sdir:571003_Fan_Coil_Units_FCU_for_Cabins
         rdfs:label       "Fan coil units, (fcu) for cabins"@en ;
@@ -19497,7 +19497,7 @@ sdir:452_Travelling_Cranes_and_Lifting_Gear_in_Engine_Room
         rdfs:subClassOf  sdir:SubGroup , sdir:45_LIFTING_AND_TRANSPORT_EQUIPMENT_FOR_MACHINERY_COMPONENTS ;
         sdir:code        "452" ;
         sdir:definition  "Lifting and transport equipment for machinery components in the engine room, pump rooms and other rooms for machinery, including such as: - Travelling cranes, pulleys and similar, above/for main and auxiliary engines, gas bottles, separators, etc. - Equipment for withdrawal and lifting of propeller shaft, etc. - Trolleys, wagons, etc. for transport of machinery parts. Also included are drive unit, operating devices, crane girders, etc. " ;
-        sdir:reference   sdir:563_Provision_Cranes_and_Derricks , sdir:442_General_Hand_and_Pneumatic_Tools , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:323_Travelling_Cranes_in_Cargo_Holds .
+        sdir:reference   sdir:563_Provision_Cranes_and_Derricks , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:442_General_Hand_and_Pneumatic_Tools , sdir:323_Travelling_Cranes_in_Cargo_Holds .
 
 sdir:273020_Suspended_Decks
         rdfs:label       "Suspended decks"@en ;
@@ -19545,7 +19545,7 @@ sdir:413_Gyro_Plants_Autopilots_Compasses
         rdfs:subClassOf  sdir:SubGroup , sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT ;
         sdir:code        "413" ;
         sdir:definition  "Navigation/manoeuvring equipment of the following categories: - Gyro plants with gyro, gyro compasses, gyro direction finders (repeater), turning rate indicator, alarms, autopilots, pos- sible converters, etc., and connections/transmissions to the steering gear, etc. - Other compasses with autopilots, etc. - Standard compasses (other compasses). This group also includes additional equipment, e.g. position and course recorders, course deviation alarm, etc. " ;
-        sdir:reference   sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:403_Steering_Gear_Columns_Telemoter_Rudder_Indicator_Emergency_Steering , sdir:412_Position_and_Identification_Systems .
+        sdir:reference   sdir:403_Steering_Gear_Columns_Telemoter_Rudder_Indicator_Emergency_Steering , sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:412_Position_and_Identification_Systems .
 
 sdir:419003_Radar_Plants
         rdfs:label       "Radar plants"@en ;
@@ -19587,7 +19587,7 @@ sdir:372_Closed_Ventilation_Return_Vapour_Systems_for_Cargo_Holds
         rdfs:subClassOf  sdir:SubGroup , sdir:37_GAS_VENTILATION_SYSTEMS_FOR_CARGO_HOLDS_TANKS ;
         sdir:code        "372" ;
         sdir:definition  "Closed, mechanical ventilation system for non-refrigerated cargo holds where the cargo hold air is recirculated (closed sys- tem), and a controlled amount of fresh air can be added. The ventilation system includes such as: - Make-up air plant and air circulation plant with ducts, etc. - Ventilation fans with drive units. - Equipment for regulating air humidity, i.e. by means of  absorption, cooling or similar. - Heating batteries in the ventilation plant (see also Ref.). - Possible Ozone plant. " ;
-        sdir:reference   sdir:575_Ventilation_Air_Conditioning_Systems_for_Pump_Rooms , sdir:373_Open_Ventilation_Systems_for_Cargo_Holds .
+        sdir:reference   sdir:373_Open_Ventilation_Systems_for_Cargo_Holds , sdir:575_Ventilation_Air_Conditioning_Systems_for_Pump_Rooms .
 
 sdir:877_Unassigned  rdfs:label  "Unassigned"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:87_COMMON_ELECTRICAL_DISTRIBUTION_SYSTEMS ;
@@ -20207,7 +20207,7 @@ sdir:202_Transportation_Sorting_and_Storage_of_Hull_Materials
         rdfs:subClassOf  sdir:SubGroup , sdir:20_HULL_MATERIALS_GENERAL_HULL_WORK ;
         sdir:code        "202" ;
         sdir:definition  "Discharging, internal transportation including crane operation, sorting, unpacking and storage of all non-prepared steel materials and aluminum materials. Further transportation of hull materials, hull parts and hull sections. " ;
-        sdir:reference   sdir:125_Transportation_Excluding_Hull_Parts , sdir:145_Shifting_Towing_Excluding_Launching , sdir:201_Hull_Materials .
+        sdir:reference   sdir:201_Hull_Materials , sdir:145_Shifting_Towing_Excluding_Launching , sdir:125_Transportation_Excluding_Hull_Parts .
 
 sdir:702003_FO_Preheaters
         rdfs:label       "Fo preheaters"@en ;
@@ -20445,7 +20445,7 @@ sdir:127_Models_Albums_Photos
         rdfs:subClassOf  sdir:SubGroup , sdir:12_QUALITY_ASSURANCE_GENERAL_WORK_MODELS ;
         sdir:code        "127" ;
         sdir:definition  "Models which cannot be referred to machinery or equipment in one subgroup, such as: - Exhibition model (outfit models) delivered to the owner according to the contract. - Arrangement models (engine room models etc.). - Full scale models (mock-ups). - Albums/photographs, films e.g. to the owner for follow-up during construction (building) period (Note! see also Ref.). " ;
-        sdir:reference   sdir:545_Decorations_Figureheads , sdir:106_Drawing_Ordering_etc_Machinery_Components_Machinery_Ship_Systems , sdir:102_Drawing_Ordering_etc_Hull , sdir:118_Launching_and_Delivery_Representation .
+        sdir:reference   sdir:118_Launching_and_Delivery_Representation , sdir:102_Drawing_Ordering_etc_Hull , sdir:545_Decorations_Figureheads , sdir:106_Drawing_Ordering_etc_Machinery_Components_Machinery_Ship_Systems .
 
 sdir:363007_Condensers
         rdfs:label       "Condensers"@en ;
@@ -20649,7 +20649,7 @@ sdir:419_Integrated_Navigation_Systems
         rdfs:subClassOf  sdir:SubGroup , sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT ;
         sdir:code        "419" ;
         sdir:definition  "Integrated navigation and search systems, also for military purposes, including such as: - Consoles. - Screens. - Indicators. - Transformers, converters, switchgear etc. - Connected equipment for plotting (plotting table etc), taking bearings etc. " ;
-        sdir:reference   sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:411_Radar_Plants , sdir:415_Electronic_Charting , sdir:507_Security_Systems , sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:412_Position_and_Identification_Systems , sdir:413_Gyro_Plants_Autopilots_Compasses , sdir:403_Steering_Gear_Columns_Telemoter_Rudder_Indicator_Emergency_Steering , sdir:418_Radar_Signal_Observation_and_Antenna_Masts .
+        sdir:reference   sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:411_Radar_Plants , sdir:415_Electronic_Charting , sdir:507_Security_Systems , sdir:423_Satellite_Communication_Data_Transmission_Plants , sdir:403_Steering_Gear_Columns_Telemoter_Rudder_Indicator_Emergency_Steering , sdir:413_Gyro_Plants_Autopilots_Compasses , sdir:412_Position_and_Identification_Systems , sdir:418_Radar_Signal_Observation_and_Antenna_Masts .
 
 sdir:646029_Chemical_Feed_Tanks
         rdfs:label       "Chemical feed tanks"@en ;
@@ -20661,7 +20661,7 @@ sdir:494_Meal_and_Oil_Factories
         rdfs:subClassOf  sdir:SubGroup , sdir:49_FISH_PROCESSING_EQUIPMENT ;
         sdir:code        "494" ;
         sdir:definition  "Extraction plant for hunting, including such as: - Meal plant with cutting devices, feeders, cookers, presses, driers, separators, desludgers, mills, buffer stores, por- tioning equipment, conveyor belts, etc. - Oil plants with softening tank, boiling plant, pipes, pumps with drive unit etc. - Guano grinder, bins, etc. Also included is associated auxiliary equipment, e.g. special outfitting in the holds for meal and oil plants. " ;
-        sdir:reference   sdir:492_Fillet_Factories , sdir:312_Loose_Tanks_for_Cargo , sdir:7_SYSTEMS_FOR_MACHINERY_MAIN_COMPONENTS .
+        sdir:reference   sdir:312_Loose_Tanks_for_Cargo , sdir:492_Fillet_Factories , sdir:7_SYSTEMS_FOR_MACHINERY_MAIN_COMPONENTS .
 
 sdir:155014_Tug_Hire  rdfs:label  "Tug hire"@en ;
         rdfs:subClassOf  sdir:DetailCode , sdir:155_Special_Tests_Trials ;
@@ -20707,7 +20707,7 @@ sdir:371_Ventilation_Systems_for_Refrigerated_Cargo_Holds
         rdfs:subClassOf  sdir:SubGroup , sdir:37_GAS_VENTILATION_SYSTEMS_FOR_CARGO_HOLDS_TANKS ;
         sdir:code        "371" ;
         sdir:definition  "Ventilation system with mechanical or natural circulation, for refrigerated cargo holds, including such as: - Make-up air plant and air circulation plant with air ducts, duct insulation, intake jealousies, etc. - Ventilation fans with drive units (see also Ref.). - Equipment for regulating air humidity, i.e. by means of absorption and similar. - Ozone plant for ventilation/air conditioning of the holds. " ;
-        sdir:reference   sdir:385_Insulation_Drying_System_for_Cargo_Holds_Tanks , sdir:362_Freezing_and_Refrigerating_Systems_for_Dry_Cargo , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems .
+        sdir:reference   sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:385_Insulation_Drying_System_for_Cargo_Holds_Tanks , sdir:362_Freezing_and_Refrigerating_Systems_for_Dry_Cargo .
 
 sdir:794048_Indicators
         rdfs:label       "Indicators"@en ;
@@ -20724,7 +20724,7 @@ sdir:565_Misc_Conveyance_Equipment
         rdfs:subClassOf  sdir:56_TRANSPORT_EQUIPMENT_FOR_CREW_PASSENGERS_AND_PROVISIONS , sdir:SubGroup ;
         sdir:code        "565" ;
         sdir:definition  "Miscellaneous aids for conveyance on board, including such as: - Rafts for use in tanks. - Scooters. - Trolleys and rails etc. in pipe ways (or in similar duct/tunnel in the double bottom). " ;
-        sdir:reference   sdir:452_Travelling_Cranes_and_Lifting_Gear_in_Engine_Room , sdir:563_Provision_Cranes_and_Derricks , sdir:486_Aux_Vessels , sdir:443_Painting_Equipment_Scaffolding_Paint_Rafts_Boats_Gigs , sdir:444_Cleaning_Equipment_Garbage_Chutes , sdir:502_Liferafts_with_Equipment , sdir:501_Lifeboats_with_Equipment , sdir:485_Aircraft_Helicopters , sdir:442_General_Hand_and_Pneumatic_Tools , sdir:324_Bulldozers_Mechanical_Shovels_Trolleys_Trucks .
+        sdir:reference   sdir:452_Travelling_Cranes_and_Lifting_Gear_in_Engine_Room , sdir:563_Provision_Cranes_and_Derricks , sdir:486_Aux_Vessels , sdir:443_Painting_Equipment_Scaffolding_Paint_Rafts_Boats_Gigs , sdir:444_Cleaning_Equipment_Garbage_Chutes , sdir:501_Lifeboats_with_Equipment , sdir:502_Liferafts_with_Equipment , sdir:485_Aircraft_Helicopters , sdir:442_General_Hand_and_Pneumatic_Tools , sdir:324_Bulldozers_Mechanical_Shovels_Trolleys_Trucks .
 
 sdir:309061_Hydr_Valves_and_Piping_Systems
         rdfs:label       "Hydr. valves and piping systems"@en ;
@@ -20981,7 +20981,7 @@ sdir:20_HULL_MATERIALS_GENERAL_HULL_WORK
         rdfs:subClassOf  sdir:Group , sdir:2_HULL_SYSTEMS ;
         sdir:code        "20" ;
         sdir:definition  "The group includes purchase of hull materials and various general hull work. " ;
-        sdir:reference   sdir:19_CONSUMPTION_ARTICLES_USED_DURING_CONSTRUCTION , sdir:13_PROVISIONAL_RIGGING , sdir:102_Drawing_Ordering_etc_Hull .
+        sdir:reference   sdir:102_Drawing_Ordering_etc_Hull , sdir:13_PROVISIONAL_RIGGING , sdir:19_CONSUMPTION_ARTICLES_USED_DURING_CONSTRUCTION .
 
 sdir:374025_Exhaust_Gas_Mast_Fan
         rdfs:label       "Exhaust gas mast fan"@en ;
@@ -21091,7 +21091,7 @@ sdir:707_Gas_Fuel_System
         rdfs:subClassOf  sdir:SubGroup , sdir:70_FUEL_SYSTEMS ;
         sdir:code        "707" ;
         sdir:definition  "System where boil-off gas from the cargo (e.g. methane, LNG) is conditioned and supplied to boilers, motors, gas turbines and similar, or to burn-off plant. The system includes such as: - Bunkering hoses with couplings and possible separate bunkering gallows, etc. - Piping with valves, pressure tank, etc., to dual fuel diesel engines, gas turbines, boilers or to gas burn-off plant. - Compressors with drive units (Note! see also Ref.). - Heat exchangers for conditioning the gas. - Separate ventilation arrangement for pipe/shaft for fuel gas pipes. - Gas burn-off plant. For a combined fuel gas and refrigeration plant, the fuel gas system begins at the pipe connection after the compressor. " ;
-        sdir:reference   sdir:355_Loading_Discharging_Systems_for_LPG_LNG_in_Gaseous_Phase , sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS , sdir:70_FUEL_SYSTEMS , sdir:36_FREEZING_REFRIGERATING_AND_HEATING_SYSTEMS_FOR_CARGO , sdir:663_Gas_Turbo_Aggregates_for_Electric_Power_Production , sdir:601_Diesel_Engines , sdir:651_Aux_Diesel_Generator_Aggregates , sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS , sdir:621_Gas_Turbines_with_Air_Preheaters_for_Propulsion .
+        sdir:reference   sdir:355_Loading_Discharging_Systems_for_LPG_LNG_in_Gaseous_Phase , sdir:70_FUEL_SYSTEMS , sdir:36_FREEZING_REFRIGERATING_AND_HEATING_SYSTEMS_FOR_CARGO , sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS , sdir:663_Gas_Turbo_Aggregates_for_Electric_Power_Production , sdir:601_Diesel_Engines , sdir:651_Aux_Diesel_Generator_Aggregates , sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS , sdir:621_Gas_Turbines_with_Air_Preheaters_for_Propulsion .
 
 sdir:493048_Hydr_Oil_Aggregates
         rdfs:label       "Hydr. oil aggregates"@en ;
@@ -21148,7 +21148,7 @@ sdir:426_Speaking_Tubes_Tube_Post_Plants
         rdfs:subClassOf  sdir:SubGroup , sdir:42_COMMUNICATION_EQUIPMENT ;
         sdir:code        "426" ;
         sdir:definition  "Intercommunication equipment, non-electrical, including such as: - Speaking tubes with whistles, spouts, tube fittings, etc. - Tube post plant (pneumatic plant for transmission of messages) with separate compressed air/vacuum plants, loose tanks, receiving/sending boxes, tube fittings, etc. - Communication hatch with fittings, etc. between bridge/radio room and/or chartroom. " ;
-        sdir:reference   sdir:427_Light_and_Signal_Equipment_Lanterns_Typhoons , sdir:552_Galley_Food_Preparation_and_Serving , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies .
+        sdir:reference   sdir:427_Light_and_Signal_Equipment_Lanterns_Typhoons , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:552_Galley_Food_Preparation_and_Serving .
 
 sdir:592_Water_Effect_Installations
         rdfs:label       "Water effect installations"@en ;
@@ -21248,7 +21248,7 @@ sdir:831_Special_Common_Hydr_Oil_Systems
         rdfs:subClassOf  sdir:83_SPECIAL_COMMON_HYDR_OIL_SYSTEMS , sdir:SubGroup ;
         sdir:code        "831" ;
         sdir:definition  "Hydraulic oil systems which serve special consumer combinations, e.g., hydraulic oil systems for machinery/equipment in more than one subgroup and which cannot be entered in other subgroups for frequent occurring common hydraulic oil sys- tems (Note! see also Ref.). The special common hydraulic oil systems can be for consumer combinations such as: - Loading/discharging pumps and side thrusters (bow propeller). - Mooring winches and side thruster. - Loading/discharging pumps/compressors, ballast pumps and mooring winches. - Winches for fishing, loading/discharging and mooring. - Propulsion propeller, generator, mooring winches, and e.g. winches for fishing and hunting. The special common hydraulic oil systems include such as: - Pumps with separate drive units, or driven by propulsion machinery, main reduction gear, etc., thus including coup- ling/V-belt transmissions own (separate) gears, mounted valves, etc. - Expansion tank and loose storage tanks with flanges, valves, etc. (Note! see also Ref.). - Cooling coils in the tanks or separate coolers. - Filling, sounding, deaeration and drain pipes for the tanks, etc. (Note! see also Ref.). - Piping between the mentioned components and supply piping to the mentioned machinery, as well as return piping. The system piping includes all system components, such as bends, T-pieces, flanges, filters, purification plant, drain taps, waste trays, etc. If the separate hydraulic oil systems have a common tank, the tank (if loose) with common equipment, comes under this subgroup. " ;
-        sdir:reference   sdir:438_Common_Hydr_Oil_System_for_Anchoring_Mooring_Equipment , sdir:309_Common_Hydraulic_Oil_System_for_Hatches_Ports , sdir:801_Ballast_Systems_Solid_Ballast , sdir:803_Bilge_Systems , sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY , sdir:821_Bleed_and_Overflow_Pipe_Systems , sdir:439_Common_Hydr_Oil_System_for_Anchoring_Mooring_Cargo_Winches , sdir:301_Cargo_Hatch_Covers_with_Equipment_on_Weather_Decks , sdir:347_Common_Plants_for_Cargo_Winches , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems .
+        sdir:reference   sdir:438_Common_Hydr_Oil_System_for_Anchoring_Mooring_Equipment , sdir:309_Common_Hydraulic_Oil_System_for_Hatches_Ports , sdir:801_Ballast_Systems_Solid_Ballast , sdir:803_Bilge_Systems , sdir:821_Bleed_and_Overflow_Pipe_Systems , sdir:79_AUTOMATION_SYSTEMS_FOR_MACHINERY , sdir:439_Common_Hydr_Oil_System_for_Anchoring_Mooring_Cargo_Winches , sdir:301_Cargo_Hatch_Covers_with_Equipment_on_Weather_Decks , sdir:347_Common_Plants_for_Cargo_Winches , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems .
 
 sdir:713040_Cyl_LO_Systems
         rdfs:label       "Cyl. lo systems"@en ;
@@ -21518,7 +21518,7 @@ sdir:57_VENTILATION_AIR_CONDITIONING_AND_HEATING_SYSTEMS
         rdfs:subClassOf  sdir:Group , sdir:5_CREW_AND_PASSENGER_EQUIPMENT ;
         sdir:code        "57" ;
         sdir:definition  "The subgroups include unless otherwise stated: - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transport costs (external). - Installation and adjustment. - Testing and inspection (in workshops and during installation). The systems in the subgroups also include all associated system components, such as: - Pipes and ducts with bends, T-pieces, brackets, expansion arrangements, penetration pieces, valves, spindle extensions, flaps, jealousies, filters, diffusers, insulation with covering. - Fans with drive units, heating and cooling batteries with associated separate machinery. - Instruments, regulating and control (operating) equipment. - Protection covers (excluding weather decks and cargo holds). - Fitted flanges for connection to systems and associated components. - Spare parts. All auxiliary (connected) systems end at the intake flange on the system described in the subgroup. " ;
-        sdir:reference   sdir:37_GAS_VENTILATION_SYSTEMS_FOR_CARGO_HOLDS_TANKS , sdir:892_Electric_Lighting_Systems_for_Accommodation , sdir:873_Group_Starters_Group , sdir:51_INSULATION_PANELS_BULKHEADS_DOORS_SIDE_SCUTTLES_SKYLIGHTS .
+        sdir:reference   sdir:873_Group_Starters_Group , sdir:37_GAS_VENTILATION_SYSTEMS_FOR_CARGO_HOLDS_TANKS , sdir:51_INSULATION_PANELS_BULKHEADS_DOORS_SIDE_SCUTTLES_SKYLIGHTS , sdir:892_Electric_Lighting_Systems_for_Accommodation .
 
 sdir:795046_Remote_Reading_Instrument_Transmitters
         rdfs:label       "Remote reading instrument transmitters"@en ;
@@ -21713,7 +21713,7 @@ sdir:385_Insulation_Drying_System_for_Cargo_Holds_Tanks
         rdfs:subClassOf  sdir:SubGroup , sdir:38_AUX_SYSTEMS_AND_EQUIPMENT_FOR_CARGO ;
         sdir:code        "385" ;
         sdir:definition  "Drying system for insulation in refrigerated compartments or on tanks for cargo, e.g. by means of dry air, including such as: - Ducts and pipes with valves, etc. - Fans with drive units. - Dehydrator, etc. " ;
-        sdir:reference   sdir:557_Insulation_Drying_Systems_for_Provision_Rooms , sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks .
+        sdir:reference   sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks , sdir:557_Insulation_Drying_Systems_for_Provision_Rooms .
 
 sdir:797020_Ballast_Bilge_System_Instruments
         rdfs:label       "Ballast/bilge system instruments"@en ;
@@ -21911,7 +21911,7 @@ sdir:126_Assistance_with_Owners_Supply
         rdfs:subClassOf  sdir:SubGroup , sdir:12_QUALITY_ASSURANCE_GENERAL_WORK_MODELS ;
         sdir:code        "126" ;
         sdir:definition  "Yard assistance with owners supply such as: - External transportation. - Unpacking and preparation. - Transportation on board and placing/installation. - Including also direct expenses connected with owners supplies. " ;
-        sdir:reference   sdir:195_Equipment_for_Owners_Representatives , sdir:109_Maintenance_Systems_Instruction_Material .
+        sdir:reference   sdir:109_Maintenance_Systems_Instruction_Material , sdir:195_Equipment_for_Owners_Representatives .
 
 sdir:595_Unassigned  rdfs:label  "Unassigned"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:59_PASSENGER_VESSELS_CABINS_PUBLIC_ROOMS_AND_POOLS_ETC ;
@@ -22034,7 +22034,7 @@ sdir:402_Rudder_Carriers_Rudder_Stocks_Rudder_Bearings
         rdfs:subClassOf  sdir:SubGroup , sdir:40_MANOEUVRING_MACHINERY_AND_EQUIPMENT ;
         sdir:code        "402" ;
         sdir:definition  "Mounting of rudders. Rudder equipment (purchases/prefabrication and mounting) including such as: - Rudder stocks, axles and pintles with liners and bolts, including securing devices, e.g. by casting. - Journal bearings, thrust bearings and rudder carrier with bearing (separate). - Liners in stern section/stern/heel boss etc. - Rudder stuffing boxes, drain plugs. - Equipment for lubrication of rudder bearings. - Lifting-eyes for mounting of rudder or for joint mounting of rudder and propeller. - Propellers with drive units for active rudder, alternatively driving gear (e.g. excenter) for rudder flaps, mounted to rud- der shaft (Note! see also Ref.). " ;
-        sdir:reference   sdir:403_Steering_Gear_Columns_Telemoter_Rudder_Indicator_Emergency_Steering , sdir:401_Rudder_with_Welded_Parts , sdir:218_Stern_Frame_Sections .
+        sdir:reference   sdir:403_Steering_Gear_Columns_Telemoter_Rudder_Indicator_Emergency_Steering , sdir:218_Stern_Frame_Sections , sdir:401_Rudder_with_Welded_Parts .
 
 sdir:566001_Helicopter_Deck
         rdfs:label       "Helicopter deck"@en ;
@@ -22236,7 +22236,7 @@ sdir:305_Bow_Ports  rdfs:label  "Bow ports"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:30_HATCHES_PORTS ;
         sdir:code        "305" ;
         sdir:definition  "Bow ports including such as: - Cover, coaming, packing (gasket), fittings, moving and closing arrangement, separate hydraulic system, special gear for operation of port etc " ;
-        sdir:reference   sdir:309_Common_Hydraulic_Oil_System_for_Hatches_Ports , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps .
+        sdir:reference   sdir:309_Common_Hydraulic_Oil_System_for_Hatches_Ports , sdir:311_Loose_Decks_and_Platforms_for_Cargo_Ramps , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers .
 
 sdir:363_Direct_Cooling_Systems_for_Liquid_Cargo
         rdfs:label       "Direct cooling systems for liquid cargo"@en ;
@@ -22260,21 +22260,21 @@ sdir:471_Hand_Weapons_Light_and_Heavy_Guns
         rdfs:subClassOf  sdir:SubGroup , sdir:47_ARMAMENT_WEAPON_AND_COUNTER_MEASURES ;
         sdir:code        "471" ;
         sdir:definition  "Attack weapons of the following categories: - Hand weapons such as rifles, pistols, light machine guns, machine pistols, etc. - Light guns such as (heavy) machine guns, etc. with block. - Heavy guns (cannons), complete with drive system, including necessary transformers, converters, amplifiers, etc., con- trol equipment, safety devices, suspension of the gun, built-in charging arrangement, mounted aerials, shields, etc. " ;
-        sdir:reference   sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS , sdir:473_Torpedo_Plants , sdir:461_Hunting_Equipment_for_Whale_Seal .
+        sdir:reference   sdir:461_Hunting_Equipment_for_Whale_Seal , sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS , sdir:473_Torpedo_Plants .
 
 sdir:146_Gas_Freeing_Tank_Cleaning
         rdfs:label       "Gas freeing, tank cleaning"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:14_WORK_ON_WAYS_LAUNCHING_DOCKING ;
         sdir:code        "146" ;
         sdir:definition  "Costs/expenses for tank cleaning and gas freeing. " ;
-        sdir:reference   sdir:28_MATERIAL_PROTECTION_INTERNAL , sdir:27_MATERIAL_PROTECTION_EXTERNAL , sdir:123_Clearing_and_Cleaning .
+        sdir:reference   sdir:27_MATERIAL_PROTECTION_EXTERNAL , sdir:123_Clearing_and_Cleaning , sdir:28_MATERIAL_PROTECTION_INTERNAL .
 
 sdir:465_Fish_Pumping_Plants_and_Landing_Equipment
         rdfs:label       "Fish pumping plants and landing equipment"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:46_HUNTING_AND_FISHING_EQUIPMENT ;
         sdir:code        "465" ;
         sdir:definition  "Auxiliary equipment for fishing such as: - Fish pumps with pipe suction heads, separate drive machinery, plus additional extra equipment such as filter chests, bins, etc. - Equipment for landing of fish (scoop nets, etc.). - Fish bin/-trunk/-silo for collection before the fish is transferred to treatment/cargo holds (see also Ref.). - Equipment for transportation to meal-/oil-/processing plant. - Discharging pump for fish with piping etc. to be charged to the subgroup in group 35 concerned. " ;
-        sdir:reference   sdir:386_Equipment_for_Addition_of_Preservatives_Inhibitors_Spirits , sdir:384_Separate_Cooling_Water_Systems_for_Cargo_Equipment , sdir:463_Purse_Nets_and_Seine_Equipment_Power_Blocks .
+        sdir:reference   sdir:463_Purse_Nets_and_Seine_Equipment_Power_Blocks , sdir:386_Equipment_for_Addition_of_Preservatives_Inhibitors_Spirits , sdir:384_Separate_Cooling_Water_Systems_for_Cargo_Equipment .
 
 sdir:375014_Flame_Arresters
         rdfs:label       "Flame arresters"@en ;
@@ -22346,7 +22346,7 @@ sdir:639_Foils_Sails_with_Masts_and_Rigging
         rdfs:subClassOf  sdir:SubGroup , sdir:63_PROPELLERS_TRANSMISSIONS_FOILS ;
         sdir:code        "639" ;
         sdir:definition  "Foils for hydrofoil (craft), complete with attachment. Sails for propulsion/stabilizing with masts, deck fittings and rigging. " ;
-        sdir:reference   sdir:34_MASTS_DERRICK_POSTS_RIGGING_AND_WINCHES_FOR_CARGO , sdir:418_Radar_Signal_Observation_and_Antenna_Masts , sdir:501_Lifeboats_with_Equipment .
+        sdir:reference   sdir:501_Lifeboats_with_Equipment , sdir:34_MASTS_DERRICK_POSTS_RIGGING_AND_WINCHES_FOR_CARGO , sdir:418_Radar_Signal_Observation_and_Antenna_Masts .
 
 sdir:803_Bilge_Systems
         rdfs:label       "Bilge systems"@en ;
@@ -22400,7 +22400,7 @@ sdir:843_Heating_Oil_Distribution_Systems_Outside_Engine_Room
         rdfs:subClassOf  sdir:SubGroup , sdir:84_CENTRAL_HEAT_TRANSFER_SYSTEMS_WITH_CHEMICAL_FLUIDS_OIL ;
         sdir:code        "843" ;
         sdir:definition  "System for distribution of chemical heat transfer liquid to users outside engine room (and adjoining rooms) e.g. on outside deck, in cargo holds/tanks, other tanks in the cargo area, such as ballast- and bunker tanks. Here is included arrangement for heat oil supply and return piping to such as: - Cargo pipelines on deck and possibly in tanks. - Heating coils in cargo oil tanks, ballast tanks, bunker tanks and similar. - Heating units for cargo oil pumps and other users outside the engine room. In the system is included system components analogue to that mentioned in subgroup 842. " ;
-        sdir:reference   sdir:704_Heating_Coils_in_FO_Tanks , sdir:842_Heating_Oil_Distribution_Systems_for_Engine_Room , sdir:802_Heating_Coils_in_Ballast_Tanks , sdir:365_Indirect_Cooling_Heating_Systems_Cargo_Oil_Heating .
+        sdir:reference   sdir:704_Heating_Coils_in_FO_Tanks , sdir:365_Indirect_Cooling_Heating_Systems_Cargo_Oil_Heating , sdir:802_Heating_Coils_in_Ballast_Tanks , sdir:842_Heating_Oil_Distribution_Systems_for_Engine_Room .
 
 sdir:285072_Food_Waste_Tanks
         rdfs:label       "Food waste tanks"@en ;
@@ -22458,7 +22458,7 @@ sdir:175_Services_to_Ships_Crew_Meals_etc
         rdfs:subClassOf  sdir:SubGroup , sdir:17_SHIP_REPAIR_SPECIAL_SERVICES ;
         sdir:code        "175" ;
         sdir:definition  "Catering of ships crew. Rental of living quarters, cars, etc, for superintendent, officers, etc. " ;
-        sdir:reference   sdir:136_Provisional_Steam_Water_Heating_and_Ventilation_Plants , sdir:117_Representation_Travels_Conferences , sdir:195_Equipment_for_Owners_Representatives .
+        sdir:reference   sdir:117_Representation_Travels_Conferences , sdir:136_Provisional_Steam_Water_Heating_and_Ventilation_Plants , sdir:195_Equipment_for_Owners_Representatives .
 
 sdir:425021_Crew_Call_Centrals
         rdfs:label       "Crew call centrals"@en ;
@@ -22502,7 +22502,7 @@ sdir:25_DECK_HOUSES_AND_SUPERSTRUCTURES
         rdfs:subClassOf  sdir:Group , sdir:2_HULL_SYSTEMS ;
         sdir:code        "25" ;
         sdir:definition  "The deck houses and superstructures include: - Decks, tops, sides and bulkheads above upper deck. Exempted from this are ordinary forecastle decks and raised after decks with bulkheads over the cargo area (Note! see also Ref.). For vessels with superstructure with several decks above the upper deck the superstructure sides start at the nearest plat- ing butt (seam) above upper deck. For vessels with one deck superstructure of the type poop, mid ship bridge on a three-island ship and similar, deck and bulkheads above upper deck are included in subgroup 253, while shell is included in the underlying hull areas (groups 21- 24). The subgroups include, unless otherwise stated: - Production costs. - License and patent fees. - Installation and adjustment. - Welding with chiselling and chamfer burning. - Testing and inspection (in workshops and during installation). For mounting and welding of parts (sections) with different group or subgroup numbers, the following rule is to be applied: - The work is to be charged to the part (section) which shall be mounted (following the section order). In the subgroups are included plates, stiffeners and strengtheners which follow the sections (Note! see also Ref.). " ;
-        sdir:reference   sdir:443_Painting_Equipment_Scaffolding_Paint_Rafts_Boats_Gigs , sdir:566_Helicopter_Platforms_with_Equipment , sdir:13_PROVISIONAL_RIGGING , sdir:204_Testing_of_Tanks_Bulkheads , sdir:20_HULL_MATERIALS_GENERAL_HULL_WORK , sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:804_Gutter_Pipes_Outside_Accommodation , sdir:421_GMDSS_System , sdir:51_INSULATION_PANELS_BULKHEADS_DOORS_SIDE_SCUTTLES_SKYLIGHTS , sdir:28_MATERIAL_PROTECTION_INTERNAL , sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:102_Drawing_Ordering_etc_Hull , sdir:52_INTERNAL_DECK_COVERING_LADDERS_STEPS_RAILING , sdir:53_EXT_DECK_COVERING_LADDERS_STEPS_FORE_AND_AFT_GANGWAY , sdir:205_X-Ray_and_Ultrasonic_Testing_of_Hull_Parts , sdir:582_Sanitary_Discharge_and_Drainage_Systems , sdir:27_MATERIAL_PROTECTION_EXTERNAL , sdir:261_Hull_and_House_Markings , sdir:26_HULL_OUTFITTING .
+        sdir:reference   sdir:443_Painting_Equipment_Scaffolding_Paint_Rafts_Boats_Gigs , sdir:566_Helicopter_Platforms_with_Equipment , sdir:13_PROVISIONAL_RIGGING , sdir:204_Testing_of_Tanks_Bulkheads , sdir:20_HULL_MATERIALS_GENERAL_HULL_WORK , sdir:804_Gutter_Pipes_Outside_Accommodation , sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:51_INSULATION_PANELS_BULKHEADS_DOORS_SIDE_SCUTTLES_SKYLIGHTS , sdir:421_GMDSS_System , sdir:28_MATERIAL_PROTECTION_INTERNAL , sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:53_EXT_DECK_COVERING_LADDERS_STEPS_FORE_AND_AFT_GANGWAY , sdir:52_INTERNAL_DECK_COVERING_LADDERS_STEPS_RAILING , sdir:102_Drawing_Ordering_etc_Hull , sdir:205_X-Ray_and_Ultrasonic_Testing_of_Hull_Parts , sdir:582_Sanitary_Discharge_and_Drainage_Systems , sdir:27_MATERIAL_PROTECTION_EXTERNAL , sdir:261_Hull_and_House_Markings , sdir:26_HULL_OUTFITTING .
 
 sdir:429_Unassigned  rdfs:label  "Unassigned"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:42_COMMUNICATION_EQUIPMENT ;
@@ -22541,7 +22541,7 @@ sdir:424_VHF_UHF_Telephones
         rdfs:subClassOf  sdir:SubGroup , sdir:42_COMMUNICATION_EQUIPMENT ;
         sdir:code        "424" ;
         sdir:definition  "Telephone plants, mainly for external communication, which are not included in the subgroups 421 and 422, such as: - VHF, UHF and SHF telephone/radio, portable or stationary/mounted, primarily for maritime radio frequencies (not Walkie-Talkie, see Ref.). - Lake-telephone. - Equipment for satellite communication. - The plants include such as: - Transmitters/receivers. - Aerials. - Transformers, converters, junction boxes, batteries, signal transmission cables, etc. - Walkie-Talkie (Citizen-band). " ;
-        sdir:reference   sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies , sdir:412_Position_and_Identification_Systems , sdir:422_Lifeboat_Radio_Transmitters_EPIRB_SART .
+        sdir:reference   sdir:422_Lifeboat_Radio_Transmitters_EPIRB_SART , sdir:412_Position_and_Identification_Systems , sdir:425_Calling_Command_Crew_Call_Telephone_Plants_Walkie-Talkies .
 
 sdir:183009_Packing_and_Jointing
         rdfs:label       "Packing and jointing"@en ;
@@ -22558,7 +22558,7 @@ sdir:376_Inert_Gas_Systems_with_Conditioning_Plant
         rdfs:subClassOf  sdir:37_GAS_VENTILATION_SYSTEMS_FOR_CARGO_HOLDS_TANKS , sdir:SubGroup ;
         sdir:code        "376" ;
         sdir:definition  "System for conditioning and supplying of inert gas to tanks for liquid cargo, to spaces in connection with this cargo and pos- sibly to cargo holds to prevent oxidation of the cargo, including the following types of systems: Inert gas system, where exhaust gas is taken from the funnel, or similar, including such as: - Conditioning plant with gas washers, driers, absorbers and similar. - Suction/pressure fans with drive units. - Ducts/pipes with valves, insulation, etc. from the funnel or similar, to the above mentioned components, to the cargo tanks or to loading/discharging pipes (see also Ref.). Inert gas system with own gas production plant, including such as: - Gas production plant with gas generators for burning of oil, or with transformers, condensers, loose storage tanks, etc. for chemical production of gas. - Separate fuel oil system for gas generators, with pipes, pumps, storage tanks, etc. (see also Ref.). - Conditioning plant with gas washers, driers, absorbers, heaters, etc., possibly with own cooling plant. - Ducts/pipes from the above components to the cargo tanks or loading/discharging pipes (see also Ref.). If the gas washers have a separate water supply system with own pump, etc.,this also comes under this subgroup. " ;
-        sdir:reference   sdir:2_HULL_SYSTEMS , sdir:815_Fire_Fighting_Systems_with_Gas_CO2_Halon_etc , sdir:663_Gas_Turbo_Aggregates_for_Electric_Power_Production , sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves , sdir:376_Inert_Gas_Systems_with_Conditioning_Plant , sdir:35_LOADING_DISCHARGING_SYSTEMS_FOR_LIQUID_CARGO , sdir:649_Gas_Generators , sdir:703_FO_Supply_Systems , sdir:374_Vent_Gas_Freeing_Systems_for_Tanks_Wind_Sails_with_Equipment .
+        sdir:reference   sdir:815_Fire_Fighting_Systems_with_Gas_CO2_Halon_etc , sdir:2_HULL_SYSTEMS , sdir:663_Gas_Turbo_Aggregates_for_Electric_Power_Production , sdir:376_Inert_Gas_Systems_with_Conditioning_Plant , sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves , sdir:35_LOADING_DISCHARGING_SYSTEMS_FOR_LIQUID_CARGO , sdir:649_Gas_Generators , sdir:703_FO_Supply_Systems , sdir:374_Vent_Gas_Freeing_Systems_for_Tanks_Wind_Sails_with_Equipment .
 
 sdir:405051_Hydr_Oil_Coolers
         rdfs:label       "Hydr. oil coolers"@en ;
@@ -22570,7 +22570,7 @@ sdir:555_Insulation_Lining_and_Battening_in_Provision_Rooms_Doors_and_Ports
         rdfs:subClassOf  sdir:55_GALLEY_PANTRY_EQUIPMENT_PROVISION_PLANTS_LAUNDRY_IRONING_EQUIPMENT , sdir:SubGroup ;
         sdir:code        "555" ;
         sdir:definition  "Insulating and lining/sheathing in the provision rooms (also dry-provision rooms), including such as: - Pegwood with lugs, etc. - Insulation of tank-top, bulkheads, hull underside of decks (also of possible hatchway coamings) and of manhole covers. - Lining/sheathing and moisture barriers for protection of insulation. - Deck coating for protection of insulation. - Flat bars for limitation of strip insulation, etc. - Battens on the lining/sheathing. Insulated doors and/or ports to refrigerated rooms for provisions, complete with such as: - Coaming and door/port. - Insulation, lining and gaskets. - Hinges, fittings and closing mechanism. Containers with associated equipment, for storage of provisions are also included here. " ;
-        sdir:reference   sdir:511_Partition_Bulkheads_Paneling , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks , sdir:551_Galley_Food_Cooking_Equipment , sdir:556_Walls_Bins_Shelves_Racks_Grating_and_Invent_in_Provision_Rooms , sdir:513_Other_Internal_Doors_with_Coamings , sdir:52_INTERNAL_DECK_COVERING_LADDERS_STEPS_RAILING , sdir:584_Unassigned , sdir:541_Furniture_for_Crew_Standard_Type .
+        sdir:reference   sdir:511_Partition_Bulkheads_Paneling , sdir:304_Smaller_Hatches_Grain_Hatches_Manhole_Covers , sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks , sdir:551_Galley_Food_Cooking_Equipment , sdir:513_Other_Internal_Doors_with_Coamings , sdir:556_Walls_Bins_Shelves_Racks_Grating_and_Invent_in_Provision_Rooms , sdir:52_INTERNAL_DECK_COVERING_LADDERS_STEPS_RAILING , sdir:584_Unassigned , sdir:541_Furniture_for_Crew_Standard_Type .
 
 sdir:552101_Workbenches
         rdfs:label       "Workbenches"@en ;
@@ -23119,7 +23119,7 @@ sdir:214_First_Deck_with_Stiffening
         rdfs:subClassOf  sdir:SubGroup , sdir:21_AFTERBODY ;
         sdir:code        "214" ;
         sdir:definition  "Upper deck in the afterbody with stiffeners and strengtheners. Also here are included parts of plate frames, girders, stiffeners, bulk heads, underlying pillars, integrated gutters, ducts etc., which are mounted together with the deck plates or sections. " ;
-        sdir:reference   sdir:533_Handrails_Railing_Rail_Gates , sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:216_Stern_Sections_Stern_Tube_Bulkheads .
+        sdir:reference   sdir:267_Gutter_Bars_Bulwark_Breakwaters_Gas_Barriers , sdir:533_Handrails_Railing_Rail_Gates , sdir:216_Stern_Sections_Stern_Tube_Bulkheads .
 
 sdir:512035_Fixtures_Locks
         rdfs:label       "Fixtures, locks"@en ;
@@ -23322,7 +23322,7 @@ sdir:756_Primary_Feed_Water_Systems
         rdfs:subClassOf  sdir:SubGroup , sdir:75_STEAM_CONDENSATE_AND_FEED_WATER_SYSTEMS ;
         sdir:code        "756" ;
         sdir:definition  "Feed water system for the ships primary steam plant (note! not secondary feed water system, e.g. for the steam con- verter). The primary feed water system is limited by the feed water pumps suction side (high-pressure pumps) and the boiler(s), and includes such as: - Feed water pumps (high-pressure) with drive units, as well as injectors. - Feed water preheaters (high-pressure). - Piping with valves, etc., between the feed water pumps and the high pressure preheaters to the boiler(s). Also included here are possible water circulation system between auxiliary fired boilers and exhaust gas boiler with pipes, circulation pumps, etc. Piping and equipment for portioning chemical additives in the feed water system (high-pressure system), as well as pos- sible equipment for purification of the feed water are also included. " ;
-        sdir:reference   sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS , sdir:759_Secondary_Condensate_and_Feed_Water_Systems , sdir:755_Primary_Condensate_Systems .
+        sdir:reference   sdir:755_Primary_Condensate_Systems , sdir:759_Secondary_Condensate_and_Feed_Water_Systems , sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS .
 
 sdir:573001_Air_Conditioning_Central_Units
         rdfs:label       "Air conditioning central units"@en ;
@@ -23480,7 +23480,7 @@ sdir:73_COMPRESSED_AIR_SYSTEMS
         rdfs:subClassOf  sdir:Group , sdir:7_SYSTEMS_FOR_MACHINERY_MAIN_COMPONENTS ;
         sdir:code        "73" ;
         sdir:definition  "The group includes the ships main compressed air systems, i.e. systems for production, storage and supply of compressed air to machinery main components (machinery in primary group 6) and to other machinery supplied by the same system (Note! see also Ref.), as well as supply of general purpose and instrument air. The subgroups include, unless otherwise stated: - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transport costs (external). - Installation and adjustment. - Testing and inspection (in workshops and during installation). The systems in the subgroups include all associated system components, such as: - Compressors with drive unit, coolers, loose tanks, filters and traps, drying equipment, sound mufflers, etc. - Pipes with bends, T-pieces, flanges, suspensions, clamps, expansion arrangements, penetration pieces, drain taps, valves, etc. - Local instruments (thermometers, manometers, etc.). - Protection covers (excluding weather decks and cargo holds/tanks). - Spare parts. Drain pipes and pots, air pipes and valves, come under the subgroup for the component or system which is drained/blown- off. All auxiliary systems (connected systems) end at the intake flange on the system which is described in the subgroup. " ;
-        sdir:reference   sdir:426_Speaking_Tubes_Tube_Post_Plants , sdir:326_Pneumatic_Plants_for_Bulk_Cargo_Handling , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins .
+        sdir:reference   sdir:426_Speaking_Tubes_Tube_Post_Plants , sdir:316_Protection_Plates_Covers_Hatch_Tents_and_Tarpaulins , sdir:326_Pneumatic_Plants_for_Bulk_Cargo_Handling .
 
 sdir:363023_Heat_Exchangers
         rdfs:label       "Heat exchangers"@en ;
@@ -23589,7 +23589,7 @@ sdir:312_Loose_Tanks_for_Cargo
         rdfs:subClassOf  sdir:SubGroup , sdir:31_EQUIPMENT_FOR_CARGO_IN_HOLDS_ON_DECK ;
         sdir:code        "312" ;
         sdir:definition  "Cargo tanks where shell, decks and bulkheads do not form part of the tank (e.g. special gas tanks, cement tanks), including such as: - Plating and stiffening, securing arrangements, pipe connections with flanges, dome, hatches (manhole covers), equip- ment for grounding, etc. together with those parts of the foundation (skirt or similar) that are built together with the tank. Arrangement for grounding of the tanks. Included here are also loose auxiliary tanks for gas, which are used during cargo shifting and similar (see also Ref.). " ;
-        sdir:reference   sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks , sdir:312_Loose_Tanks_for_Cargo , sdir:23_CARGO_AREA_HULL_SMALL_VESSELS , sdir:231_Shell_Panels_Separate_Shell_Plates , sdir:527_Platforms_Ladders_and_Railing_in_Cargo_Tanks , sdir:528_Platforms_Ladders_and_Railing_in_Cargo_Holds , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:238_Bottom_Side_Tanks_etc_Special_Lower_Constructions , sdir:327_Grabbing_Lifting_Equipment_for_Cranes_Masts_and_Booms_for_Cargo , sdir:284_Cargo_Tanks , sdir:234_First_Deck_with_Stiffening , sdir:252_Mast_Pump_Fan_and_Winch_Houses_Companion_Ways , sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves , sdir:377_Unassigned .
+        sdir:reference   sdir:361_Insulation_and_Sheathing_of_Cargo_Holds_Tanks , sdir:312_Loose_Tanks_for_Cargo , sdir:23_CARGO_AREA_HULL_SMALL_VESSELS , sdir:231_Shell_Panels_Separate_Shell_Plates , sdir:527_Platforms_Ladders_and_Railing_in_Cargo_Tanks , sdir:528_Platforms_Ladders_and_Railing_in_Cargo_Holds , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems , sdir:238_Bottom_Side_Tanks_etc_Special_Lower_Constructions , sdir:327_Grabbing_Lifting_Equipment_for_Cranes_Masts_and_Booms_for_Cargo , sdir:284_Cargo_Tanks , sdir:234_First_Deck_with_Stiffening , sdir:252_Mast_Pump_Fan_and_Winch_Houses_Companion_Ways , sdir:377_Unassigned , sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves .
 
 sdir:438006_Hydr_Oil_Preheaters
         rdfs:label       "Hydr. oil preheaters"@en ;
@@ -23640,7 +23640,7 @@ sdir:478_Torpedo_Counter_Measures_Smoke_Generating_Equipment
         rdfs:subClassOf  sdir:SubGroup , sdir:47_ARMAMENT_WEAPON_AND_COUNTER_MEASURES ;
         sdir:code        "478" ;
         sdir:definition  "Plants for anti-torpedo action (i.e. Unifoxer or Fanfare) including cables, winches, control equipment, lashing devices, deck fittings, etc. Also included are plants for smoke generation, other equipment for weapon countermeasures that is not stated in above subgroups and other naval equipment that cannot be included in other subgroups. " ;
-        sdir:reference   sdir:474_Anti-Submarine_Weapons , sdir:411_Radar_Plants , sdir:473_Torpedo_Plants , sdir:88_ELECTRIC_CABLE_INSTALLATION .
+        sdir:reference   sdir:474_Anti-Submarine_Weapons , sdir:473_Torpedo_Plants , sdir:88_ELECTRIC_CABLE_INSTALLATION , sdir:411_Radar_Plants .
 
 sdir:703047_FO_Fine_Filters
         rdfs:label       "Fo fine filters"@en ;
@@ -23713,7 +23713,7 @@ sdir:82_AIR_AND_SOUNDING_SYSTEMS_FROM_TANKS_TO_DECK
         rdfs:subClassOf  sdir:Group , sdir:8_COMMON_SYSTEMS ;
         sdir:code        "82" ;
         sdir:definition  "The subgroups include, unless otherwise stated: - Production costs. - License and patent fees. - Purchases (materials and equipment). - Transport costs (external). - Installation and adjustment. - Testing and inspection (in workshops and during installation). The system in the subgroups include all associated system components, such as: - Pipes with bends, clamps, penetration pieces, etc. - Spare parts, etc. " ;
-        sdir:reference   sdir:73_COMPRESSED_AIR_SYSTEMS , sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables .
+        sdir:reference   sdir:448_Nameplates_Marking_on_Machinery_Equipment_Pipes_Cables , sdir:73_COMPRESSED_AIR_SYSTEMS .
 
 sdir:573_Ventilation_Air_Conditioning_Systems_for_Control_Rooms
         rdfs:label       "Ventilation/air conditioning systems for control rooms"@en ;
@@ -23752,7 +23752,7 @@ sdir:613_Medium_and_Low_Pressure_Turbines
         rdfs:subClassOf  sdir:SubGroup , sdir:61_PROPULSION_STEAM_MACHINERY ;
         sdir:code        "613" ;
         sdir:definition  "Medium and low pressure turbines for propulsion (ahead and astern), also including such as: - Mounted thrust shaft, thrust bearing and turning gear. - Mounted pipes with fittings, admission valves, etc. " ;
-        sdir:reference   sdir:611_Steam_Turbines_with_Condensers , sdir:614_Main_Condensers , sdir:612_High_Pressure_Turbines .
+        sdir:reference   sdir:612_High_Pressure_Turbines , sdir:614_Main_Condensers , sdir:611_Steam_Turbines_with_Condensers .
 
 sdir:1_GENERAL  rdfs:label  "General"@en ;
         rdfs:subClassOf  sdir:MainGroup , sdir:SFIConcept ;
@@ -23818,7 +23818,7 @@ sdir:733_General_Purpose_Air_Systems_for_Deck_Low_Pressure
         rdfs:subClassOf  sdir:SubGroup , sdir:73_COMPRESSED_AIR_SYSTEMS ;
         sdir:code        "733" ;
         sdir:definition  "General purpose air system (low-pressure system) for production, storage and supply of compressed air to taps and equip- ment on weather decks, on mast houses/superstructure and in possible other rooms outside the engine room (Note! see also Ref.), such as: - Cranes. - Davit winches, and other pneumatic winches. - Low-pressure whistles, etc. (Note! see also Ref.). The system includes such as: - General purpose air compressor (stationary and/or portable) with drive unit, oil and water separators, coolers, etc. - General purpose air tanks with melting plugs, etc. - Pipes with valves, taps, etc., from general purpose air tanks, or from branching points in the high-pressure system (including reduction valves), to the mentioned low-pressure consumers outside the engine room. - Drain pipes from the general purpose air system outside the engine room. If instrument air is taken from the general purpose air system via branching and reduction valves, the general purpose air system ends at the reduction valves (Note! see also Ref.). " ;
-        sdir:reference   sdir:732_General_Purpose_Air_Systems_for_Engine_Room_Low_Pressure , sdir:442_General_Hand_and_Pneumatic_Tools , sdir:731_Starting_Air_Systems_High_Pressure .
+        sdir:reference   sdir:732_General_Purpose_Air_Systems_for_Engine_Room_Low_Pressure , sdir:731_Starting_Air_Systems_High_Pressure , sdir:442_General_Hand_and_Pneumatic_Tools .
 
 sdir:381002_Ferry_Ramp_Radio_Control
         rdfs:label       "Ferry ramp radio control"@en ;
@@ -23835,14 +23835,14 @@ sdir:566_Helicopter_Platforms_with_Equipment
         rdfs:subClassOf  sdir:56_TRANSPORT_EQUIPMENT_FOR_CREW_PASSENGERS_AND_PROVISIONS , sdir:SubGroup ;
         sdir:code        "566" ;
         sdir:definition  "Landing area for helicopter, including such as: - Separate platform construction with supports/pillars, low rails, etc. - Fuel ducts (gutters) with possible separate pipes, tank and pump with drive unit, etc. - Ladders/stairs, railings and safety net. - Special deck covering and impregnation. - Anchoring points and lashing wire. " ;
-        sdir:reference   sdir:503_Lifesaving_Safety_and_Emergency_Equipment , sdir:883_Cable_Trays_and_Installation_on_Deck_and_in_Cargo_Holds , sdir:2_HULL_SYSTEMS , sdir:427_Light_and_Signal_Equipment_Lanterns_Typhoons , sdir:504_Medical_First_Aid_and_Dental_Equipment_Medicines , sdir:505_Loose_Firefighting_Apparatuses_and_Equipment_Firemens_Outfit , sdir:417_Nautical_Utility_Equipment_Clockworks_Weather_Facsimile , sdir:501_Lifeboats_with_Equipment , sdir:502_Liferafts_with_Equipment , sdir:261_Hull_and_House_Markings , sdir:531_External_Deck_Covering , sdir:81_FIRE_AND_LIFEBOAT_ALARM_FIRE_FIGHTING_AND_WASH_DOWN_SYSTEMS , sdir:485_Aircraft_Helicopters , sdir:412_Position_and_Identification_Systems .
+        sdir:reference   sdir:503_Lifesaving_Safety_and_Emergency_Equipment , sdir:883_Cable_Trays_and_Installation_on_Deck_and_in_Cargo_Holds , sdir:2_HULL_SYSTEMS , sdir:427_Light_and_Signal_Equipment_Lanterns_Typhoons , sdir:504_Medical_First_Aid_and_Dental_Equipment_Medicines , sdir:417_Nautical_Utility_Equipment_Clockworks_Weather_Facsimile , sdir:505_Loose_Firefighting_Apparatuses_and_Equipment_Firemens_Outfit , sdir:501_Lifeboats_with_Equipment , sdir:502_Liferafts_with_Equipment , sdir:261_Hull_and_House_Markings , sdir:531_External_Deck_Covering , sdir:485_Aircraft_Helicopters , sdir:81_FIRE_AND_LIFEBOAT_ALARM_FIRE_FIGHTING_AND_WASH_DOWN_SYSTEMS , sdir:412_Position_and_Identification_Systems .
 
 sdir:411_Radar_Plants
         rdfs:label       "Radar plants"@en ;
         rdfs:subClassOf  sdir:SubGroup , sdir:41_NAVIGATION_AND_SEARCHING_EQUIPMENT ;
         sdir:code        "411" ;
         sdir:definition  "Radar plants for navigation and searching, also including radar plants for military purposes, comprising such as: - Transmitters/receivers. - Aerials. - Indicators. - Transformers, converters, junction boxes, etc. - Anti-collision plants (separate). - Associated equipment for plotting (plotting tables etc.) direction finding equipment, etc., including equipment for mil- itary purposes, such as radar identification systems, shooting radars, etc. " ;
-        sdir:reference   sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:418_Radar_Signal_Observation_and_Antenna_Masts , sdir:423_Satellite_Communication_Data_Transmission_Plants .
+        sdir:reference   sdir:418_Radar_Signal_Observation_and_Antenna_Masts , sdir:414_Underwater_Searching_Equipment_ASDIC_Echo_Sounder_Speed_Log , sdir:423_Satellite_Communication_Data_Transmission_Plants .
 
 sdir:734005_Instrument_Air_Water_Oil_Separators
         rdfs:label       "Instrument air water/oil separators"@en ;
@@ -23900,7 +23900,7 @@ sdir:373_Open_Ventilation_Systems_for_Cargo_Holds
         rdfs:subClassOf  sdir:SubGroup , sdir:37_GAS_VENTILATION_SYSTEMS_FOR_CARGO_HOLDS_TANKS ;
         sdir:code        "373" ;
         sdir:definition  "Open ventilation system for non-refrigerated cargo holds, also for spaces surrounding loose gas tanks, where the air is sup- plied and removed without recirculation. The following categories of equipment/plants are included: - Ventilation pipes with rotating cowls for natural ventilation. - Ventilation pipes with fans for mechanical ventilation. - Ventilation system with mechanical supply/removal of the air and distribution/removal ducts in the cargo holds, includ- ing fans, heating batteries and similar in connection with this (see also Ref.). " ;
-        sdir:reference   sdir:372_Closed_Ventilation_Return_Vapour_Systems_for_Cargo_Holds , sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves , sdir:575_Ventilation_Air_Conditioning_Systems_for_Pump_Rooms .
+        sdir:reference   sdir:375_Blow-Off_System_from_Safety_Valves_Pressure_Vacuum_Valves , sdir:372_Closed_Ventilation_Return_Vapour_Systems_for_Cargo_Holds , sdir:575_Ventilation_Air_Conditioning_Systems_for_Pump_Rooms .
 
 sdir:542022_Tables  rdfs:label  "Tables"@en ;
         rdfs:subClassOf  sdir:DetailCode , sdir:542_Office_Equipment_and_Special_Furniture ;
@@ -23926,7 +23926,7 @@ sdir:855_Common_Computer_Systems
         rdfs:subClassOf  sdir:SubGroup , sdir:85_COMMON_ELECTRICAL_AND_ELECTRONIC_SYSTEMS ;
         sdir:code        "855" ;
         sdir:definition  "Common EDP plant which is used for several functions on board, such as: - Operation and maintenance. - Cargo supervision. - Anticollision system - Navigation. - Communication. - Weapons systems. - Administration. - Machinery surveillance. The EDP plant includes such as: - Control unit, memory, etc. - Input/output equipment (interface equipment, selectors, AD-converters, etc). - Other peripheral equipment (for printing, reading, punching and similar, real time clocks, data screens, tape and disc stations, drums, etc). - Other equipment specific for EDP plants (data centre). " ;
-        sdir:reference   sdir:109_Maintenance_Systems_Instruction_Material , sdir:411_Radar_Plants , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems .
+        sdir:reference   sdir:411_Radar_Plants , sdir:109_Maintenance_Systems_Instruction_Material , sdir:381_Sounding_Surveillance_and_Operating_Equipment_for_Cargo_Systems .
 
 sdir:414004_Indicator_Screens
         rdfs:label       "Indicator screens"@en ;
@@ -24034,7 +24034,7 @@ sdir:342_Derrick_Booms_Boom_Rests
         rdfs:subClassOf  sdir:SubGroup , sdir:34_MASTS_DERRICK_POSTS_RIGGING_AND_WINCHES_FOR_CARGO ;
         sdir:code        "342" ;
         sdir:definition  "Derrick booms for cargo with associated boom rests (crutches), complete with all fittings. If boom rests are used for both cranes and derricks, they are to be charged here. " ;
-        sdir:reference   sdir:383_Lifting_Gear_for_Cargo_Hoses , sdir:564_Shore_Gangways_with_Davits_Landing_Booms , sdir:453_External_Lifting_Gear_for_Machinery_Components , sdir:563_Provision_Cranes_and_Derricks .
+        sdir:reference   sdir:383_Lifting_Gear_for_Cargo_Hoses , sdir:564_Shore_Gangways_with_Davits_Landing_Booms , sdir:563_Provision_Cranes_and_Derricks , sdir:453_External_Lifting_Gear_for_Machinery_Components .
 
 sdir:358006_Rope_Guide
         rdfs:label       "Rope guide"@en ;
@@ -24122,7 +24122,7 @@ sdir:644_Aux_Steam_Boilers
         rdfs:subClassOf  sdir:SubGroup , sdir:64_BOILERS_STEAM_AND_GAS_GENERATORS ;
         sdir:code        "644" ;
         sdir:definition  "Fired boilers and electro-boilers for steam production, primarily for auxiliary machinery and heating. The plant includes equivalent equipment, as mentioned in subgroup 641, as well as boiler automation equipment for smal- ler auxiliary boilers, e.g. donkey boilers (see also Ref.). " ;
-        sdir:reference   sdir:794_Automation_Equipment_for_Boilers , sdir:646_Exhaust_Gas_Boilers , sdir:648_Central_Heating_and_Thermal_Oil_Boilers .
+        sdir:reference   sdir:794_Automation_Equipment_for_Boilers , sdir:648_Central_Heating_and_Thermal_Oil_Boilers , sdir:646_Exhaust_Gas_Boilers .
 
 sdir:439012_Hydr_Oil_Filters
         rdfs:label       "Hydr. oil filters"@en ;
@@ -24351,7 +24351,7 @@ sdir:124_Snow_Clearing_De-icing
         rdfs:subClassOf  sdir:SubGroup , sdir:12_QUALITY_ASSURANCE_GENERAL_WORK_MODELS ;
         sdir:code        "124" ;
         sdir:definition  "Snow clearing and de-icing on board and on ways (berth), drying before welding etc. " ;
-        sdir:reference   sdir:123_Clearing_and_Cleaning , sdir:136_Provisional_Steam_Water_Heating_and_Ventilation_Plants .
+        sdir:reference   sdir:136_Provisional_Steam_Water_Heating_and_Ventilation_Plants , sdir:123_Clearing_and_Cleaning .
 
 sdir:731016_Starting_Air_Compressor_Silencers
         rdfs:label       "Starting air compressor silencers"@en ;
