@@ -26,7 +26,7 @@ Remove:
 
 Then:  
 `$ npm install -g serve`  
-`$ npm run build`
+`$ npm run build`  
 `$ serve -s build`  
 Go to [localhost:5000](localhost:5000)
 
