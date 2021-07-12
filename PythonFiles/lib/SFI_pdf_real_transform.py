@@ -36,7 +36,7 @@ class SFI_pdf_real_transform:
         self.grouping_lists_and_definitions()
         
         self.find_typo()
-        
+        self.add_mainGroup_definition()
         self.add_code_and_label()
         self.add_dbpedia()
 
@@ -146,7 +146,17 @@ class SFI_pdf_real_transform:
             else:
                 self.all_codes[i]['dbpedia'] = ""
                 
-                
+    def add_mainGroup_definition(self):
+        #Adds definition to main groups manually 
+        self.all_codes["1 GENERAL"]["definition"] = "Details and costs that cannot be charged to any specific function onboard, e.g. general arrangement, quality assurance, launching, dry-docking and guarantee work."
+        self.all_codes["2 HULL SYSTEMS"]["definition"] = "Hull, superstructure and material protection of the vessel."   
+        self.all_codes["3 CARGO EQUIPMENT"]["definition"] = "Cargo equipment and machinery including systems for vessel’s cargo, loading/discharging systems, cargo winches and hatches."
+        self.all_codes["4 SHIP EQUIPMENT"]["definition"] = "Ship specific equipment- and machinery. Navigational equipment, manoeuvring machinery, anchoring equipment, and communication equipment. This group also includes special equipment such as equipment for fishing."   
+        self.all_codes["5 CREW AND PASSENGER EQUIPMENT"]["definition"] = "Equipment, machinery, systems etc. serving crew and passengers, for example lifesaving equipment, furniture, catering equipment and sanitary systems."   
+        self.all_codes["6 MACHINERY MAIN COMPONENTS"]["definition"] = "Primary components in the engine room, for example main and auxiliary engines, propellers, plant, boilers, and generators."   
+        self.all_codes["7 SYSTEMS FOR MACHINERY MAIN COMPONENTS"]["definition"] = "Systems serving main machinery components, for example fuel and lubrication oil systems, starting air system, exhaust systems and automation systems."   
+        self.all_codes["8 COMMON SYSTEMS"]["definition"] = "Central ship systems, for example ballast and bilge systems, fire fighting and wash down systems, electrical distribution systems etc."   
+        
     def delete_duplicate_references(self):
         for i in self.all_codes:
             self.all_codes[i]["references"] = list(set(self.all_codes[i]["references"]))
