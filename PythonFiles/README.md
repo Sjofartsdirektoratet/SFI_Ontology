@@ -85,5 +85,6 @@ directory to the web-apps public folder.
 It is possible to run test when developing. There are test in `~/PythonFiles/tests`, and those who are there is made for the pipeline.  
 
 To run pytest and test if the pipeline works do this run this in your favorite python enviroment:  
-```pytest
+```
+pytest
 ```
