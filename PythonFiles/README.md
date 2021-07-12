@@ -86,5 +86,8 @@ It is possible to run test when developing. There are test in `~/PythonFiles/tes
 
 To run pytest and test if the pipeline works do this run this in your favorite python enviroment:  
 ```
+cd ~/SFI_Ontology/PythonFiles/
+```
+```
 pytest
 ```
