@@ -41,8 +41,3 @@ def test_pdf_save_json():
     data = sfi.transform(data)
     sfi.save_json("testfile.json")
     os.remove("testfile.json")
-
-    
-    
-# def 
-# data = tree.read_json("SFI_extraced_info.json")

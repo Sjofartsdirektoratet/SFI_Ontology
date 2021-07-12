@@ -19,7 +19,7 @@ def test_make_ctr():
     ctr = Convert_to_rdf()
     
 # test if ctr can transform
-def test_make_ctr():
+def test_transform_ctr():
     tree = Make_tree()
     data = tree.read_json("SFI_extraced_info.json")
     classes = tree.transform(data)
@@ -28,7 +28,7 @@ def test_make_ctr():
     ctr.transform(classes)
     
 # test if ctr cpuld save stottr
-def test_make_ctr():
+def test_make_stottr():
     tree = Make_tree()
     data = tree.read_json("SFI_extraced_info.json")
     classes = tree.transform(data)
@@ -36,6 +36,24 @@ def test_make_ctr():
     ctr = Convert_to_rdf()
     ctr.transform(classes)
     
-    ctr.make_stottr(fname="test_stottr")
-    os.remove("test_stottr.stottr")
+    ctr.make_stottr(fname="test_stottr.stottr")
+    if os.path.exists("test_stottr.stottr"):
+        os.remove("test_stottr.stottr")
+    
+# Test if lutra can run
+def test_run_lutra():
+    tree = Make_tree()
+    data = tree.read_json("SFI_extraced_info.json")
+    classes = tree.transform(data)
+    
+    ctr = Convert_to_rdf()
+    ctr.transform(classes)
+    
+    ctr.make_stottr(fname="test_stottr.stottr")
+    ctr.activate_lutra(fname="test_lutra") # .ttl
+    
+    if os.path.exists("test_stottr.stottr"):
+        os.remove("test_stottr.stottr")
+    if os.path.exists("test_lutra.ttl"):
+        os.remove("test_lutra.ttl")
     
