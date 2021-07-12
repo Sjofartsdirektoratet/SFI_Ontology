@@ -45,7 +45,7 @@ function KnowledgeGraph(){
 
     function initialCollapse(d){
         
-        if (d.children && d.depth > 0) { 
+        if (d.children && d.depth > 1) { 
             d._children = d.children;
             d._children.forEach(initialCollapse)
             d.children = null;
@@ -58,6 +58,7 @@ function KnowledgeGraph(){
             d.children = d._children;
             d._children = null;
         }
+        setFromJson(d)
     }
 
     function constructReferenceLinks(root,node, links,svg){
@@ -85,8 +86,12 @@ function KnowledgeGraph(){
     useEffect(() => {
         d3.json('Ontologi.json').then(data => {
 
-            var data2 = [] // New array to store triples with code property to avoid multiple root problem
-            data.filter(x => x["https://www.sdir.no/SFI-model#code"]).map(x => data2.push(x))
+            var data2 = [] // New array to store triples with code property to avoid multiple root problem and filter out unassigned groups
+            data.filter(x => x["https://www.sdir.no/SFI-model#code"] && x["http://www.w3.org/2000/01/rdf-schema#label"]).map(x =>{
+                if(x["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"] != "Unassigned"){
+                    data2.push(x)
+                }})
+            
             
             const hierarchy = d3.stratify() // Builds d3.hierarchy object from json
             .id(function(d) { 
@@ -122,6 +127,7 @@ function KnowledgeGraph(){
             
             update(fromJson,svg)   
         }
+
         
         
 
@@ -137,20 +143,15 @@ function KnowledgeGraph(){
             .separation((a, b) => (a.parent == b.parent ? 1 : 3)/ a.depth)
             
             const root = tree(data)
-            //console.log(root.links())
+
             svg.selectAll("*").remove()
 
-
-            console.log()
-            // var referencesLinks = constructReferenceLinks(root,root, [],svg)
-            // console.log(referencesLinks)
+         
             
             svg = svg.append('svg')
             .attr("height",height2)
             .attr("width",width2)
 
-            
-        
             
             // Define the div for the tooltip
             var div = d3.select(d3KGraph.current).append("div")	
@@ -279,21 +280,50 @@ function KnowledgeGraph(){
                     .text(d => d.data["https://www.sdir.no/SFI-model#code"][0]["@value"])
                 //.text(d => d.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"])
                 .style("padding","1px")
-
-
+                 
         }
             
             // data.sort(function(a,b){
             //     return d3.descending(parseInt(a.data["https://www.sdir.no/SFI-model#code"][0]["@value"][0]),parseInt(b.data["https://www.sdir.no/SFI-model#code"][0]["@value"][0]))
             // })
        
-          
-      
+        function getMaxLayer(data){
+            const maxDepth = d3.max(data, (x) => {return x.depth})
+            return maxDepth
+        }
+
+        function expandLayer(d,maxLayer){
+
+            if (!d.children && d._children) {
+                d.children = d._children
+            }
+            if(d.children && maxLayer != d.depth){
+                d.children.forEach(d => {expandLayer(d, maxLayer)})
+            }
+            setFromJson(d)
+        }
+
+        function collapseLayer(d,maxLayer){
+            if(d.depth==maxLayer-1 && d.children){
+                d._children = d.children
+                d.children = null
+            }
+            else if(d.children){
+                d.children.forEach(d => {collapseLayer(d,maxLayer)})
+            }
+            setFromJson(d)
+        }
 
       
             
     return (
-           <div ref={d3KGraph}></div>
+    <div> 
+        
+        <button onClick={() => expandLayer(fromJson,getMaxLayer(fromJson))}>Expand Layer</button>
+        <button onClick={() => collapseLayer(fromJson,getMaxLayer(fromJson))}>Collapse Layer</button>
+        <div ref={d3KGraph}></div>
+    </div> 
+               
     )
 }
 
