@@ -105,7 +105,7 @@ class load_from_DBpedia:
         self.all_data = dict(self.all_data)
         
         
-    def save_file(self, fname='dbpediaINFO.pickle'):
+    def save_file(self, fname='dbpedia_SFI_info.pickle'):
         with open(fname, 'wb') as handle:
             pickle.dump(self.all_data, handle, protocol=4)
 

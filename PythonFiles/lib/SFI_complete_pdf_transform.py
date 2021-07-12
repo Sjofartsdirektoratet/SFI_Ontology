@@ -137,7 +137,7 @@ class SFI_complete_pdf_transform:
         
         
     def add_dbpedia(self):
-        with open('dbpediaINFO.pickle', 'rb') as f:
+        with open('dbpedia_SFI_info.pickle', 'rb') as f:
                 dbpedia_definitions = pickle.load(f)
                 
         for i in self.all_codes:
