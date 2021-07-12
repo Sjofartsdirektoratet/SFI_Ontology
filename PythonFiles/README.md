@@ -10,10 +10,12 @@ The RDF Ortology will be saved as a Turtle file. A JSON-LD file is made translat
 * `jdk >= 15.0.0`
 * `anytree =  2.8.0`
 * `PyPDF2 = 1.26.0`
+* `pdfplumber = 0.5.28`
 * `rdflib = 5.0.0`
 * `rdflib-jsonld = 0.5.0`
 * `pickle w/ protocol >= 4`
 * `nltk = 3.6.1, w/ wordnet`
+* `SPARQLWrapper = 1.8.5`
 
 To check package `pip show package_name`  
 To install package `pip install package_name`
