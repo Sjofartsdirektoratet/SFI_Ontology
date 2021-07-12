@@ -1,4 +1,4 @@
-# SFI model - a maritim ontology with visualization
+# SFI model - A maritime ontology with visualization
 
 <img src="images/logo.PNG" width="300">  
 
