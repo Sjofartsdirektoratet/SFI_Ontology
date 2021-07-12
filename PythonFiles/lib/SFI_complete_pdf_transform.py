@@ -13,7 +13,7 @@ import json
  
 
 
-class SFI_pdf_real_transform:
+class SFI_complete_pdf_transform:
     def __init__(self):
         self.all_codes = {}
     
