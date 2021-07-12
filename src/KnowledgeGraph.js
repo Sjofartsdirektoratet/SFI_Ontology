@@ -45,7 +45,7 @@ function KnowledgeGraph(){
 
     function initialCollapse(d){
         
-        if (d.children && d.depth > 1) { 
+        if (d.children && d.depth > 0) { 
             d._children = d.children;
             d._children.forEach(initialCollapse)
             d.children = null;
@@ -60,13 +60,30 @@ function KnowledgeGraph(){
         }
     }
 
+    function constructReferenceLinks(root,node, links,svg){
+        
+        if(node.data["https://www.sdir.no/SFI-model#reference"]){
+            node.data["https://www.sdir.no/SFI-model#reference"].forEach(x => {
+                const referenceNode = root.descendants().find(d => d.data["@id"] === x["@id"])
+                if(referenceNode)links.push({source:node,target:referenceNode});
+            })
+        }
+        if(node.children){
+            node.children.forEach(d => {
+                constructReferenceLinks(root,d,links,svg)
+            })
+        }
+        return links
+    }
+
+    
 
     const [fromJson, setFromJson] = useState([]);
     const [loading, setLoading] = useState(true);
     const [firstTimeLoading, setFirstTimeLoading] = useState(true)
 
     useEffect(() => {
-        d3.json('jsontest_2.json').then(data => {
+        d3.json('Ontologi.json').then(data => {
 
             var data2 = [] // New array to store triples with code property to avoid multiple root problem
             data.filter(x => x["https://www.sdir.no/SFI-model#code"]).map(x => data2.push(x))
@@ -105,27 +122,35 @@ function KnowledgeGraph(){
             
             update(fromJson,svg)   
         }
-            
+        
+        
 
         function update(data, svg){
             
-            
+                
             const maxDepth = d3.max(data, (x) => {return x.depth})
-
-            let height2 = 1700-(200*maxDepth)
-            let width2 = 1700-(200*maxDepth)
+            let height2 = 1700
+            let width2 = 1700
             let radius = width2/2 - 50
             const tree = d3.tree()
             .size([2 * Math.PI, radius]) 
             .separation((a, b) => (a.parent == b.parent ? 1 : 3)/ a.depth)
             
             const root = tree(data)
-            
+            //console.log(root.links())
             svg.selectAll("*").remove()
+
+
+            console.log()
+            // var referencesLinks = constructReferenceLinks(root,root, [],svg)
+            // console.log(referencesLinks)
             
             svg = svg.append('svg')
             .attr("height",height2)
             .attr("width",width2)
+
+            
+        
             
             // Define the div for the tooltip
             var div = d3.select(d3KGraph.current).append("div")	
@@ -139,6 +164,7 @@ function KnowledgeGraph(){
                     .attr("fill", "none")
                     .attr("stroke-opacity", 0.5)
                     .attr("stroke-width", 1)
+                    .attr("id","sub_links")
                 .selectAll("path")
                 .data(root.links())
                 .join("path")
@@ -147,7 +173,23 @@ function KnowledgeGraph(){
                         .radius(d => d.y))
                     
                     .attr('stroke', function(d) { return applyColor(d.source); });
-
+            
+            var references = svg.append("g")
+                    .attr('transform', "translate("+(width2/2)+","+(height2/2)+")")
+                    .attr("fill", "none")
+                    .attr("stroke-opacity", 0.5)
+                    .attr("stroke-width", 0.5)
+                    .attr("id","ref_links")
+                .selectAll("path")
+                .data(constructReferenceLinks(root,root, [],svg))
+                .join("path")
+                    .attr("d", d3.linkRadial()
+                        .angle(d => d.x)
+                        .radius(d => d.y))
+                    
+                    .attr('stroke', "black")
+                    .style("visibility","hidden");
+                    
             
             // Applying attributes to Nodes in graph
             svg.append("g")
@@ -163,13 +205,13 @@ function KnowledgeGraph(){
                     .attr("fill", function(d) { return applyColor(d); })
                     .attr('stroke', function(d) { return applyColor(d); })
                     .attr("r", 0.3)
+                    
                 .attr("cursor", "pointer")
                 .on('mouseover', function(d,node){
                     var code_info = node.data["https://www.sdir.no/SFI-model#code"][0]["@value"]
                     var label_info = node.data["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]
 
                     var labels = code_info + " " + label_info
-                
                     var xy = d3.pointer(d, node);
 
                     div.transition()		
@@ -184,13 +226,28 @@ function KnowledgeGraph(){
                         .style("padding", "5px")
                         .style("display", "block")
                         .style("background-color", "#e7e7e7")
-                        .style("visibility", "visible");		
+                        .style("visibility", "visible");
+                    
+                    svg.select("#"+"sub_links")
+                        .attr("visibility", "hidden")
+                    
+                    references.filter(function (x){
+                        return node == x["source"] || node == x["target"]
+                    })
+                        .style("visibility", "visible")
 
-                    })					
-                .on("mouseout", function(d) {		
+                    })
+                				
+                .on("mouseout", function(node) {		
                     div.transition()		
                         .duration(100)		
-                        .style("visibility", "hidden");	
+                        .style("visibility", "hidden")	
+                    svg.select("#"+"sub_links")
+                        .attr("visibility", "visible")
+
+                    references.style("visibility", "hidden")
+
+                    
                 })
                 .on("click", function(d,node){
                     div.transition()		
