@@ -43,8 +43,8 @@ class SFI_complete_pdf_transform:
         self.delete_duplicate_references()
         self.find_uri_references()
         
-        json_like_data = self.reform_to_json()
-        return json_like_data
+        self.json_like_data = self.reform_to_json()
+        return self.json_like_data
     
     def make_dict(self, page_list):
         '''
@@ -192,9 +192,9 @@ class SFI_complete_pdf_transform:
             myjson.append(mydict)
         return myjson
     
-    def save_json(self):
+    def save_json(self, fname='SFI_extraced_info.json'):
         # Save to json file
         
-        with open('info.json', 'w') as f:
-            json.dump(self.data_json, f)
+        with open(fname, 'w') as f:
+            json.dump(self.json_like_data, f)
         f.close()
