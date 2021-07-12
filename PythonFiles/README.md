@@ -79,3 +79,11 @@ In the end lutra is activated with right flags and convert the stottr file to RD
 `rdf_to_json.py` - This file converts the RDF made above to a JSON-LD file used for visualization. Main root is added for making D3js work properly. Saves is as a JSON file with default
 directory to the web-apps public folder.  
 `load_from_DBpedia.py` - Queries to DBpedia to enrich the knowledge graph. Lemmatizeses the last word in URI/label to get better hits in DBpedia. Saves results in a pickle file.
+
+
+## Pytest
+It is possible to run test when developing. There are test in `~/PythonFiles/tests`, and those who are there is made for the pipeline.  
+
+To run pytest and test if the pipeline works do this run this in your favorite python enviroment:  
+```pytest
+```
