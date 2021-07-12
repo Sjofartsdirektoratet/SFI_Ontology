@@ -167,15 +167,19 @@ class Convert_to_rdf:
             references = "(" + str(",".join(["sdir:" + ref for ref in references])) + ")"
             definition = self.replace_all_non_ascii_and_snuts(definition)
             label = self.replace_all_non_ascii_and_snuts(label)
+            self.definition = definition
             
             if not dbpedia:
-                dbpedia = "dbr:Thing"
+                dbpedia = "none"
+                
+            definition = "none" if not definition else '"' + definition + '"'
+                
               
                 
             
             # Add for ottr o-sdir:CreateRelation template
             self.all_text.append(
-                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", "{5}", {6}) .'.format(self.namespace_init,
+                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", {5}, {6}) .'.format(self.namespace_init,
                                                             node,
                                                             parent,
                                                             label,
