@@ -8,33 +8,33 @@
 @prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 
-@prefix o-sdir: <https://www.sdir.no/SFI-model/ottr#> .
-@prefix sdir: <https://www.sdir.no/SFI-model#> .
+@prefix o-sfi: <https://www.sdir.no/SFI-model/ottr#> .
+@prefix sfi: <https://www.sdir.no/SFI-model#> .
 
 
-o-sdir:CreateRelation[owl:Class ?group, owl:Class ?parent, ? ?label, ? xsd:string ?code, ? xsd:string ?definition, ? owl:Class ?dbpedia] :: {
+o-sfi:CreateRelation[owl:Class ?group, owl:Class ?parent, ? ?label, ? xsd:string ?code, ? xsd:string ?definition, ? owl:Class ?dbpedia] :: {
     # Define group and connect to parent
 	# define code, definition and label for class
 	
     ax:SubClassOf(?group, ?parent), 
-	ottr:Triple(?group, sdir:code, ?code),
+	ottr:Triple(?group, sfi:code, ?code),
 	ottr:Triple(?group, rdfs:label, ?label),
-	ottr:Triple(?group, sdir:definition, ?definition),
+	ottr:Triple(?group, sfi:definition, ?definition),
 	ottr:Triple(?group, rdfs:seeAlso, ?dbpedia)
 	
 }.
 
-o-sdir:MakeReferences[owl:Class ?group,  NEList<owl:Class> ?references] :: {
-	cross | ottr:Triple(?group, sdir:reference, ++?references)
+o-sfi:MakeReferences[owl:Class ?group,  NEList<owl:Class> ?references] :: {
+	cross | ottr:Triple(?group, sfi:reference, ++?references)
 }. 
 
-o-sdir:GroupBelonging[owl:Class ?group, owl:Class ?overview_group] :: {
+o-sfi:GroupBelonging[owl:Class ?group, owl:Class ?overview_group] :: {
 	# Defines in one of the four main groups
 	
 	ax:SubClassOf(?group, ?overview_group)
 }.
 
-o-sdir:ExplainProperty[?p, ? ?comment, ? ?label, ? ?domain, ?range] :: {
+o-sfi:ExplainProperty[?p, ? ?comment, ? ?label, ? ?domain, ?range] :: {
 	# Define a property
 	
 	ottr:Triple(?p, rdf:type, rdf:Property),

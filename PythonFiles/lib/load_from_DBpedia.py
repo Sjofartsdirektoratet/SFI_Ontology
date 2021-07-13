@@ -2,6 +2,8 @@
 """
 Created on Wed Jun 30 09:55:35 2021
 
+Graph enrichment through rdfs:seeAlso with similar entities in DBPedia.
+
 @author: steien
 """
 

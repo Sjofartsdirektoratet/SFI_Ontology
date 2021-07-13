@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<title>SFI Group System Vocabulary</title>
+
 <html>
 <head>
     <link href="http://xmlns.com/xmlns-style.css" rel="stylesheet" type="text/css">
@@ -8,7 +10,7 @@
 </head>
 <body>
     <h1>
-        SFI model Vocabulary Specification 0.1 
+        SFI Group System Vocabulary Specification 0.1 
     </h1>
     <h2>
         Namespace documentation 05. July 2021
@@ -27,12 +29,12 @@
         <a href="mailto:stian.teien@capgemini.com">Stian Teien</a></dd>
     
         <dt>Contributors:</dt>
-    
-        <dd>This Vocabulary was made with help from the Norwgian Maritim Authority, SpecTec AS - owner of the SFI model 
-            and Capgemini Norway.</dd>
+        
+        <dd>The vocabulary is developed in cooperation between the <a href="https://www.sdir.no/en/">Norwegian Maritime Authority</a>, <a href="https://www.spectec.net/">SpecTec</a> and <a href="https://www.capgemini.com/no-no/">Capgemini Norway</a>.</dd>
+
       </dl>
 
-    <p class="copyright">Copyright © 2021 Capgemini Norge</p>
+    <p class="copyright">Copyright © 2021 Norwegian Maritime Authority</p>
 
     <p>
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
@@ -91,10 +93,10 @@
     </div>
 
     <div>
-        <h3>Terms in SFI model</h3>
+        <h3>Resources in the SFI Group System Vocabulary</h3>
 
         <p>
-            This is an overview of the main terms in the SFI model by class and by property.
+            This is an overview of the main terms in the SFI Group System Vocabulary by class and by property.
         </p>
 
         <div class="azlist">
@@ -112,11 +114,12 @@
     <h2 id="sec-example">Example</h2>
     <p>Here is a very basic document describing a detail code:</p>
     <div class="example">
-        <pre>sdir:641039_Salinometers
-        rdfs:label       "Salinometers"@en ;
-        rdfs:subClassOf  sdir:DetailCode , sdir:641_MAIN_BOILERS ;
-        sdir:code        "641.039" ;
-        sdir:definition  "A salinometer is a device designed to measure the salinity, or dissolved salt content,..." .
+        <pre>sfi:113_Building_Advance_Interest_Discount_Finance_Costs
+            rdfs:label      "Building advance interest, discount, finance costs"@en ;
+            rdfs:subClassOf sfi:SubGroup , sfi:11_INSURANCE_FEES_CERTIFICATES_REPRESENTATION ;
+            sfi:code        "113" ;
+            sfi:definition  "Interest on building advances and other general interests. Discount rate losses, losses due to devaluation etc. Costs connected with loans, guarantees and credits. " ;
+            sfi:reference   sfi:111_General_Insurance .
     </pre>
     </div>
     <p>This brief example shows how a detail code is described using RDF.
@@ -149,7 +152,7 @@
     <h2>Classes</h2>
 
     <div class="specterm classterm " id="term_SFIConcept" about="documentation.html#term_SFIConcept" typeof="rdfs:Class">
-        <h3>Class: sdir:SFIConcept</h3> 
+        <h3>Class: sfi:SFIConcept</h3> 
         <em>SFIConcept</em> - The root concept of the ontology. Every group is sub class of this class. <br>
     <table style="th { float: top; }">
         <tbody><tr><th>Status:</th>
@@ -170,7 +173,7 @@
     </div>
 
     <div class="specterm classterm " id="term_MainGroup" about="documentation.html#term_MainGroup" typeof="rdfs:Class">
-        <h3>Class: sdir:MainGroup</h3> 
+        <h3>Class: sfi:MainGroup</h3> 
         <em>MainGroup</em> - The top group in the hierarchy, containing 8 main groups. <br>
     <table style="th { float: top; }">
         <tbody><tr><th>Status:</th>
@@ -191,7 +194,7 @@
     </div>
 
     <div class="specterm classterm " id="term_Group" about="documentation.html#term_Group" typeof="rdfs:Class">
-        <h3>Class: sdir:Group</h3> 
+        <h3>Class: sfi:Group</h3> 
         <em>Group</em> - The sub group of MainGroup in the hierarchy, containing several groups. <br>
     <table style="th { float: top; }">
         <tbody><tr><th>Status:</th>
@@ -212,7 +215,7 @@
     </div>
 
     <div class="specterm classterm " id="term_SubGroup" about="documentation.html#term_SubGroup" typeof="rdfs:Class">
-        <h3>Class: sdir:SubGroup</h3> 
+        <h3>Class: sfi:SubGroup</h3> 
         <em>SubGroup</em> - The sub group of Group in the hierarchy, containing several sub groups. <br>
     <table style="th { float: top; }">
         <tbody><tr><th>Status:</th>
@@ -233,7 +236,7 @@
     </div>
 
     <div class="specterm classterm " id="term_DetailCode" about="documentation.html#term_DetailCode" typeof="rdfs:Class">
-        <h3>Class: sdir:DetailCode</h3> 
+        <h3>Class: sfi:DetailCode</h3> 
         <em>DetailCode</em> - DetailCode is the lowest representation, detailing specific components. <br>
     <table style="th { float: top; }">
         <tbody><tr><th>Status:</th>
@@ -267,7 +270,7 @@
     <h2>Properties</h2>
 
     <div class="specterm propertyterm " id="term_code" about="documentation.html#term_code" typeof="rdf:Property">
-            <h3>Property: sdir:code</h3> 
+            <h3>Property: sfi:code</h3> 
             <em>code</em> - code for the entity. <br>
             
         <table style="th { float: top; }">
@@ -290,7 +293,7 @@
 
     
     <div class="specterm propertyterm " id="term_definition" about="documentation.html#term_definition" typeof="rdf:Property">
-            <h3>Property: sdir:definition</h3> 
+            <h3>Property: sfi:definition</h3> 
             <em>definition</em> - definition of the entity. <br>
             
         <table style="th { float: top; }">
@@ -312,7 +315,7 @@
     </div>
 
     <div class="specterm propertyterm " id="term_reference" about="documentation.html#term_reference" typeof="rdf:Property">
-            <h3>Property: sdir:reference</h3> 
+            <h3>Property: sfi:reference</h3> 
             <em>reference</em> - reference to other entities. <br>
             
         <table style="th { float: top; }">

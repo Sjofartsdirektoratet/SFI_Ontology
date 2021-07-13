@@ -1,8 +1,8 @@
 # PythonFile Documentation
 
 ## Abstract
-This is a set of python scripts for making a RDF Ontology (knowledge graph). They read and convert information to RDF using ottr and lutra.  
-The RDF Ontology will be saved as a Turtle file. A JSON-LD file is made translated from RDF for use in the visualization web-app.
+This is a set of python scripts for making a RDF Vocabulary. They read and convert information to RDF using OTTR and Lutra.  
+The RDF Vocabulary will be saved as a Turtle file. A JSON-LD file is made translated from RDF for use in the visualization web application.
 
 ### Package/program requirement
 * `Python >= 3.8`
@@ -38,7 +38,7 @@ When running main.py this happens:
 
 
 ## Load information from DBpedia
-Some classes in the SFI model could be explained more deeply by DBpedia. Here is how to search for information based on the class name.  
+Some classes in the SFI model could be enriched with similar entities from DBPedia. Here is how to search for information based on the class name.  
 
 `$ cd ~/SFI_Ontology/PythonFiles`  
 `$ python load_dbpedia.py`
