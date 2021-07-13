@@ -48,15 +48,15 @@ class SFI_pdf_transform:
             for j in i:
                 data_unstack.append(j)
                 
-        data_unstack = self.koble_sammen(data_unstack)
-        data_unstack = self.fjerne_lineskift(data_unstack)   
-        data_unstack = self.koble_inn_tekst_uten_tall(data_unstack)
-        data_unstack = self.fjern_tom(data_unstack)
-        data_unstack = self.fjern_sidetall(data_unstack)
+        data_unstack = self.connecting_text(data_unstack)
+        data_unstack = self.remove_newline(data_unstack)   
+        data_unstack = self.connecting_text_without_integers(data_unstack)
+        data_unstack = self.remove_empty(data_unstack)
+        data_unstack = self.remove_page_number(data_unstack)
         data_unstack = self.strip_down(data_unstack)
-        data_unstack = self.fjern_dobbel_punktum(data_unstack)
+        data_unstack = self.remove_double_punctuation(data_unstack)
         
-        # FJERNE DEN ENE SKRIVEFEILEN
+        # REMOVE THE ONE TYPO
         # 3230.01 Travelling cranes, complete
         i = data_unstack.index("3230.01 Travelling cranes, complete")
         data_unstack[i] = "323.01 Travelling cranes, complete"
@@ -98,20 +98,20 @@ class SFI_pdf_transform:
                 
     
     
-    def koble_sammen(self, liste):
+    def connecting_text(self, liste):
         temp = []
         for tekst in liste:
             temp.append(re.sub(r"(\d+)\n\.\n(\d+)", r"\1.\2", tekst))
         return temp
     
-    def fjerne_lineskift(self, liste):
+    def remove_newline(self, liste):
         temp = []
         for tekst in liste:
             temp.append(re.sub(r"(\n)", "", tekst))
         return temp
     
-    def koble_inn_tekst_uten_tall(self, liste):
-        # Koble inn ord der den forran (i-1) finnes!
+    def connecting_text_without_integers(self, liste):
+        # Concat word before where (i-1) exists!
         temp = []
         
         for i,tekst in enumerate(liste):
@@ -124,10 +124,10 @@ class SFI_pdf_transform:
                 temp.append(tekst)
         return temp
     
-    def fjern_tom(self, liste):
+    def remove_empty(self, liste):
         return [i for i in liste if len(i)>2]
         
-    def fjern_sidetall(self, liste):
+    def remove_page_number(self, liste):
         temp = []
         for tekst in liste:
             if not len(re.findall(r"^[ \d]+$", tekst)) > 0:
@@ -135,9 +135,9 @@ class SFI_pdf_transform:
         return temp
     
     def strip_down(self, liste):
-        return list(map(lambda x:x.strip(), liste))#Removes trailing spaces
+        return list(map(lambda x:x.strip(), liste)) # Removes trailing spaces
     
-    def legg_til_hovednummer(self, liste):
+    def add_main_number(self, liste):
         temp = []
         counter = 1
         for tekst in liste:
@@ -148,7 +148,7 @@ class SFI_pdf_transform:
                 temp.append(tekst)
         return temp
     
-    def fjern_dobbel_punktum(self, liste):
+    def remove_double_punctuation(self, liste):
         temp = []
         for tekst in liste:
             temp.append(re.sub(r"\.\.", ".", tekst))

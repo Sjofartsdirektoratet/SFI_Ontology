@@ -116,7 +116,7 @@ class Make_tree:
 class Convert_to_rdf:
     def __init__(self):
         
-        self.namespace_init = "sdir:"
+        self.namespace_init = "sfi:"
         self.prefixes = [
             '@prefix ottr: <http://ns.ottr.xyz/0.4/> .',
             '@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .',
@@ -127,8 +127,8 @@ class Convert_to_rdf:
             '@prefix rstr: <http://tpl.ottr.xyz/owl/restriction/0.1/> .',
             '@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .\n',
             '@prefix dbr: <http://dbpedia.org/resource/> .',
-            '@prefix o-sdir: <https://www.sdir.no/SFI-model/ottr#> .',
-            '@prefix sdir: <https://www.sdir.no/SFI-model#> .\n']
+            '@prefix o-sfi: <https://www.sdir.no/SFI-model/ottr#> .',
+            '@prefix sfi: <https://www.sdir.no/SFI-model#> .\n']
         
     def clean_string_id(self, string):
         return string.replace(" ", "_").replace(",", "")\
@@ -164,7 +164,7 @@ class Convert_to_rdf:
             node = self.clean_string_id(node)
             parent = self.clean_string_id(parent)
             references = map(self.clean_string_id, references)
-            references = "(" + str(",".join(["sdir:" + ref for ref in references])) + ")"
+            references = "(" + str(",".join(["sfi:" + ref for ref in references])) + ")"
             definition = self.replace_all_non_ascii_and_snuts(definition)
             label = self.replace_all_non_ascii_and_snuts(label)
             self.definition = definition
@@ -177,9 +177,9 @@ class Convert_to_rdf:
               
                 
             
-            # Add for ottr o-sdir:CreateRelation template
+            # Add for ottr o-sfi:CreateRelation template
             self.all_text.append(
-                'o-sdir:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", {5}, {6}) .'.format(self.namespace_init,
+                'o-sfi:CreateRelation({0}{1}, {0}{2}, "{3}"@en, "{4}", {5}, {6}) .'.format(self.namespace_init,
                                                             node,
                                                             parent,
                                                             label,
@@ -188,19 +188,19 @@ class Convert_to_rdf:
                                                             dbpedia)
                 )
             
-            # Add for ottr o-sdir:MakeReferences template
+            # Add for ottr o-sfi:MakeReferences template
             if len(references) > 3: # length of empty tuple is 2
                 self.all_text.append(
-                    "o-sdir:MakeReferences({0}{1}, {2}) .".format(self.namespace_init,
+                    "o-sfi:MakeReferences({0}{1}, {2}) .".format(self.namespace_init,
                                                             node,
                                                             references.replace("'",""))
                     
                     )
             
             
-            # # Add for ottr o-sdir:GroupBelonging template
+            # # Add for ottr o-sfi:GroupBelonging template
             self.all_text.append(
-                'o-sdir:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init,
+                'o-sfi:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init,
                                                           node, overview_group)
                 )
             
@@ -209,7 +209,7 @@ class Convert_to_rdf:
         for pre, fill, node in RenderTree(root_group):
             if node.parent:
                 self.all_text.append(
-                    'o-sdir:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init, node.name,
+                    'o-sfi:GroupBelonging({0}{1}, {0}{2}) .'.format(self.namespace_init, node.name,
                                                             node.parent.name)
                 )
                 
@@ -225,11 +225,11 @@ class Convert_to_rdf:
                       "reference": {"comment": "Reference to other SFI code",
                                     "label": "hasReference",
                                     "domain": "SFIConcept",
-                                    "range": "sdir:SFIConcept"}}
+                                    "range": "sfi:SFIConcept"}}
         
         for prop in properties:
             self.all_text.append(
-                'o-sdir:ExplainProperty({0}{1}, "{2}"@en, "{3}"@en, {0}{4}, {5}) .'.format(self.namespace_init,
+                'o-sfi:ExplainProperty({0}{1}, "{2}"@en, "{3}"@en, {0}{4}, {5}) .'.format(self.namespace_init,
                                                              prop, 
                                                              properties[prop]['comment'],
                                                              properties[prop]['label'],
