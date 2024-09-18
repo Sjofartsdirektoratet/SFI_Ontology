@@ -2,7 +2,7 @@
 
 <img src="images/logo.PNG" width="300">  
 
-SFI_Ontology is a project in cooperation between the Norwegian Maritime Authority, SpecTec and Capgemini Norway. Its purpose is to create an open ontology and vocabulary describing the SFI Coding and Classification System, including enrichment with references to DBPedia. The project includes implementation of a web application for visualization of the knowledge graph.
+SFI_Ontology is a project in cooperation between the Norwegian Maritime Authority, SpecTec and Capgemini Norway. Its purpose is to create an open ontology and vocabulary describing the SFI Coding and Classification System, owned and developed by SpecTec, including enrichment with references to DBPedia. The project includes implementation of a web application for visualization of the knowledge graph.
 
 
 Documentation for RDF could be found locally on `~/SFI_Ontoloy/documentation.html`.  
